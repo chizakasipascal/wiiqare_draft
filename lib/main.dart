@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:wiiqare/utils/colors.dart';
 import 'constants/routes.dart';
 import 'constants/app_theme.dart';
 import 'constants/strings.dart';
@@ -7,7 +8,7 @@ import 'views/ui/ui.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+      SystemUiOverlayStyle(statusBarColor: BlueText));
   runApp(MyApp());
 }
 
@@ -18,8 +19,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: Strings.appName,
       theme: themeData,
-      home: Dashboard(),
-      routes: Routes.routes,
+      home: Login(),
+      //routes: Routes.routes,
     );
   }
 }
