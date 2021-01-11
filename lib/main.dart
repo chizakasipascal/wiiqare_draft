@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: Strings.appName,
       theme: themeData,
-      home: Login(),
+      home: Authentication(),
       //routes: Routes.routes,
     );
   }

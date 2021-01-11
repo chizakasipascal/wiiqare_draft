@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
+import 'package:wiiqare/views/tabs/tabs.dart';
 
-class Login extends StatefulWidget {
+class Authentication extends StatefulWidget {
   @override
-  _LoginState createState() => _LoginState();
+  _AuthenticationState createState() => _AuthenticationState();
 }
 
-class _LoginState extends State<Login> {
+class _AuthenticationState extends State<Authentication> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,8 +79,8 @@ class _LoginState extends State<Login> {
                         child: TabBarView(
                           physics: BouncingScrollPhysics(),
                           children: [
-                            Center(child: Text("data 1")),
-                            Center(child: Text("data 2")),
+                            Login(),
+                            Text("data 2"),
                           ],
                         ),
                       ),
