@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wiiqare/utils/colors.dart';
-import 'constants/routes.dart';
 import 'constants/app_theme.dart';
 import 'constants/strings.dart';
 import 'views/ui/ui.dart';
