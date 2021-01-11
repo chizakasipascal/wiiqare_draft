@@ -75,10 +75,10 @@ class _LoginState extends State<Login> {
             ),
             SizedBox(height: 20.0),
             Center(
-                child: Text(
-              "Mot de passe oublier ?",
-              style: TextStyle(color: BlueText),
-            )),
+              child: SingleTitle(
+                singleTitle: "Mot de passe oublier ?",
+              ),
+            ),
           ],
         ),
       ),

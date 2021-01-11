@@ -73,6 +73,12 @@ class _SincrireState extends State<Sincrire> {
                 designation: "S'inscrire",
               ),
             ),
+            SizedBox(height: 20.0),
+            Center(
+              child: SingleTitle(
+                singleTitle: "Vous avez un compter WiiQare?",
+              ),
+            ),
           ],
         ),
       ),
