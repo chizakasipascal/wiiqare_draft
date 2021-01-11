@@ -80,7 +80,7 @@ class _AuthenticationState extends State<Authentication> {
                           physics: BouncingScrollPhysics(),
                           children: [
                             Login(),
-                            Text("data 2"),
+                            Sincrire(),
                           ],
                         ),
                       ),

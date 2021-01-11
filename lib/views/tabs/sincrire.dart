@@ -2,17 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
-class Login extends StatefulWidget {
+class Sincrire extends StatefulWidget {
   @override
-  _LoginState createState() => _LoginState();
+  _SincrireState createState() => _SincrireState();
 }
 
-class _LoginState extends State<Login> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
+class _SincrireState extends State<Sincrire> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,13 +15,9 @@ class _LoginState extends State<Login> {
       child: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 50.0),
-            GrandTitle(
-              title: "Connexion a mon compte",
-            ),
+            SizedBox(height: 20.0),
+            GrandTitle(title: "Créer un compte"),
             SizedBox(height: 20.0),
             //Nom complet
             Container(
@@ -47,6 +38,9 @@ class _LoginState extends State<Login> {
               ),
             ),
             SizedBox(height: 20.0),
+
+            //TODO:Packegs number and flags authentification
+
             //Mot de passe
             Container(
               decoration: BoxDecoration(
@@ -67,16 +61,9 @@ class _LoginState extends State<Login> {
               ),
             ),
             SizedBox(height: 20.0),
-            SizedBox(
-              height: 60,
-              child: WikiButtom(),
-            ),
-            SizedBox(height: 20.0),
-            Center(
-                child: Text(
-              "Mot de passe oublier ?",
-              style: TextStyle(color: BlueText),
-            )),
+            Row(
+              children: [],
+            )
           ],
         ),
       ),
