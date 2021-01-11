@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/tabs/tabs.dart';
 
-class Authentication extends StatefulWidget {
+class Authentification extends StatefulWidget {
   @override
-  _AuthenticationState createState() => _AuthenticationState();
+  _AuthentificationState createState() => _AuthentificationState();
 }
 
-class _AuthenticationState extends State<Authentication> {
+class _AuthentificationState extends State<Authentification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

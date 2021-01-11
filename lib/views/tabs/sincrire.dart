@@ -42,7 +42,10 @@ class _SincrireState extends State<Sincrire> {
             SizedBox(height: 20.0),
 
             //TODO:Packegs number and flags authentification
-
+            Container(
+              height: 150,
+              child: Placeholder(),
+            ),
             //Mot de passe
             Container(
               decoration: BoxDecoration(
