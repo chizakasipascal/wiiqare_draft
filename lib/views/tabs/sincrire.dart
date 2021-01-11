@@ -15,6 +15,8 @@ class _SincrireState extends State<Sincrire> {
       child: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20.0),
             GrandTitle(title: "Créer un compte"),
@@ -63,7 +65,14 @@ class _SincrireState extends State<Sincrire> {
             SizedBox(height: 20.0),
             Row(
               children: [],
-            )
+            ),
+            SizedBox(height: 20.0),
+            SizedBox(
+              height: 60,
+              child: WikiButtom(
+                designation: "S'inscrire",
+              ),
+            ),
           ],
         ),
       ),

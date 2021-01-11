@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 
 class WikiButtom extends StatelessWidget {
+  final designation;
   const WikiButtom({
     Key key,
+    @required this.designation,
   }) : super(key: key);
 
   @override
@@ -17,7 +19,7 @@ class WikiButtom extends StatelessWidget {
       onPressed: () {},
       child: Center(
         child: Text(
-          "Se connecter",
+          designation,
           style: TextStyle(
             color: White,
           ),

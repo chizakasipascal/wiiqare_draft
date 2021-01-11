@@ -69,7 +69,9 @@ class _LoginState extends State<Login> {
             SizedBox(height: 20.0),
             SizedBox(
               height: 60,
-              child: WikiButtom(),
+              child: WikiButtom(
+                designation: "Se connecter",
+              ),
             ),
             SizedBox(height: 20.0),
             Center(
