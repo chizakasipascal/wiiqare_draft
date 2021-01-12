@@ -7,5 +7,5 @@ final ThemeData themeData = ThemeData(
   primaryColor: Bleu,
   accentColor: Bleu.withOpacity(.5),
   //fontFamily: GoogleFonts.roboto().fontFamily,
-  splashColor: Bleu,
+  splashColor: Colors.transparent,
 );
