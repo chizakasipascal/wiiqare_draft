@@ -3,9 +3,11 @@ import 'package:wiiqare/utils/colors.dart';
 
 class WikiButtom extends StatelessWidget {
   final designation;
+  final void function;
   const WikiButtom({
     Key key,
     @required this.designation,
+    this.function,
   }) : super(key: key);
 
   @override
@@ -16,7 +18,7 @@ class WikiButtom extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       color: Yello,
-      onPressed: () {},
+      onPressed: () => function,
       child: Center(
         child: Text(
           designation,

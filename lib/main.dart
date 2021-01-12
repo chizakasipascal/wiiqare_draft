@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'constants/app_theme.dart';
 import 'constants/strings.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       title: Strings.appName,
       theme: themeData,
       home: Authentification(),
-      //routes: Routes.routes,
+      initialRoute: Routes.authentification,
+      routes: Routes.routes,
     );
   }
 }
