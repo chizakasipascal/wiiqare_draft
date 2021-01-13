@@ -14,7 +14,7 @@ class WelcomBackGround extends StatelessWidget {
           end: Alignment.bottomCenter,
           colors: [
             Color(0xFFA6E4F8),
-            Color(0xFFEEF3F3),
+            // Color(0xFFEEF3F3),
             Color(0xFFEDEFEC),
             Color(0xFFECECE7),
             Color(0xFFEFFBFF),
