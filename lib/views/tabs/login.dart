@@ -71,9 +71,10 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: 60,
               child: WikiButtom(
-                designation: "Se connecter",
-                function: () => {
+                descpritionButtom: "Se connecter",
+                onPressed: () => {
                   // Code de traitement login
+                  print("Se connecter"),
                   Navigator.pushNamed(context, Routes.welcome)
                 },
               ),
@@ -82,6 +83,7 @@ class _LoginState extends State<Login> {
             GestureDetector(
               onTap: () => {
                 //Code de recuperation mot de passe
+                print("Mot de passe oublier ?")
               },
               child: Center(
                 child: SingleTitle(

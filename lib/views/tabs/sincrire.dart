@@ -73,7 +73,7 @@ class _SincrireState extends State<Sincrire> {
             SizedBox(
               height: 60,
               child: WikiButtom(
-                designation: "S'inscrire",
+                descpritionButtom: "S'inscrire",
               ),
             ),
             SizedBox(height: 20.0),
