@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/utils/colors.dart';
 
 class WelcomBackGround extends StatelessWidget {
   const WelcomBackGround({
@@ -13,7 +14,8 @@ class WelcomBackGround extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color(0xFFA6E4F8),
+            // Color(0xFFA6E4F8),
+            BlueText,
             // Color(0xFFEEF3F3),
             Color(0xFFEDEFEC),
             Color(0xFFECECE7),
