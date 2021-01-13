@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
@@ -70,13 +71,24 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: 60,
               child: WikiButtom(
-                designation: "Se connecter",
+                descpritionButtom: "Se connecter",
+                onPressed: () => {
+                  // Code de traitement login
+                  print("Se connecter"),
+                  Navigator.pushNamed(context, Routes.welcome)
+                },
               ),
             ),
             SizedBox(height: 20.0),
-            Center(
-              child: SingleTitle(
-                singleTitle: "Mot de passe oublier ?",
+            GestureDetector(
+              onTap: () => {
+                //Code de recuperation mot de passe
+                print("Mot de passe oublier ?")
+              },
+              child: Center(
+                child: SingleTitle(
+                  singleTitle: "Mot de passe oublier ?",
+                ),
               ),
             ),
           ],

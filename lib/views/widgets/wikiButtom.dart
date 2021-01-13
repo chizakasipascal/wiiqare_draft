@@ -1,27 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 
+typedef void OnPressed();
+typedef ValueChanged<T> = void Function(T value);
+
 class WikiButtom extends StatelessWidget {
-  final designation;
+  final bool isPressed;
+  final String descpritionButtom;
+  final OnPressed onPressed;
+  final ValueChanged<bool> onHighlightChanged;
+
   const WikiButtom({
     Key key,
-    @required this.designation,
+    this.descpritionButtom,
+    this.onPressed,
+    this.onHighlightChanged,
+    this.isPressed = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return FlatButton(
+      splashColor: Colors.white,
+      color: Yello,
+      onPressed: onPressed, //!enable ? onPressed : null,
       shape: RoundedRectangleBorder(
-        //side: BorderSide(color: Theme.of(context).primaryColor),
+        side: BorderSide(color: White), //Theme.of(context).primaryColor),
         borderRadius: BorderRadius.circular(10.0),
       ),
-      color: Yello,
-      onPressed: () {},
+      onHighlightChanged: onHighlightChanged,
       child: Center(
         child: Text(
-          designation,
+          descpritionButtom,
           style: TextStyle(
-            color: White,
+            color: White, // this.isPressed ? RedColor : Color(0xffFFFFFF),
+            fontSize: 14,
           ),
         ),
       ),

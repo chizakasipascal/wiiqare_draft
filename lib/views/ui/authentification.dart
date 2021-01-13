@@ -77,7 +77,7 @@ class _AuthentificationState extends State<Authentification> {
                     Expanded(
                       child: Container(
                         child: TabBarView(
-                          physics: BouncingScrollPhysics(),
+                          physics: new NeverScrollableScrollPhysics(),
                           children: [
                             Login(),
                             Sincrire(),
