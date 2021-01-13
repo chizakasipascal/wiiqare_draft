@@ -7,6 +7,7 @@ const Yello = const Color(0xFFFFBE00);
 const BlackText = const Color(0xFF000000);
 const BlueText = const Color(0xFF6FACE6);
 const Bleu = const Color(0xFF003570);
+const Grey = const Color(0xFF707070);
 const WelcomBack = const LinearGradient(
   colors: [BlueText, Yello],
   begin: Alignment.topCenter,
