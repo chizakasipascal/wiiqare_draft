@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/tabs/tabs.dart';
+import 'package:wiiqare/views/widgets/widgets.dart';
 
 class Authentification extends StatefulWidget {
   @override
@@ -10,6 +11,7 @@ class Authentification extends StatefulWidget {
 class _AuthentificationState extends State<Authentification> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -25,11 +27,7 @@ class _AuthentificationState extends State<Authentification> {
                       children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.only(left: 8.0),
-                          child: Text(
-                            "WiiQare",
-                            style: TextStyle(
-                                color: BlueText, fontWeight: FontWeight.w700),
-                          ),
+                          child: LogoWiiQare(size: size),
                         ),
                         Spacer(),
                         TabBar(
