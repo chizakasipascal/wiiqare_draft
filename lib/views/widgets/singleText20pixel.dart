@@ -6,7 +6,7 @@ class SingleText20pixel extends StatelessWidget {
   final Color color;
   const SingleText20pixel({
     Key key,
-    this.designation,
+    @required this.designation,
     this.color = White,
   }) : super(key: key);
 

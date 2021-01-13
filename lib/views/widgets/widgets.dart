@@ -5,3 +5,5 @@ export 'singleTitle.dart';
 export 'logoWiiQare.dart';
 export 'wiIQareCenterLogoWithIcons.dart';
 export 'singleText20pixel.dart';
+export 'welcomWhishWithButtomLogin.dart';
+export 'welcomItemsButtom.dart';
