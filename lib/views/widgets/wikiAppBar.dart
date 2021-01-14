@@ -11,32 +11,35 @@ class WikiAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SingleTitle(
-              singleTitle: "Hi, ${name}",
-              fontWeight: FontWeight.bold,
-              color: Bleu,
-            ),
-            SingleTitle(
-              singleTitle: "Welcome to WiiQare",
-              fontWeight: FontWeight.bold,
-              color: Bleu,
-            ),
-          ],
-        ),
-        Spacer(),
-        Icon(
-          Icons.notifications,
-          color: Bleu,
-        ),
-        CircleAvatar(
-          backgroundColor: BlueText,
-        )
-      ],
+    return Container(
+      height: 35,
+      child: Row(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SingleTitle(
+                singleTitle: "Hi, ${name}",
+                fontWeight: FontWeight.bold,
+                color: Bleu,
+              ),
+              SingleTitle(
+                singleTitle: "Welcome to WiiQare",
+                fontWeight: FontWeight.bold,
+                color: Bleu,
+              ),
+            ],
+          ),
+          Spacer(),
+          Icon(
+            Icons.notifications,
+            color: Bleu,
+          ),
+          CircleAvatar(
+            backgroundColor: BlueText,
+          )
+        ],
+      ),
     );
   }
 }
