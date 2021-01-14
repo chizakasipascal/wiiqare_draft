@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
 class WiIQareCenterLogoWithIcons extends StatelessWidget {
@@ -17,7 +18,12 @@ class WiIQareCenterLogoWithIcons extends StatelessWidget {
         SizedBox(
           height: 50,
           width: 50,
-          child: Placeholder(),
+          child: IconButton(
+            onPressed: () {
+              //TODO:Code notification
+            },
+            icon: Icon(Icons.notifications, color: White),
+          ),
         ),
         Align(
           alignment: Alignment.topCenter,
@@ -26,7 +32,12 @@ class WiIQareCenterLogoWithIcons extends StatelessWidget {
         SizedBox(
           height: 50,
           width: 50,
-          child: Placeholder(),
+          child: IconButton(
+            onPressed: () {
+              //TODO:Code QCoder Scanner
+            },
+            icon: Icon(Icons.qr_code, color: White),
+          ),
         ),
       ],
     );

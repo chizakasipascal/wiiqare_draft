@@ -4,6 +4,7 @@ import 'package:wiiqare/utils/colors.dart';
 class SingleTitle extends StatelessWidget {
   final singleTitle;
   final Color color;
+
   const SingleTitle({
     Key key,
     @required this.singleTitle,
