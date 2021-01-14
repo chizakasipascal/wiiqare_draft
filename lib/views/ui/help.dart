@@ -103,7 +103,7 @@ class Help extends StatelessWidget {
                                           right: 8.0, top: 5.0),
                                       child: SingleTitle(
                                         singleTitle: "Enligne",
-                                        color: Grey,
+                                        color: Colors.green,
                                         size: 8.0,
                                       ),
                                     ),
