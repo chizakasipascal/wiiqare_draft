@@ -29,7 +29,7 @@ class Help extends StatelessWidget {
                     onPressed: () => {
                       {
                         //TODO:Code de navigator from welcom page
-                        Navigator.popAndPushNamed(context, Routes.welcome)
+                        Navigator.pop(context, Routes.welcome)
                       },
                     },
                   ),
