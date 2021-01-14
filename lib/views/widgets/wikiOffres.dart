@@ -3,12 +3,13 @@ import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
 class WikiOffres extends StatelessWidget {
+  final Size size;
+  final bonus;
   const WikiOffres({
     Key key,
     @required this.size,
+    @required this.bonus,
   }) : super(key: key);
-
-  final Size size;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class WikiOffres extends StatelessWidget {
                       width: size.width * .6,
                       child: SingleTitle(
                         singleTitle:
-                            "Commander ce produit et gagner 1000fc de credit santé dans votre compte Wiiqare",
+                            "Commander ce produit et gagner ${bonus}fc de credit santé dans votre compte Wiiqare",
                         color: Grey,
                         size: 11.0,
                       ),
