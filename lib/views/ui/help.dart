@@ -257,6 +257,7 @@ class Help extends StatelessWidget {
                 WikiOffres(
                   size: size,
                   bonus: 1000,
+                  onPressed: () {},
                 ),
               ],
             ),

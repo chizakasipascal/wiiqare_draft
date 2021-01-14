@@ -155,6 +155,12 @@ class Welcome extends StatelessWidget {
                 WikiOffres(
                   size: size,
                   bonus: 1000,
+                  onPressed: () {
+                    //Test de navigation to home
+                    Navigator.pushNamed(context, Routes.home);
+
+                    //TODO: Code propres aceete fonction
+                  },
                 ),
               ],
             ),

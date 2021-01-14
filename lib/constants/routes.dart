@@ -7,10 +7,12 @@ class Routes {
   static const String authentification = '/authentification';
   static const String welcome = '/welcome';
   static const String help = '/help';
+  static const String home = '/home';
 
   static final routes = <String, WidgetBuilder>{
     authentification: (BuildContext context) => Authentification(),
     welcome: (BuildContext context) => Welcome(),
-    help: (BuildContext context) => Help()
+    help: (BuildContext context) => Help(),
+    home: (BuildContext context) => Home()
   };
 }

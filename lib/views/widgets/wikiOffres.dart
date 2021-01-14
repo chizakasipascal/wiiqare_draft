@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
+typedef OnPressed onPressed();
+
 class WikiOffres extends StatelessWidget {
   final Size size;
   final bonus;
+  final OnPressed onPressed;
   const WikiOffres({
     Key key,
     @required this.size,
     @required this.bonus,
+    @required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -40,9 +44,9 @@ class WikiOffres extends StatelessWidget {
                     ),
                     FlatButton(
                       color: Yello,
-                      onPressed: () {
-                        //TODO:Code de commande de produit
-                      },
+                      onPressed: onPressed,
+                      //TODO:Code de commande de produit
+
                       shape: RoundedRectangleBorder(
                         side: BorderSide(
                           color: White,
