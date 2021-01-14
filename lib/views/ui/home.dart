@@ -9,10 +9,9 @@ class Home extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Container(height: size.height, color: Colors.green),
-            // WikiAppBar(
-            //   name: "Ebene jean",
-            // ),
+            WikiAppBar(
+              name: "Ebene jean",
+            ),
           ],
         ),
       ),
