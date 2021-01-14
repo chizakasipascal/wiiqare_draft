@@ -39,23 +39,27 @@ class Welcome extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Align(
                                 alignment: Alignment.center,
                                 child: SizedBox(
                                   height: 70,
                                   width: 70,
-                                  child: CircleAvatar(backgroundColor: Bleu),
+                                  child:
+                                      CircleAvatar(backgroundColor: BlueText),
                                 ),
                               ),
                               SizedBox(height: 5),
                               SingleTitle(
                                 singleTitle: "Salut",
                                 color: Grey,
+                                size: 11.0,
                               ),
                               SingleTitle(
                                 singleTitle: "Christopher Bengangine",
                                 color: Grey,
+                                size: 11.0,
                               ),
                               SizedBox(height: 5),
                               Center(
@@ -65,8 +69,9 @@ class Welcome extends StatelessWidget {
                                     SingleTitle(
                                       singleTitle: "Votre solde est:",
                                       color: Grey,
+                                      size: 12.0,
                                     ),
-
+                                    SizedBox(height: 10),
                                     // getMontant
                                     Text(
                                       "${montant}FC",
@@ -84,14 +89,56 @@ class Welcome extends StatelessWidget {
                       ),
                       SizedBox(
                         height: 100,
-                        width: 100,
+                        width: 90,
                         child: WelcomItemsButtom(
                           size: size,
+                          color: BlueText,
                           widget: Padding(
                             padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Align(
+                                  alignment: Alignment.topCenter,
+                                  child: CircleAvatar(
+                                    backgroundColor: BlueText,
+                                  ),
+                                ),
+                                SingleTitle(
+                                  singleTitle: "Guide",
+                                  size: 10.0,
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                      )
+                      ),
+                      SizedBox(
+                        height: 100,
+                        width: 90,
+                        child: WelcomItemsButtom(
+                          size: size,
+                          color: BlueText,
+                          widget: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Align(
+                                  alignment: Alignment.topCenter,
+                                  child: CircleAvatar(
+                                    backgroundColor: BlueText,
+                                  ),
+                                ),
+                                SingleTitle(
+                                  singleTitle: "Map",
+                                  size: 10.0,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
