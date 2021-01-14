@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:wiiqare/views/widgets/wikiButtonLoginLockroUnLock.dart';
 
@@ -21,6 +22,10 @@ class WelcomWhishWithButtomLogin extends StatelessWidget {
         ),
         WikiButtonLoginLockroUnLock(
           descpritionButtom: "Login",
+          onPressed: () {
+            //TODO:Code de navigator from help page
+            Navigator.pushNamed(context, Routes.help);
+          },
         )
       ],
     );

@@ -20,17 +20,18 @@ class WikiButtonLoginLockroUnLock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: White,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(30),
-          bottomLeft: Radius.circular(30),
-        ),
-      ),
+    return SizedBox(
+      height: 50,
+      // decoration: BoxDecoration(
+      //   color: White,
+      //   borderRadius: BorderRadius.only(
+      //     topLeft: Radius.circular(30),
+      //     bottomLeft: Radius.circular(30),
+      //   ),
+      // ),
       child: FlatButton(
         splashColor: White,
-        color: Yello,
+        color: White,
         onPressed: onPressed, //!enable ? onPressed : null,
         shape: RoundedRectangleBorder(
           side: BorderSide(color: White), //Theme.of(context).primaryColor),

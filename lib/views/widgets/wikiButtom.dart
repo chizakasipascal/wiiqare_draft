@@ -7,6 +7,7 @@ typedef ValueChanged<T> = void Function(T value);
 class WikiButtom extends StatelessWidget {
   final bool isPressed;
   final String descpritionButtom;
+  final Color color;
   final OnPressed onPressed;
   final ValueChanged<bool> onHighlightChanged;
 
@@ -16,13 +17,14 @@ class WikiButtom extends StatelessWidget {
     this.onPressed,
     this.onHighlightChanged,
     this.isPressed = false,
+    this.color = Yello,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return FlatButton(
       splashColor: Colors.white,
-      color: Yello,
+      color: color,
       onPressed: onPressed, //!enable ? onPressed : null,
       shape: RoundedRectangleBorder(
         side: BorderSide(color: White), //Theme.of(context).primaryColor),
