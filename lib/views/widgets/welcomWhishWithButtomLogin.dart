@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:wiiqare/views/widgets/wikiButtonLoginLockroUnLock.dart';
 
+typedef void OnPressed();
+
 class WelcomWhishWithButtomLogin extends StatelessWidget {
+  final OnPressed onPressed;
   const WelcomWhishWithButtomLogin({
     Key key,
+    this.onPressed,
   }) : super(key: key);
 
   @override
@@ -20,8 +24,7 @@ class WelcomWhishWithButtomLogin extends StatelessWidget {
           ],
         ),
         WikiButtonLoginLockroUnLock(
-          descpritionButtom: "Login",
-        )
+            descpritionButtom: "Login", onPressed: onPressed)
       ],
     );
   }
