@@ -87,58 +87,161 @@ class Help extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: 100,
-                        width: 90,
-                        child: WelcomItemsButtom(
-                          size: size,
-                          color: BlueText,
-                          widget: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Align(
-                                  alignment: Alignment.topCenter,
-                                  child: CircleAvatar(
-                                    backgroundColor: BlueText,
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: 90,
+                            width: size.width * .5,
+                            child: WelcomItemsButtom(
+                              size: size,
+                              widget: Stack(
+                                children: [
+                                  Positioned(
+                                    right: 0,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          right: 8.0, top: 5.0),
+                                      child: SingleTitle(
+                                        singleTitle: "Enligne",
+                                        color: Grey,
+                                        size: 8.0,
+                                      ),
+                                    ),
                                   ),
-                                ),
-                                SingleTitle(
-                                  singleTitle: "Guide",
-                                  size: 10.0,
-                                )
-                              ],
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Center(
+                                          child: Container(
+                                            height: 50,
+                                            width: 50,
+                                            decoration: BoxDecoration(
+                                              color: BlueText,
+                                              borderRadius:
+                                                  BorderRadius.circular(100),
+                                            ),
+                                            child: Stack(
+                                              children: [
+                                                Positioned(
+                                                  bottom: 0,
+                                                  right: 5,
+                                                  child: Container(
+                                                    height: 10,
+                                                    width: 10,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.green,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                        100,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            SingleTitle(
+                                              singleTitle: "Dr",
+                                              color: Grey,
+                                              size: 11.0,
+                                            ),
+                                            SingleTitle(
+                                              singleTitle: "Robert  M.",
+                                              color: Grey,
+                                              size: 11.0,
+                                            ),
+                                            SingleTitle(
+                                              singleTitle: "Salut Avez-vous", //
+                                              color: Grey,
+                                              size: 10.0,
+                                            ),
+                                            SingleTitle(
+                                              singleTitle:
+                                                  "besoin d’assistance?",
+                                              color: Grey,
+                                              size: 10.0,
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 100,
-                        width: 90,
-                        child: WelcomItemsButtom(
-                          size: size,
-                          color: BlueText,
-                          widget: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Align(
-                                  alignment: Alignment.topCenter,
-                                  child: CircleAvatar(
-                                    backgroundColor: BlueText,
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 100,
+                                width: 90,
+                                child: WelcomItemsButtom(
+                                  size: size,
+                                  color: BlueText,
+                                  widget: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.topCenter,
+                                          child: CircleAvatar(
+                                            backgroundColor: BlueText,
+                                          ),
+                                        ),
+                                        SingleTitle(
+                                          singleTitle: "Guide",
+                                          size: 10.0,
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
-                                SingleTitle(
-                                  singleTitle: "Map",
-                                  size: 10.0,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
+                              ),
+                              SizedBox(
+                                height: 100,
+                                width: 90,
+                                child: WelcomItemsButtom(
+                                  size: size,
+                                  color: BlueText,
+                                  widget: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.topCenter,
+                                          child: CircleAvatar(
+                                            backgroundColor: BlueText,
+                                          ),
+                                        ),
+                                        SingleTitle(
+                                          singleTitle: "Map",
+                                          size: 10.0,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      )
                     ],
                   ),
                 ),
