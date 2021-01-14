@@ -7,3 +7,4 @@ export 'wiIQareCenterLogoWithIcons.dart';
 export 'singleText20pixel.dart';
 export 'welcomWhishWithButtomLogin.dart';
 export 'welcomItemsButtom.dart';
+export 'wikiOffres.dart';
