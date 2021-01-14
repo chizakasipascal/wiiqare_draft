@@ -4,12 +4,13 @@ import 'package:wiiqare/utils/colors.dart';
 class WelcomItemsButtom extends StatelessWidget {
   final Widget widget;
   final Size size;
-  final Color color;
+  final Color color, background;
   const WelcomItemsButtom({
     Key key,
     @required this.size,
     @required this.widget,
     this.color = Yello,
+    this.background = White,
   }) : super(key: key);
 
   @override
@@ -21,6 +22,7 @@ class WelcomItemsButtom extends StatelessWidget {
         child: Material(
           child: Container(
             height: 180,
+            color: background,
             width: size.width * .4,
             child: Stack(
               children: [
