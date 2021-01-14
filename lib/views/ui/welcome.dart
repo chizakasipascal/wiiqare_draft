@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
+import 'package:wiiqare/views/widgets/welcomWhishWithButtomLogin.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
 class Welcome extends StatelessWidget {
@@ -23,7 +25,15 @@ class Welcome extends StatelessWidget {
                 SizedBox(height: size.height * 0.1),
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0),
-                  child: WelcomWhishWithButtomLogin(),
+                  child: WelcomWhishWithButtomLogin(
+                    onPressed: () => {
+                      {
+                        print("Welcom to help"),
+                        //TODO:Code de navigator from help page
+                        Navigator.pushNamed(context, Routes.help)
+                      },
+                    },
+                  ),
                 ),
                 Spacer(),
                 Padding(
