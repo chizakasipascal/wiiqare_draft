@@ -2,15 +2,61 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
+import 'package:wiiqare/views/widgets/welcomItemsButtom.dart';
 import 'package:wiiqare/views/widgets/welcomWhishWithButtomLogin.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
+import 'package:wiiqare/views/widgets/wikiOffres.dart';
 
 class Welcome extends StatelessWidget {
-  var montant = 20000000;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      bottomSheet: Container(
+        height: 200,
+        // color: Colors.red,
+        child: Stack(
+          children: [
+            GestureDetector(
+              onTap: () {
+                print("add scroll effect");
+              },
+              child: Container(
+                //color: Colors.green,
+                height: 15,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 3.0,
+                      width: 60.0,
+                      decoration: BoxDecoration(
+                        color: Grey.withOpacity(.5),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Column(
+              children: [
+                SizedBox(height: 10),
+                WikiOffres(
+                  size: size,
+                  bonus: 1000,
+                  onPressed: () {
+                    //Test de navigation to home
+                    Navigator.pushNamed(context, Routes.home);
+
+                    //TODO: Code propres aceete fonction
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: Stack(
           children: [
@@ -35,7 +81,8 @@ class Welcome extends StatelessWidget {
                     },
                   ),
                 ),
-                Spacer(),
+                // Spacer(),
+                SizedBox(height: 120),
                 Padding(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 10.0, vertical: 0.0),
@@ -45,6 +92,10 @@ class Welcome extends StatelessWidget {
                     children: [
                       WelcomItemsButtom(
                         size: size,
+                        onPressed: () => {
+                          ///
+                          Navigator.pushNamed(context, Routes.authentification)
+                        },
                         widget: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -56,20 +107,12 @@ class Welcome extends StatelessWidget {
                                 child: SizedBox(
                                   height: 70,
                                   width: 70,
-                                  child:
-                                      CircleAvatar(backgroundColor: BlueText),
+                                  child: Icon(
+                                    Icons.login,
+                                    size: 50.0,
+                                    color: Yello,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(height: 5),
-                              SingleTitle(
-                                singleTitle: "Salut",
-                                color: Grey,
-                                size: 11.0,
-                              ),
-                              SingleTitle(
-                                singleTitle: "Christopher Bengangine",
-                                color: Grey,
-                                size: 11.0,
                               ),
                               SizedBox(height: 5),
                               Center(
@@ -77,19 +120,10 @@ class Welcome extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     SingleTitle(
-                                      singleTitle: "Votre solde est:",
+                                      singleTitle: "Créer un compte Wiiqare",
                                       color: Grey,
-                                      size: 12.0,
+                                      size: 11.0,
                                     ),
-                                    SizedBox(height: 10),
-                                    // getMontant
-                                    Text(
-                                      "${montant}FC",
-                                      style: TextStyle(
-                                          color: BlueText,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 15),
-                                    )
                                   ],
                                 ),
                               )
@@ -151,16 +185,6 @@ class Welcome extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-                WikiOffres(
-                  size: size,
-                  bonus: 1000,
-                  onPressed: () {
-                    //Test de navigation to home
-                    Navigator.pushNamed(context, Routes.home);
-
-                    //TODO: Code propres aceete fonction
-                  },
                 ),
               ],
             ),

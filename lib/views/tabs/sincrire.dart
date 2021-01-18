@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+import 'package:wiiqare/constants/strings.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
@@ -8,6 +10,27 @@ class Sincrire extends StatefulWidget {
 }
 
 class _SincrireState extends State<Sincrire> {
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
+  final TextEditingController controller = TextEditingController();
+  String initialCountry = 'CD';
+  PhoneNumber number = PhoneNumber(isoCode: 'CD');
+
+  void getPhoneNumber(String phoneNumber) async {
+    PhoneNumber number =
+        await PhoneNumber.getRegionInfoFromPhoneNumber(phoneNumber, 'CD');
+
+    setState(() {
+      this.number = number;
+    });
+  }
+
+  @override
+  void dispose() {
+    controller?.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -41,11 +64,54 @@ class _SincrireState extends State<Sincrire> {
             ),
             SizedBox(height: 20.0),
 
-            //TODO:Packegs number and flags authentification
             Container(
-              height: 150,
-              child: Placeholder(),
+              decoration: BoxDecoration(
+                color: White,
+                borderRadius: BorderRadius.circular(9),
+                border: Border.all(
+                  color: Yello,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                      color: HintText, offset: Offset(0, 4), blurRadius: 2),
+                ],
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: InternationalPhoneNumberInput(
+                  onInputChanged: (PhoneNumber number) {
+                    print(number.phoneNumber);
+                  },
+                  onInputValidated: (bool value) {
+                    print(value);
+                  },
+                  selectorConfig: SelectorConfig(
+                    selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
+                  ),
+                  errorMessage: Strings.ErrorMessageNumberInvalide,
+                  hintText: Strings.HintTextDescriptionPhoneNumber,
+                  ignoreBlank: false,
+                  autoValidateMode: AutovalidateMode.onUserInteraction,
+                  textStyle: TextStyle(color: Grey),
+                  selectorTextStyle: TextStyle(color: Grey),
+                  initialValue: number,
+                  textFieldController: controller,
+                  formatInput: false,
+                  cursorColor: BlueText,
+                  keyboardType: TextInputType.numberWithOptions(
+                    signed: true,
+                    decimal: true,
+                  ),
+                  inputBorder: OutlineInputBorder(),
+                  inputDecoration: InputDecoration(border: InputBorder.none),
+                  onSaved: (PhoneNumber number) {
+                    print('On Saved: $number');
+                  },
+                ),
+              ),
             ),
+
+            SizedBox(height: 20.0),
             //Mot de passe
             Container(
               decoration: BoxDecoration(
@@ -73,7 +139,13 @@ class _SincrireState extends State<Sincrire> {
             SizedBox(
               height: 60,
               child: WikiButtom(
+                color: Yello,
                 descpritionButtom: "S'inscrire",
+                onPressed: () => {
+                  formKey.currentState.validate() //Function to validate number
+                  //  formKey.currentState.save() //function to save number
+                  // getPhoneNumber(number.phoneNumber) //function to getnumber
+                },
               ),
             ),
             SizedBox(height: 20.0),

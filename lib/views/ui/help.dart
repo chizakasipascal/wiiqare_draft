@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
+import 'package:wiiqare/views/widgets/welcomItemsButtom.dart';
 import 'package:wiiqare/views/widgets/welcomWhishWithButtomLogin.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
+import 'package:wiiqare/views/widgets/wikiOffres.dart';
 
 class Help extends StatelessWidget {
   var montant = 20000000;
