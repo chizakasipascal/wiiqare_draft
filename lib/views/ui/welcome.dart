@@ -4,7 +4,6 @@ import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
 import 'package:wiiqare/views/widgets/welcomItemsButtom.dart';
 import 'package:wiiqare/views/widgets/welcomWhishWithButtomLogin.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:wiiqare/views/widgets/wikiOffres.dart';
 
@@ -13,6 +12,51 @@ class Welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      bottomSheet: Container(
+        height: 200,
+        // color: Colors.red,
+        child: Stack(
+          children: [
+            GestureDetector(
+              onTap: () {
+                print("add scroll effect");
+              },
+              child: Container(
+                //color: Colors.green,
+                height: 15,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 3.0,
+                      width: 60.0,
+                      decoration: BoxDecoration(
+                        color: Grey.withOpacity(.5),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Column(
+              children: [
+                SizedBox(height: 10),
+                WikiOffres(
+                  size: size,
+                  bonus: 1000,
+                  onPressed: () {
+                    //Test de navigation to home
+                    Navigator.pushNamed(context, Routes.home);
+
+                    //TODO: Code propres aceete fonction
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: Stack(
           children: [
@@ -37,7 +81,8 @@ class Welcome extends StatelessWidget {
                     },
                   ),
                 ),
-                Spacer(),
+                // Spacer(),
+                SizedBox(height: 120),
                 Padding(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 10.0, vertical: 0.0),
@@ -140,16 +185,6 @@ class Welcome extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-                WikiOffres(
-                  size: size,
-                  bonus: 1000,
-                  onPressed: () {
-                    //Test de navigation to home
-                    Navigator.pushNamed(context, Routes.home);
-
-                    //TODO: Code propres aceete fonction
-                  },
                 ),
               ],
             ),
