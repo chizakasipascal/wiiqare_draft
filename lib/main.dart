@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: Strings.AppName,
       theme: themeData,
       home: Authentification(),
-      initialRoute: Routes.authentification,
+      initialRoute: Routes.welcome,
       routes: Routes.routes,
     );
   }
