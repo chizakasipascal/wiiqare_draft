@@ -64,7 +64,6 @@ class _SincrireState extends State<Sincrire> {
             ),
             SizedBox(height: 20.0),
 
-            //TODO:Packegs number and flags authentification
             Container(
               decoration: BoxDecoration(
                 color: White,
@@ -92,12 +91,13 @@ class _SincrireState extends State<Sincrire> {
                   errorMessage: Strings.ErrorMessageNumberInvalide,
                   hintText: Strings.HintTextDescriptionPhoneNumber,
                   ignoreBlank: false,
-                  autoValidateMode: AutovalidateMode.disabled,
+                  autoValidateMode: AutovalidateMode.onUserInteraction,
                   textStyle: TextStyle(color: Grey),
                   selectorTextStyle: TextStyle(color: Grey),
                   initialValue: number,
                   textFieldController: controller,
                   formatInput: false,
+                  cursorColor: BlueText,
                   keyboardType: TextInputType.numberWithOptions(
                     signed: true,
                     decimal: true,
@@ -144,7 +144,7 @@ class _SincrireState extends State<Sincrire> {
                 onPressed: () => {
                   formKey.currentState.validate() //Function to validate number
                   //  formKey.currentState.save() //function to save number
-                  // getPhoneNumber(number.toString()) //function to getnumber
+                  // getPhoneNumber(number.phoneNumber) //function to getnumber
                 },
               ),
             ),

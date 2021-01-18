@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
+import 'package:wiiqare/views/widgets/welcomItemsButtom.dart';
 import 'package:wiiqare/views/widgets/welcomWhishWithButtomLogin.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
+import 'package:wiiqare/views/widgets/wikiOffres.dart';
 
 class Welcome extends StatelessWidget {
-  var montant = 20000000;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -45,6 +47,10 @@ class Welcome extends StatelessWidget {
                     children: [
                       WelcomItemsButtom(
                         size: size,
+                        onPressed: () => {
+                          ///
+                          Navigator.pushNamed(context, Routes.authentification)
+                        },
                         widget: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -56,20 +62,12 @@ class Welcome extends StatelessWidget {
                                 child: SizedBox(
                                   height: 70,
                                   width: 70,
-                                  child:
-                                      CircleAvatar(backgroundColor: BlueText),
+                                  child: Icon(
+                                    Icons.login,
+                                    size: 50.0,
+                                    color: Yello,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(height: 5),
-                              SingleTitle(
-                                singleTitle: "Salut",
-                                color: Grey,
-                                size: 11.0,
-                              ),
-                              SingleTitle(
-                                singleTitle: "Christopher Bengangine",
-                                color: Grey,
-                                size: 11.0,
                               ),
                               SizedBox(height: 5),
                               Center(
@@ -77,19 +75,10 @@ class Welcome extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     SingleTitle(
-                                      singleTitle: "Votre solde est:",
+                                      singleTitle: "Créer un compte Wiiqare",
                                       color: Grey,
-                                      size: 12.0,
+                                      size: 11.0,
                                     ),
-                                    SizedBox(height: 10),
-                                    // getMontant
-                                    Text(
-                                      "${montant}FC",
-                                      style: TextStyle(
-                                          color: BlueText,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 15),
-                                    )
                                   ],
                                 ),
                               )

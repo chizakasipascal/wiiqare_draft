@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
+import 'package:wiiqare/views/widgets/welcomItemsButtom.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
-typedef OnPressed onPressed();
+typedef OnPressed();
 
 class WikiOffres extends StatelessWidget {
   final Size size;
