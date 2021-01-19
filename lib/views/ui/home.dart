@@ -1,72 +1,79 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
-import 'package:wiiqare/views/widgets/Background/background.dart';
-import 'package:wiiqare/views/widgets/widgets.dart';
-import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
-import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
+import 'package:wiiqare/views/tabsHome/tabsHome.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:wiiqare/views/widgets/bottom_bar.dart';
 
-class Home extends StatelessWidget {
-  double percent = 10;
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+  TabController _controller;
+  bool buttonPressed = false;
+  int _selectedIndex = 0;
+
+  void _onItemClike(int index) {
+    setState(
+      () {
+        _selectedIndex = index;
+        switch (index) {
+          case 0:
+            break;
+          case 1:
+            break;
+          case 2:
+            break;
+          default:
+            break;
+        }
+      },
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TabController(vsync: this, length: 5);
+
+    _controller.addListener(_handleTabSelection);
+
+    super.initState();
+  }
+
+  _handleTabSelection() {
+    if (_controller.indexIsChanging) {
+      setState(() {
+        _selectedIndex = _controller.index;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Scaffold(
+      bottomNavigationBar: BottomBar(),
       body: SafeArea(
-        child: Column(
-          children: [
-            BackGroundHome(
-              size: size,
-              widget: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    SingleTitle(
-                      singleTitle: "Mon objectif : 50.000 Fc par semaine",
-                    ),
-                    RoundedProgressBar(
-                      height: 20,
-                      childCenter: SingleTitle(
-                        singleTitle: "${percent}",
-                      ),
-                      style: RoundedProgressBarStyle(
-                          borderWidth: 0, widthShadow: 0),
-                      margin: EdgeInsets.symmetric(vertical: 16),
-                      borderRadius: BorderRadius.circular(24),
-                      percent: percent,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SingleTitle(
-                              singleTitle: "Mon compte :1500 Fc",
-                            ),
-                            SizedBox(height: 5.0),
-                            SingleTitle(
-                              singleTitle: "Mes points:150 points",
-                            ),
-                          ],
-                        ),
-                        WikiButtom(
-                          descpritionButtom: "Recharge",
-                          color: Yello,
-                          onPressed: () {},
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Placeholder()
-          ],
+        child: DefaultTabController(
+          length: 5,
+          child: TabBarView(
+            controller: _controller,
+            physics: new NeverScrollableScrollPhysics(),
+            children: [
+              HomeTabs(),
+              HomeTabs(),
+              HomeTabs(),
+              HomeTabs(),
+              HomeTabs()
+            ],
+          ),
         ),
       ),
     );
+  }
+
+  _getIndex() {
+    print("Index is ${_controller.index}");
   }
 }
