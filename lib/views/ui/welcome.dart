@@ -63,7 +63,8 @@ class Welcome extends StatelessWidget {
         child: Stack(
           children: [
             WelcomBackGround(),
-            Center(
+            //TODO:Image  in the background
+            /* Center(
               child: Container(
                 height: 100,
                 width: 100,
@@ -85,7 +86,7 @@ class Welcome extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
+            ),*/
             Column(
               children: [
                 Padding(
