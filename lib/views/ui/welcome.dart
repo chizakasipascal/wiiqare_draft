@@ -9,7 +9,45 @@ import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:wiiqare/views/widgets/wikiOffres.dart';
 
-class Welcome extends StatelessWidget {
+class Welcome extends StatefulWidget {
+  @override
+  _WelcomeState createState() => _WelcomeState();
+}
+
+class _WelcomeState extends State<Welcome> {
+  final _scaffoldKey = new GlobalKey<ScaffoldState>();
+  VoidCallback _showPersBottomSheetCallBack;
+
+  @override
+  void initState() {
+    super.initState();
+    _showPersBottomSheetCallBack = _showPersBottomSheet;
+  }
+
+  void _showPersBottomSheet() {
+    setState(() {
+      _showPersBottomSheetCallBack = null;
+    });
+    _scaffoldKey.currentState
+        .showBottomSheet((context) {
+          return new Container(
+            height: 300.0,
+            color: Colors.greenAccent,
+            child: new Center(
+              child: new Text("Hi BottomSheet"),
+            ),
+          );
+        })
+        .closed
+        .whenComplete(() {
+          if (mounted) {
+            setState(() {
+              _showPersBottomSheetCallBack = _showPersBottomSheet;
+            });
+          }
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
