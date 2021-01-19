@@ -13,10 +13,14 @@ class HomeTabs extends StatefulWidget {
 }
 
 class _HomeTabsState extends State<HomeTabs> {
-  double percent = 10;
+  double percent;
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    setState(() {
+      percent = 35;
+    });
     return Column(
       children: [
         BackGroundHome(
@@ -28,11 +32,13 @@ class _HomeTabsState extends State<HomeTabs> {
               children: [
                 SingleTitle(
                   singleTitle: "Mon objectif : 50.000 Fc par semaine",
+                  color: White,
                 ),
                 RoundedProgressBar(
                   height: 20,
                   childCenter: SingleTitle(
-                    singleTitle: "${percent}",
+                    singleTitle:
+                        "${percent}", //TODO:Le pourcentage de la bar de progresse
                   ),
                   style:
                       RoundedProgressBarStyle(borderWidth: 0, widthShadow: 0),
@@ -49,18 +55,24 @@ class _HomeTabsState extends State<HomeTabs> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SingleTitle(
-                          singleTitle: "Mon compte :1500 Fc",
+                          singleTitle:
+                              "Mon compte :1500 Fc", //TODO:Remplacer par le montat du compte
+                          color: White,
                         ),
                         SizedBox(height: 5.0),
                         SingleTitle(
-                          singleTitle: "Mes points:150 points",
+                          singleTitle:
+                              "Mes points:50 points", //TODO:Remplacer par le nombre de point
+                          color: White,
                         ),
                       ],
                     ),
                     WikiButtom(
                       descpritionButtom: "Recharge",
                       color: Yello,
-                      onPressed: () {},
+                      onPressed: () {
+                        //TODO:Mettre le code recharge aproprie
+                      },
                     ),
                   ],
                 )
