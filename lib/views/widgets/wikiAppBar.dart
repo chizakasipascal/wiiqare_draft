@@ -19,7 +19,8 @@ class WikiAppBar extends StatelessWidget {
         width: size.width,
         padding: const EdgeInsets.only(left: 10.0, right: 10.0),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,12 +38,16 @@ class WikiAppBar extends StatelessWidget {
               ],
             ),
             Spacer(),
-            Icon(
-              Icons.notifications,
-              color: Bleu,
-            ),
-            CircleAvatar(
-              backgroundColor: BlueText,
+            Row(
+              children: [
+                Icon(
+                  Icons.notifications,
+                  color: Bleu,
+                ),
+                CircleAvatar(
+                  backgroundColor: Bleu,
+                )
+              ],
             )
           ],
         ),

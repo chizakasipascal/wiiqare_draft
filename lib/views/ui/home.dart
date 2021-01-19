@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wiiqare/views/widgets/widgets.dart';
+import 'package:wiiqare/views/widgets/Background/background.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -9,8 +9,11 @@ class Home extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            WikiAppBar(
-              name: "Ebene jean",
+            BackGroundHome(
+              size: size,
+              widget: Column(
+                children: [],
+              ),
             ),
           ],
         ),
