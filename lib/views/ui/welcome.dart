@@ -1,13 +1,53 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
 import 'package:wiiqare/views/widgets/welcomItemsButtom.dart';
 import 'package:wiiqare/views/widgets/welcomWhishWithButtomLogin.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:wiiqare/views/widgets/wikiOffres.dart';
 
-class Welcome extends StatelessWidget {
+class Welcome extends StatefulWidget {
+  @override
+  _WelcomeState createState() => _WelcomeState();
+}
+
+class _WelcomeState extends State<Welcome> {
+  final _scaffoldKey = new GlobalKey<ScaffoldState>();
+  VoidCallback _showPersBottomSheetCallBack;
+
+  @override
+  void initState() {
+    super.initState();
+    _showPersBottomSheetCallBack = _showPersBottomSheet;
+  }
+
+  void _showPersBottomSheet() {
+    setState(() {
+      _showPersBottomSheetCallBack = null;
+    });
+    _scaffoldKey.currentState
+        .showBottomSheet((context) {
+          return new Container(
+            height: 300.0,
+            color: Colors.greenAccent,
+            child: new Center(
+              child: new Text("Hi BottomSheet"),
+            ),
+          );
+        })
+        .closed
+        .whenComplete(() {
+          if (mounted) {
+            setState(() {
+              _showPersBottomSheetCallBack = _showPersBottomSheet;
+            });
+          }
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -61,6 +101,30 @@ class Welcome extends StatelessWidget {
         child: Stack(
           children: [
             WelcomBackGround(),
+            //TODO:Image  in the background
+            /* Center(
+              child: Container(
+                height: 100,
+                width: 100,
+                child: CachedNetworkImage(
+                  fit: BoxFit.cover,
+                  imageUrl: Pictures.WelcomImageBackGround,
+                  placeholder: (context, url) =>
+                      Center(child: Icon(Icons.image)),
+                  errorWidget: (context, url, error) => Center(
+                    child: Icon(Icons.error, color: Colors.red),
+                  ),
+                  imageBuilder: (context, imageProvider) => Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: imageProvider,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),*/
             Column(
               children: [
                 Padding(
@@ -68,6 +132,7 @@ class Welcome extends StatelessWidget {
                       horizontal: 10.0, vertical: 10.0),
                   child: WiIQareCenterLogoWithIcons(size: size),
                 ),
+
                 SizedBox(height: size.height * 0.1),
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0),

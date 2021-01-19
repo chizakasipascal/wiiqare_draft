@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/pictures.dart';
 
 class LogoWiiQare extends StatelessWidget {
   const LogoWiiQare({
@@ -16,7 +17,7 @@ class LogoWiiQare extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            "assets/images/logowiqqre.jpg",
+            Pictures.PathLogoWiiQare,
           ),
           fit: BoxFit.cover,
         ),
