@@ -7,12 +7,12 @@ import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
 import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
 
-class HomeTabs extends StatefulWidget {
+class Wallets extends StatefulWidget {
   @override
-  _HomeTabsState createState() => _HomeTabsState();
+  _WalletsState createState() => _WalletsState();
 }
 
-class _HomeTabsState extends State<HomeTabs> {
+class _WalletsState extends State<Wallets> {
   double percent = 10;
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class _HomeTabsState extends State<HomeTabs> {
           ),
         ),
         SizedBox(height: 10),
-        Text("Home")
+        Text("Walte")
       ],
     );
   }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/tabsHome/tabsHome.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:wiiqare/views/widgets/bottom_bar.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -10,70 +9,126 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
-  TabController _controller;
+  PageController _controller;
   bool buttonPressed = false;
   int _selectedIndex = 0;
 
-  void _onItemClike(int index) {
-    setState(
-      () {
-        _selectedIndex = index;
-        switch (index) {
-          case 0:
-            break;
-          case 1:
-            break;
-          case 2:
-            break;
-          default:
-            break;
-        }
-      },
-    );
-  }
-
   @override
   void initState() {
+    _controller = PageController();
     super.initState();
-    _controller = TabController(vsync: this, length: 5);
-
-    _controller.addListener(_handleTabSelection);
-
-    super.initState();
-  }
-
-  _handleTabSelection() {
-    if (_controller.indexIsChanging) {
-      setState(() {
-        _selectedIndex = _controller.index;
-      });
-    }
   }
 
   @override
   Widget build(BuildContext context) {
+    final _pages = [
+      HomeTabs(),
+      Wallets(),
+      UsersTabs(),
+      RecompeseTabs(),
+      SettingdTabs()
+    ];
     return Scaffold(
-      bottomNavigationBar: BottomBar(),
       body: SafeArea(
-        child: DefaultTabController(
-          length: 5,
-          child: TabBarView(
-            controller: _controller,
-            physics: new NeverScrollableScrollPhysics(),
-            children: [
-              HomeTabs(),
-              HomeTabs(),
-              HomeTabs(),
-              HomeTabs(),
-              HomeTabs()
-            ],
-          ),
+        child: PageView(
+          controller: _controller,
+          physics: NeverScrollableScrollPhysics(),
+          children: _pages,
+          onPageChanged: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.shifting,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            activeIcon: Icon(FontAwesomeIcons.home, size: 20, color: Yello),
+            icon: Icon(
+              FontAwesomeIcons.home,
+              size: 20,
+              color: BlueText,
+            ),
+            title: const Text(
+              "Home",
+              style: TextStyle(
+                fontSize: 12,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Icon(FontAwesomeIcons.wallet, size: 20, color: Yello),
+            icon: Icon(
+              FontAwesomeIcons.wallet,
+              size: 20,
+              color: BlueText,
+            ),
+            title: const Text(
+              "Wallet",
+              style: TextStyle(
+                fontSize: 12,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Icon(FontAwesomeIcons.users, size: 20, color: Yello),
+            icon: Icon(
+              FontAwesomeIcons.users,
+              size: 20,
+              color: BlueText,
+            ),
+            title: const Text(
+              "Groupe",
+              style: TextStyle(
+                fontSize: 12,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Icon(FontAwesomeIcons.boxOpen, size: 20, color: Yello),
+            icon: Icon(
+              FontAwesomeIcons.boxOpen,
+              size: 20,
+              color: BlueText,
+            ),
+            title: const Text(
+              "Recompense",
+              style: TextStyle(
+                fontSize: 12,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Icon(FontAwesomeIcons.cog, size: 20, color: Yello),
+            icon: Icon(
+              FontAwesomeIcons.cog,
+              size: 20,
+              color: BlueText,
+            ),
+            title: const Text(
+              "Parametre",
+              style: TextStyle(
+                fontSize: 12,
+              ),
+            ),
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Yello,
+        unselectedItemColor: BlueText,
+        unselectedLabelStyle: TextStyle(
+          color: BlueText,
+        ),
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+            _controller.animateToPage(_selectedIndex,
+                duration: Duration(milliseconds: 20), curve: Curves.bounceIn);
+          });
+        },
+      ),
     );
-  }
-
-  _getIndex() {
-    print("Index is ${_controller.index}");
   }
 }
