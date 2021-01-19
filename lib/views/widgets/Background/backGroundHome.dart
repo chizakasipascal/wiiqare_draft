@@ -31,8 +31,12 @@ class BackGroundHome extends StatelessWidget {
             color: Bleu,
             borderRadius: BorderRadius.circular(10),
           ),
-          child: widget,
-        )
+          child: Container(
+            height: 100,
+            width: size.width,
+            child: widget,
+          ),
+        ),
       ],
     );
   }

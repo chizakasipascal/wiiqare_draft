@@ -179,6 +179,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.8.1"
+  flutter_rounded_progress_bar:
+    dependency: "direct dev"
+    description:
+      name: flutter_rounded_progress_bar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.2"
   flutter_svg:
     dependency: "direct dev"
     description:
