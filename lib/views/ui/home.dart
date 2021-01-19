@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
 class Home extends StatelessWidget {
@@ -7,11 +8,24 @@ class Home extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: Stack(
+          overflow: Overflow.visible,
           children: [
-            WikiAppBar(
-              name: "Ebene jean",
+            Container(
+              height: size.height * .2,
+              color: BlueText,
+              child: WikiAppBar(
+                name: "Ebene jean",
+              ),
             ),
+            Container(
+              height: size.height * .2,
+              margin: const EdgeInsets.only(top: 80, left: 20.0, right: 20.0),
+              decoration: BoxDecoration(
+                color: Bleu,
+                borderRadius: BorderRadius.circular(10),
+              ),
+            )
           ],
         ),
       ),
