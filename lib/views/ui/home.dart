@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wiiqare/utils/colors.dart';
-import 'package:wiiqare/views/widgets/widgets.dart';
+import 'package:wiiqare/views/widgets/Background/background.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -8,24 +7,14 @@ class Home extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          overflow: Overflow.visible,
+        child: Column(
           children: [
-            Container(
-              height: size.height * .2,
-              color: BlueText,
-              child: WikiAppBar(
-                name: "Ebene jean",
+            BackGroundHome(
+              size: size,
+              widget: Column(
+                children: [],
               ),
             ),
-            Container(
-              height: size.height * .2,
-              margin: const EdgeInsets.only(top: 80, left: 20.0, right: 20.0),
-              decoration: BoxDecoration(
-                color: Bleu,
-                borderRadius: BorderRadius.circular(10),
-              ),
-            )
           ],
         ),
       ),
