@@ -147,6 +147,8 @@ class _WalletsState extends State<Wallets> {
             ],
           ),
         ),
+        SizedBox(height: 10),
+        SingleTitle(singleTitle: "Historique")
       ],
     );
   }
