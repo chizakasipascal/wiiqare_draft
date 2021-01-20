@@ -37,7 +37,7 @@ class WiIQareCenterLogoWithIcons extends StatelessWidget {
             onPressed: () {
               //TODO:Code QCoder Scanner
               //TODO:NAvigation to QRCodeScanner
-              Navigator.pushNamed(context, Routes.qRCodeScanner);
+              Navigator.pushNamed(context, Routes.modePayement);
             },
             icon: Icon(Icons.qr_code, color: White),
           ),

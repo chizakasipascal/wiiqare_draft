@@ -9,3 +9,4 @@ export 'singleText20pixel.dart';
 // export 'welcomItemsButtom.dart';
 // export 'wikiOffres.dart';
 export 'wikiAppBar.dart';
+export '../ui/qrCodeViewsScanncer.dart';

@@ -4,17 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:animated_icon_button/animated_icon_button.dart';
+import 'package:wiiqare/views/widgets/widgets.dart';
 
-class QRCodeScanner extends StatefulWidget {
-  const QRCodeScanner({
+class QRCodeScannerViews extends StatefulWidget {
+  const QRCodeScannerViews({
     Key key,
   }) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _QRCodeScannerState();
+  State<StatefulWidget> createState() => _QRCodeScannerViewsState();
 }
 
-class _QRCodeScannerState extends State<QRCodeScanner>
+class _QRCodeScannerViewsState extends State<QRCodeScannerViews>
     with SingleTickerProviderStateMixin {
   AnimationController _animationController;
   bool isPlaying = false;
@@ -68,11 +69,15 @@ class _QRCodeScannerState extends State<QRCodeScanner>
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
+                  SizedBox(height: 10.0),
                   if (result !=
                       null) //  "Barcode Type: ${describeEnum(result.format)}
                     Text("Information: ${result.code}")
                   else
-                    Text('Scan le code'),
+                    SingleTitle(
+                      singleTitle: "Scannez pour payer",
+                    ),
+                  SizedBox(height: 10.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -166,20 +171,20 @@ class _QRCodeScannerState extends State<QRCodeScanner>
                     children: <Widget>[
                       Container(
                         margin: EdgeInsets.all(8),
-                        child: RaisedButton(
+                        child: WikiButtom(
                           onPressed: () {
                             controller?.pauseCamera();
                           },
-                          child: Text('pause', style: TextStyle(fontSize: 20)),
+                          descpritionButtom: ('Appercie QR'),
                         ),
                       ),
                       Container(
                         margin: EdgeInsets.all(8),
-                        child: RaisedButton(
+                        child: WikiButtom(
                           onPressed: () {
                             controller?.resumeCamera();
                           },
-                          child: Text('resume', style: TextStyle(fontSize: 20)),
+                          descpritionButtom: ('Reprendre le scan'),
                         ),
                       )
                     ],
