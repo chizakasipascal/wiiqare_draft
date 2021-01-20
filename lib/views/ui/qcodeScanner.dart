@@ -1,8 +1,9 @@
 import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:wiiqare/utils/colors.dart';
+import 'package:animated_icon_button/animated_icon_button.dart';
 
 class QRCodeScanner extends StatefulWidget {
   const QRCodeScanner({
@@ -13,7 +14,22 @@ class QRCodeScanner extends StatefulWidget {
   State<StatefulWidget> createState() => _QRCodeScannerState();
 }
 
-class _QRCodeScannerState extends State<QRCodeScanner> {
+class _QRCodeScannerState extends State<QRCodeScanner>
+    with SingleTickerProviderStateMixin {
+  AnimationController _animationController;
+  bool isPlaying = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 200),
+      reverseDuration: Duration(milliseconds: 200),
+    );
+  }
+
+  bool isFlash = false;
   Barcode result;
   QRViewController controller;
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
@@ -30,6 +46,15 @@ class _QRCodeScannerState extends State<QRCodeScanner> {
     }
   }
 
+  void _handleOnPressed() {
+    setState(() {
+      isPlaying = !isPlaying;
+      isPlaying
+          ? _animationController.forward()
+          : _animationController.reverse();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,45 +68,95 @@ class _QRCodeScannerState extends State<QRCodeScanner> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  if (result != null)
-                    Text(
-                        'Barcode Type: ${describeEnum(result.format)}   Data: ${result.code}')
+                  if (result !=
+                      null) //  "Barcode Type: ${describeEnum(result.format)}
+                    Text("Information: ${result.code}")
                   else
-                    Text('Scan a code'),
+                    Text('Scan le code'),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Container(
                         margin: EdgeInsets.all(8),
-                        child: RaisedButton(
-                            onPressed: () => setState(() {
-                                  controller?.toggleFlash();
-                                }),
+                        decoration: BoxDecoration(
+                          color: White,
+                          borderRadius: BorderRadius.circular(50),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Grey.withOpacity(.4),
+                              blurRadius: 2.0,
+                              offset: Offset(0, 1),
+                            )
+                          ],
+                        ),
+                        child: ClipOval(
+                          child: SizedBox(
+                            height: 50.0,
+                            width: 50.0,
                             child: FutureBuilder(
                               future: controller?.getFlashStatus(),
                               builder: (context, snapshot) {
-                                return Text('Flash: ${snapshot.data}');
+                                return AnimatedIconButton(
+                                  onPressed: () => setState(() {
+                                    controller?.toggleFlash();
+                                    // if (isFlash == false) {
+                                    //   isFlash = true;
+                                    // } else {
+                                    //   isFlash = false;
+                                    // }
+                                    _handleOnPressed();
+                                  }),
+                                  duration: Duration(milliseconds: 200),
+                                  endIcon: Icon(Icons.flash_on, color: Yello),
+                                  startIcon: Icon(Icons.flash_off, color: Grey),
+                                );
                               },
-                            )),
+                            ),
+                          ),
+                        ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        child: RaisedButton(
-                            onPressed: () => setState(() {
-                                  controller?.flipCamera();
-                                }),
+                      ClipOval(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: White,
+                            borderRadius: BorderRadius.circular(50),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Grey.withOpacity(.4),
+                                  blurRadius: 2.0,
+                                  offset: Offset(0, 1))
+                            ],
+                          ),
+                          margin: EdgeInsets.all(8),
+                          child: SizedBox(
+                            height: 50.0,
+                            width: 50.0,
                             child: FutureBuilder(
                               future: controller?.getCameraInfo(),
                               builder: (context, snapshot) {
                                 if (snapshot.data != null) {
-                                  return Text(
-                                      'Camera facing ${describeEnum(snapshot.data)}');
+                                  return AnimatedIconButton(
+                                    //size: 35,
+                                    onPressed: () => setState(() {
+                                      controller?.flipCamera();
+                                      _handleOnPressed();
+                                    }),
+                                    duration: Duration(milliseconds: 200),
+                                    endIcon:
+                                        Icon(Icons.camera_front, color: Yello),
+                                    startIcon:
+                                        Icon(Icons.camera_alt, color: Grey),
+                                  );
+
+                                  // Text('Camera facing ${describeEnum(snapshot.data)}');
                                 } else {
                                   return Text('loading');
                                 }
                               },
-                            )),
+                            ),
+                          ),
+                        ),
                       )
                     ],
                   ),
