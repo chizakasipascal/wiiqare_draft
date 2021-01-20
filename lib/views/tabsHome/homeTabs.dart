@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
-import 'package:wiiqare/views/widgets/widgets.dart';
+import 'package:lottie/lottie.dart';
 import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
 import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
 import 'package:wiiqare/views/widgets/wikiItemHome.dart';
@@ -147,14 +148,18 @@ class _HomeTabsState extends State<HomeTabs> {
               size: 10.0,
             ),
             Spacer(),
-            SingleTitle(
-              singleTitle: "Voir plus",
-              size: 10.0,
-            ),
-            SizedBox(width: 10),
-            Icon(
-              Icons.arrow_right_alt,
-              size: 10,
+            Row(
+              children: [
+                SingleTitle(
+                  singleTitle: "Voir plus",
+                  size: 10.0,
+                ),
+                SizedBox(
+                  height: 10,
+                  width: 15,
+                  child: Lottie.asset(Pictures.ScrollerRight),
+                ),
+              ],
             ),
             SizedBox(width: 15),
           ],
