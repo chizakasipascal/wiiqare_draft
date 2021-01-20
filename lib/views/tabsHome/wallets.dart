@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
-import 'package:wiiqare/utils/colors.dart';
+
 import 'package:wiiqare/views/widgets/Background/background.dart';
-import 'package:wiiqare/views/widgets/widgets.dart';
-import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
-import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
+
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:wiiqare/views/widgets/wikiItemHome.dart';
 
 class Wallets extends StatefulWidget {
   @override
@@ -13,10 +13,16 @@ class Wallets extends StatefulWidget {
 }
 
 class _WalletsState extends State<Wallets> {
+  var valeur;
+
   double percent = 10;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    setState(() {
+      valeur = 3700;
+    });
+
     return Column(
       children: [
         BackGroundHome(
@@ -24,52 +30,123 @@ class _WalletsState extends State<Wallets> {
           widget: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                SingleTitle(
-                  singleTitle: "Mon objectif : 50.000 Fc par semaine",
-                ),
-                RoundedProgressBar(
-                  height: 20,
-                  childCenter: SingleTitle(
-                    singleTitle: "${percent}",
-                  ),
-                  style:
-                      RoundedProgressBarStyle(borderWidth: 0, widthShadow: 0),
-                  margin: EdgeInsets.symmetric(vertical: 16),
-                  borderRadius: BorderRadius.circular(24),
-                  percent: percent,
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SingleTitle(
-                          singleTitle: "Mon compte :1500 Fc",
-                        ),
-                        SizedBox(height: 5.0),
-                        SingleTitle(
-                          singleTitle: "Mes points:150 points",
-                        ),
-                      ],
+                    SingleTitle(
+                      singleTitle: "My total balance",
                     ),
-                    WikiButtom(
-                      descpritionButtom: "Recharge",
-                      color: Yello,
-                      onPressed: () {},
-                    ),
+                    SingleTitle(singleTitle: "${valeur} FC")
                   ],
+                ),
+                Divider(
+                  color: White,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      WikiImtesHome(
+                        icon: Icon(
+                          FontAwesomeIcons.exchangeAlt,
+                          color: Yello,
+                        ),
+                        chaine: "Transfert",
+                        textColor: Yello,
+                        color: White,
+                        border: Yello,
+                        onPressed: () {},
+                      ),
+                      WikiImtesHome(
+                        icon: Icon(
+                          FontAwesomeIcons.qrcode,
+                          color: Yello,
+                        ),
+                        chaine: "Pay",
+                        textColor: Yello,
+                        color: White,
+                        border: Yello,
+                        onPressed: () {},
+                      ),
+                      WikiImtesHome(
+                        icon: Icon(
+                          FontAwesomeIcons.moneyBill,
+                          color: Yello,
+                        ),
+                        chaine: "Recharge",
+                        textColor: Yello,
+                        color: White,
+                        border: Yello,
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
           ),
         ),
         SizedBox(height: 10),
-        Text("Walte")
+        Container(
+          width: size.width,
+          height: size.height * .14,
+          margin: const EdgeInsets.only(left: 5, right: 5, top: 5),
+          padding: const EdgeInsets.only(left: 10, right: 10, top: 5),
+          decoration: BoxDecoration(
+              color: BlueText, borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              WikiImtesHome(
+                icon: Icon(
+                  FontAwesomeIcons.exchangeAlt,
+                  color: Yello,
+                ),
+                chaine: "Credit",
+                textColor: Yello,
+                color: White,
+                border: Colors.transparent,
+                onPressed: () {},
+              ),
+              WikiImtesHome(
+                icon: Icon(
+                  FontAwesomeIcons.qrcode,
+                  color: Yello,
+                ),
+                chaine: "Paie credit",
+                textColor: Yello,
+                color: White,
+                border: Colors.transparent,
+                onPressed: () {},
+              ),
+              WikiImtesHome(
+                icon: Icon(
+                  FontAwesomeIcons.moneyBill,
+                  color: Yello,
+                ),
+                chaine: "Sport",
+                textColor: Yello,
+                color: White,
+                border: Colors.transparent,
+                onPressed: () {},
+              ),
+              WikiImtesHome(
+                icon: Icon(
+                  FontAwesomeIcons.moneyBill,
+                  color: Yello,
+                ),
+                chaine: "Autre",
+                textColor: Yello,
+                color: White,
+                border: Colors.transparent,
+                onPressed: () {},
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
