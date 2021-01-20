@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
@@ -35,6 +36,8 @@ class WiIQareCenterLogoWithIcons extends StatelessWidget {
           child: IconButton(
             onPressed: () {
               //TODO:Code QCoder Scanner
+              //TODO:NAvigation to QRCodeScanner
+              Navigator.pushNamed(context, Routes.qRCodeScanner);
             },
             icon: Icon(Icons.qr_code, color: White),
           ),
