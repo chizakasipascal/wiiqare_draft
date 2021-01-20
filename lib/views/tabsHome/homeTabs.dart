@@ -55,29 +55,39 @@ class _HomeTabsState extends State<HomeTabs> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SingleTitle(
-                          singleTitle:
-                              "Mon compte :1500 Fc", //TODO:Remplacer par le montat du compte
-                          color: White,
-                        ),
-                        SizedBox(height: 5.0),
-                        SingleTitle(
-                          singleTitle:
-                              "Mes points:50 points", //TODO:Remplacer par le nombre de point
-                          color: White,
-                        ),
-                      ],
-                    ),
                     WikiButtom(
                       descpritionButtom: "Recharge",
                       color: Yello,
                       onPressed: () {
                         //TODO:Mettre le code recharge aproprie
                       },
+                    ),
+                    Container(
+                      height: 60,
+                      width: 150,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Yello),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SingleTitle(
+                                singleTitle:
+                                    "Compte sant:", //TODO:Remplacer par le montat du compte
+                                color: White,
+                              ),
+                              SingleTitle(
+                                singleTitle:
+                                    "1500 Fc", //TODO:Remplacer par le montat du compte
+                                color: White,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 )
