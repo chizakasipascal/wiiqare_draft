@@ -11,3 +11,4 @@ export 'singleText20pixel.dart';
 export 'wikiAppBar.dart';
 export '../ui/qrCodeViewsScanncer.dart';
 //export 'wikiItemHome.dart';
+export 'hitoriqueItem.dart';

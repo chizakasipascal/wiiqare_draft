@@ -163,6 +163,7 @@ class _HomeTabsState extends State<HomeTabs> {
                 SingleTitle(
                   singleTitle: "Voir plus",
                   size: 10.0,
+                  color: BlackText,
                 ),
                 SizedBox(
                   height: 10,
