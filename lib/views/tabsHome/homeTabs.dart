@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
-import 'package:wiiqare/views/widgets/widgets.dart';
+import 'package:lottie/lottie.dart';
 import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
 import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
+import 'package:wiiqare/views/widgets/wikiItemHome.dart';
+import 'package:wiiqare/views/widgets/wikiOffres.dart';
 
 class HomeTabs extends StatefulWidget {
   @override
@@ -18,10 +21,12 @@ class _HomeTabsState extends State<HomeTabs> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final orientation = MediaQuery.of(context).orientation;
     setState(() {
       percent = 35;
     });
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         BackGroundHome(
           size: size,
@@ -80,8 +85,106 @@ class _HomeTabsState extends State<HomeTabs> {
             ),
           ),
         ),
-        SizedBox(height: 10),
-        Text("Home")
+        //   SizedBox(height: 10),
+        Padding(
+          padding: const EdgeInsets.only(left: 10, right: 10),
+          child: SingleTitle(
+            singleTitle: "Prenez soin de vous",
+            fontWeight: FontWeight.bold,
+            color: Bleu,
+          ),
+        ),
+        SizedBox(height: 5),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            WikiImtesHome(
+              icon: Icon(Icons.headset_mic),
+              chaine: "Sport",
+              onPressed: () {},
+            ),
+            WikiImtesHome(
+              icon: Icon(Icons.headset_mic),
+              chaine: "Consultation",
+              onPressed: () {},
+            ),
+            WikiImtesHome(
+              icon: Icon(Icons.headset_mic),
+              chaine: "Pharmacie",
+              onPressed: () {},
+            ),
+          ],
+        ),
+        SizedBox(height: 5),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            WikiImtesHome(
+              icon: Icon(Icons.headset_mic),
+              chaine: "Prevention",
+              onPressed: () {},
+            ),
+            WikiImtesHome(
+              icon: Icon(Icons.headset_mic),
+              chaine: "Hospitaux",
+              onPressed: () {},
+            ),
+            WikiImtesHome(
+              icon: Icon(Icons.headset_mic),
+              chaine: "Labo",
+              onPressed: () {},
+            ),
+          ],
+        ),
+
+        SizedBox(height: 5),
+        Row(
+          children: [
+            SizedBox(width: 15),
+            SingleTitle(
+              singleTitle: "Gagnez des credits sante?",
+              size: 10.0,
+            ),
+            Spacer(),
+            Row(
+              children: [
+                SingleTitle(
+                  singleTitle: "Voir plus",
+                  size: 10.0,
+                ),
+                SizedBox(
+                  height: 10,
+                  width: 15,
+                  child: Lottie.asset(Pictures.ScrollerRight),
+                ),
+              ],
+            ),
+            SizedBox(width: 15),
+          ],
+        ),
+        Container(
+          height: 190,
+          child: ListView.builder(
+            itemCount: 10,
+            scrollDirection: Axis.horizontal,
+            physics: BouncingScrollPhysics(),
+            itemBuilder: (context, i) => new Container(
+              // height: 300.0,
+              // margin: const EdgeInsets.only(top: 20),
+              // color: Colors.greenAccent,
+
+              child: WikiOffres(
+                size: MediaQuery.of(context).size,
+                bonus: 1000,
+                onPressed: () {
+                  //TODO: Code propres aceete fonction
+                },
+              ),
+            ),
+          ),
+        )
       ],
     );
   }
