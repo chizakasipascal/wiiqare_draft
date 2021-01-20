@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: Strings.AppName,
       theme: themeData,
-      home: Authentification(),
+      home: Welcome(),
       initialRoute: Routes.welcome,
       routes: Routes.routes,
     );
