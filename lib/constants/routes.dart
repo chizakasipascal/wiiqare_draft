@@ -8,6 +8,7 @@ class Routes {
   static const String welcome = '/welcome';
   static const String help = '/help';
   static const String home = '/home';
+  static const String modePayement = "/modePayement";
   static const String qRCodeScanner = '/qRCodeScanner';
 
   static final routes = <String, WidgetBuilder>{
@@ -15,6 +16,7 @@ class Routes {
     welcome: (BuildContext context) => Welcome(),
     help: (BuildContext context) => Help(),
     home: (BuildContext context) => Home(),
-    qRCodeScanner: (BuildContext context) => QRCodeScanner()
+    modePayement: (BuildContext context) => ModePayement(),
+    qRCodeScanner: (BuildContext context) => QRCodeScannerViews()
   };
 }

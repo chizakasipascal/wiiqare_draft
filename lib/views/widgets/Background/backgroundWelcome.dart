@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 
 class WelcomBackGround extends StatelessWidget {
+  final Widget widget;
   const WelcomBackGround({
     Key key,
+    this.widget,
   }) : super(key: key);
 
   @override
@@ -23,6 +25,7 @@ class WelcomBackGround extends StatelessWidget {
           ],
         ),
       ),
+      child: widget,
     );
   }
 }
