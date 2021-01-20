@@ -24,6 +24,7 @@ class _WalletsState extends State<Wallets> {
     });
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         BackGroundHome(
           size: size,
@@ -148,7 +149,17 @@ class _WalletsState extends State<Wallets> {
           ),
         ),
         SizedBox(height: 10),
-        SingleTitle(singleTitle: "Historique")
+        Padding(
+          padding: const EdgeInsets.only(left: 8.0, right: 8),
+          child: SingleTitle(singleTitle: "Historique"),
+        ),
+        SizedBox(height: 10),
+        // HistoriqueItem(
+        //   widget: Placeholder(),
+        //   title: "Transfert",
+        //   date: 2020 - 20 - 2,
+        //   typeDescption: "Recharge",
+        // ),
       ],
     );
   }
