@@ -18,7 +18,7 @@ class Routes {
     welcome: (BuildContext context) => Welcome(),
     help: (BuildContext context) => Help(),
     home: (BuildContext context) => Home(),
-    otp: (BuildContext context) => CodePin(),
+    otp: (BuildContext context) => OTP(),
     codePin: (BuildContext contrxt) => CodePin(),
     modePayement: (BuildContext context) => ModePayement(),
     qRCodeScanner: (BuildContext context) => QRCodeScannerViews()

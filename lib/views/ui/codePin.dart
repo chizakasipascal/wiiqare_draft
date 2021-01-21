@@ -6,33 +6,18 @@ import 'package:wiiqare/views/widgets/widgets.dart';
 class CodePin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: White,
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: BlueText), onPressed: () {}),
-        title: SingleTitle(
-          singleTitle: "Verification OTP",
-        ),
-      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 40.0, horizontal: 20.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            LogoWiiQare(size: size),
             SingleText20pixel(
-              designation: "Entrez l'OTP\nde verification",
-              color: Grey,
-            ),
-            SingleTitle(singleTitle: "Code envoye au ***08"),
-            Row(
-              children: [
-                SingleTitle(singleTitle: "Ce code expire dans "),
-                SingleTitle(
-                  singleTitle: "02:30",
-                  color: Colors.red,
-                ),
-              ],
+              designation: "ENTRE LE CODE PIN",
+              color: BlueText,
             ),
             SizedBox(height: 20),
             Container(
@@ -40,6 +25,7 @@ class CodePin extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: PinEntryTextField(
                   showFieldAsBox: false,
+                  isTextObscure: true,
                   onSubmit: (String pin) {
                     showDialog(
                         context: context,
@@ -54,18 +40,15 @@ class CodePin extends StatelessWidget {
               ), // end Padding()
             ),
             SizedBox(height: 40),
-            GestureDetector(
-              onTap: () {
-                //TODO:Code d'envoye OTP
-              },
-              child: Center(
-                child: SingleTitle(
-                  singleTitle: "Renvoye l'OTP",
-                  fontWeight: FontWeight.bold,
-                  color: BlueText,
-                ),
-              ),
-            )
+            SingleTitle(
+              singleTitle: "Code PIN oublie?",
+              fontWeight: FontWeight.bold,
+            ),
+            SizedBox(height: 10),
+            SingleTitle(
+              singleTitle: "Utiliser mot de passe",
+              fontWeight: FontWeight.bold,
+            ),
           ],
         ),
       ), // end Container()
