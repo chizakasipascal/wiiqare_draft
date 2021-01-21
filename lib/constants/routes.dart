@@ -8,6 +8,8 @@ class Routes {
   static const String welcome = '/welcome';
   static const String help = '/help';
   static const String home = '/home';
+  static const String otp = '/otp';
+  static const String codePin = "/codePin";
   static const String modePayement = "/modePayement";
   static const String qRCodeScanner = '/qRCodeScanner';
 
@@ -16,6 +18,8 @@ class Routes {
     welcome: (BuildContext context) => Welcome(),
     help: (BuildContext context) => Help(),
     home: (BuildContext context) => Home(),
+    otp: (BuildContext context) => OTP(),
+    codePin: (BuildContext contrxt) => CodePin(),
     modePayement: (BuildContext context) => ModePayement(),
     qRCodeScanner: (BuildContext context) => QRCodeScannerViews()
   };

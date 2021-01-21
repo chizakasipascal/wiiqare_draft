@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/constants/strings.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
@@ -142,9 +143,11 @@ class _SincrireState extends State<Sincrire> {
                 color: Yello,
                 descpritionButtom: "S'inscrire",
                 onPressed: () => {
-                  formKey.currentState.validate() //Function to validate number
+                  // formKey.currentState.validate() //Function to validate number
                   //  formKey.currentState.save() //function to save number
                   // getPhoneNumber(number.phoneNumber) //function to getnumber
+
+                  Navigator.pushNamed(context, Routes.otp)
                 },
               ),
             ),

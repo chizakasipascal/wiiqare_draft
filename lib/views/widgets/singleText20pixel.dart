@@ -15,7 +15,7 @@ class SingleText20pixel extends StatelessWidget {
     return Text(
       designation,
       style: TextStyle(
-        color: White,
+        color: color,
         fontWeight: FontWeight.bold,
         fontSize: 20,
       ),
