@@ -71,20 +71,26 @@ class _ObjectifsState extends State<Objectifs> {
                 singleTitle: "Vous pouvez commencer par créer votre objectifs",
               ),
             ),
-            Container(
-              height: 100,
-              width: 100,
-              child: Placeholder(),
-              //  Image.asset(
-              //   Pictures.ObjectiSVG,
-              //   fit: BoxFit.cover,
-              // ),
-            ),
-            WikiButtom(
-              descpritionButtom: "Créer ton objectif",
-              onPressed: () {},
+            SizedBox(height: 20),
+            Center(
+              child: Container(
+                height: 200,
+                width: 200,
+                child: Placeholder(),
+                //  Image.asset(
+                //   Pictures.ObjectiSVG,
+                //   fit: BoxFit.cover,
+                // ),
+              ),
             ),
           ],
+        ),
+      ),
+      bottomSheet: SizedBox(
+        height: 50,
+        child: WikiButtom(
+          descpritionButtom: "Créer ton objectif",
+          onPressed: () {},
         ),
       ),
     );
