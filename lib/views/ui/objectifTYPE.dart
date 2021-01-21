@@ -16,7 +16,7 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final orientation = MediaQuery.of(context).orientation;
+
     setState(() {
       percent = 35;
     });
@@ -64,65 +64,14 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Center(
-              child: SingleTitle(
-                singleTitle: "Vous pouvez commencer par créer votre objectifs",
-              ),
-            ),
-            SizedBox(height: 20),
-            Center(
-              child: Container(
-                height: 200,
-                width: 200,
-                child: Placeholder(),
-                //  Image.asset(
-                //   Pictures.ObjectiSVG,
-                //   fit: BoxFit.cover,
-                // ),
-              ),
-            ),
           ],
         ),
       ),
-      bottomSheet: SizedBox(
-        height: 50,
-        child: WikiButtom(
-          descpritionButtom: "Créer ton objectif",
-          onPressed: () {},
-        ),
-      ),
-    );
-  }
-}
-
-class WikiObjectifItemBar extends StatelessWidget {
-  final descriptin, valeur, type;
-  const WikiObjectifItemBar({
-    Key key,
-    this.descriptin,
-    this.valeur,
-    this.type,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SingleTitle(
-              singleTitle: descriptin, //TODO:Remplacer par le montat du compte
-              color: White,
-            ),
-            SingleTitle(
-              singleTitle:
-                  "${valeur}${type}", //TODO:Remplacer par le montat du compte
-              color: White,
-            ),
-          ],
+      bottomSheet: StepCreateObjectif(
+        size: size,
+        title: "Créer objectif",
+        widget: Column(
+          children: [],
         ),
       ),
     );

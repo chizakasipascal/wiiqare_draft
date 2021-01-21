@@ -13,3 +13,4 @@ export '../ui/qrCodeViewsScanncer.dart';
 //export 'wikiItemHome.dart';
 export 'hitoriqueItem.dart';
 export 'wikiObjectifItemBar.dart';
+export 'stepCreateObjectif.dart';
