@@ -230,7 +230,26 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                   ),
                 ),
               ],
-            )
+            ),
+            SizedBox(height: 20.0),
+            SizedBox(
+              height: 50,
+              child: WikiButtom(
+                descpritionButtom: "Suivant",
+                onPressed: () {},
+              ),
+            ),
+            SizedBox(height: 20.0),
+            SizedBox(
+              height: 50,
+              child: WikiButtom(
+                descpritionButtom: "Retour",
+                color: White,
+                color2: Yello,
+                colorBorder: Yello,
+                onPressed: () {},
+              ),
+            ),
           ],
         ),
       ),
