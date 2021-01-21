@@ -31,7 +31,7 @@ class StepCreateObjectif extends StatelessWidget {
             topLeft: Radius.circular(10),
           ),
         ),
-        child: Stack(
+        child: Column(
           children: [
             Container(
               height: 50,
@@ -49,7 +49,11 @@ class StepCreateObjectif extends StatelessWidget {
                 title: SingleTitle(singleTitle: title, size: 15.0),
               ),
             ),
-            widget
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
+              child: widget,
+            )
           ],
         ),
       ),

@@ -7,7 +7,7 @@ typedef ValueChanged<T> = void Function(T value);
 class WikiButtom extends StatelessWidget {
   final bool isPressed;
   final String descpritionButtom;
-  final Color color;
+  final Color color, colorBorder, color2;
   final OnPressed onPressed;
   final ValueChanged<bool> onHighlightChanged;
 
@@ -18,6 +18,8 @@ class WikiButtom extends StatelessWidget {
     this.onHighlightChanged,
     this.isPressed = false,
     this.color = Yello,
+    this.colorBorder = White,
+    this.color2 = White,
   }) : super(key: key);
 
   @override
@@ -27,7 +29,7 @@ class WikiButtom extends StatelessWidget {
       color: color,
       onPressed: onPressed, //!enable ? onPressed : null,
       shape: RoundedRectangleBorder(
-        side: BorderSide(color: White), //Theme.of(context).primaryColor),
+        side: BorderSide(color: colorBorder), //Theme.of(context).primaryColor),
         borderRadius: BorderRadius.circular(10.0),
       ),
       onHighlightChanged: onHighlightChanged,
@@ -35,7 +37,7 @@ class WikiButtom extends StatelessWidget {
         child: Text(
           descpritionButtom,
           style: TextStyle(
-            color: White, // this.isPressed ? RedColor : Color(0xffFFFFFF),
+            color: color2, // this.isPressed ? RedColor : Color(0xffFFFFFF),
             fontSize: 14,
           ),
         ),
