@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
+import 'package:wiiqare/views/widgets/welcomItemsButtom.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
 import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
@@ -71,7 +73,56 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
         size: size,
         title: "Créer objectif",
         widget: Column(
-          children: [],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SingleTitle(
+              singleTitle:
+                  "Definir votre objectif sante en fonction de votre situation personnelle",
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 10),
+            WelcomItemsButtom(
+              size: size,
+              onPressed: () => {
+                ///
+                Navigator.pushNamed(context, Routes.authentification)
+              },
+              widget: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Align(
+                      alignment: Alignment.center,
+                      child: SizedBox(
+                        height: 70,
+                        width: 70,
+                        child: Icon(
+                          Icons.login,
+                          size: 50.0,
+                          color: Yello,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SingleTitle(
+                            singleTitle: "Créer un compte Wiiqare",
+                            color: Grey,
+                            size: 11.0,
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
