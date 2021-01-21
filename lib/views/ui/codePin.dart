@@ -52,7 +52,7 @@ class CodePin extends StatelessWidget {
                 //TODO:=> //Mettre code appropries
 
                 //TODO:Objectif navigator
-                Navigator.pushNamed(context, Routes.objectif);
+                Navigator.pushNamed(context, Routes.creeobjectif);
               },
               child: SingleTitle(
                 singleTitle: "Utiliser mot de passe",

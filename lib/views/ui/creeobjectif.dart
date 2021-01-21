@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/constants/pictures.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
 import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
 
-class Objectifs extends StatefulWidget {
+class CreeObjectifs extends StatefulWidget {
   @override
-  _ObjectifsState createState() => _ObjectifsState();
+  _CreeObjectifsState createState() => _CreeObjectifsState();
 }
 
-class _ObjectifsState extends State<Objectifs> {
+class _CreeObjectifsState extends State<CreeObjectifs> {
   double percent;
 
   @override
@@ -90,40 +91,9 @@ class _ObjectifsState extends State<Objectifs> {
         height: 50,
         child: WikiButtom(
           descpritionButtom: "Créer ton objectif",
-          onPressed: () {},
-        ),
-      ),
-    );
-  }
-}
-
-class WikiObjectifItemBar extends StatelessWidget {
-  final descriptin, valeur, type;
-  const WikiObjectifItemBar({
-    Key key,
-    this.descriptin,
-    this.valeur,
-    this.type,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SingleTitle(
-              singleTitle: descriptin, //TODO:Remplacer par le montat du compte
-              color: White,
-            ),
-            SingleTitle(
-              singleTitle:
-                  "${valeur}${type}", //TODO:Remplacer par le montat du compte
-              color: White,
-            ),
-          ],
+          onPressed: () {
+            Navigator.pushNamed(context, Routes.objectifTYPE);
+          },
         ),
       ),
     );
