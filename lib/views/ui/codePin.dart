@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pin_entry_text_field/pin_entry_text_field.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
@@ -15,6 +16,7 @@ class CodePin extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             LogoWiiQare(size: size),
+            SizedBox(height: 20),
             SingleText20pixel(
               designation: "ENTRE LE CODE PIN",
               color: BlueText,
@@ -45,9 +47,17 @@ class CodePin extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
             SizedBox(height: 10),
-            SingleTitle(
-              singleTitle: "Utiliser mot de passe",
-              fontWeight: FontWeight.bold,
+            GestureDetector(
+              onTap: () {
+                //TODO:=> //Mettre code appropries
+
+                //TODO:Objectif navigator
+                Navigator.pushNamed(context, Routes.creeobjectif);
+              },
+              child: SingleTitle(
+                singleTitle: "Utiliser mot de passe",
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),

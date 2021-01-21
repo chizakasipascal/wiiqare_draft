@@ -6,3 +6,5 @@ export 'ModePayement.dart';
 export 'qrCodeViewsScanncer.dart';
 export 'otp.dart';
 export 'codePin.dart';
+export 'creeobjectif.dart';
+export 'objectifTYPE.dart';

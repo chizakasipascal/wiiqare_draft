@@ -4,4 +4,5 @@ class Pictures {
   static const PathLogoWiiQare = "${pathAssets}logowiqqre.jpg";
   static const WelcomImageBackGround = "${pathAssets}logowiqqre.jpg";
   static const ScrollerRight = "${pathAssets}35536-arrow-right.json";
+  static const ObjectiSVG = "${pathAssets}35536-arrow-right.json";
 }

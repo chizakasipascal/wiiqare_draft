@@ -12,6 +12,8 @@ class Routes {
   static const String codePin = "/codePin";
   static const String modePayement = "/modePayement";
   static const String qRCodeScanner = '/qRCodeScanner';
+  static const String creeobjectif = '/creeobjectif';
+  static const String objectifTYPE = '/objectifTYPE';
 
   static final routes = <String, WidgetBuilder>{
     authentification: (BuildContext context) => Authentification(),
@@ -21,6 +23,8 @@ class Routes {
     otp: (BuildContext context) => OTP(),
     codePin: (BuildContext contrxt) => CodePin(),
     modePayement: (BuildContext context) => ModePayement(),
-    qRCodeScanner: (BuildContext context) => QRCodeScannerViews()
+    qRCodeScanner: (BuildContext context) => QRCodeScannerViews(),
+    creeobjectif: (BuildContext context) => CreeObjectifs(),
+    objectifTYPE: (BuildContext context) => ObjectifsTYPE()
   };
 }
