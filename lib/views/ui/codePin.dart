@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pin_entry_text_field/pin_entry_text_field.dart';
-import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
-class OTP extends StatelessWidget {
+class CodePin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +57,6 @@ class OTP extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 //TODO:Code d'envoye OTP
-                Navigator.pushNamed(context, Routes.codePin);
               },
               child: Center(
                 child: SingleTitle(

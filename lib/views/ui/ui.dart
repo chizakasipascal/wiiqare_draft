@@ -5,3 +5,4 @@ export 'home.dart';
 export 'ModePayement.dart';
 export 'qrCodeViewsScanncer.dart';
 export 'otp.dart';
+export 'codePin.dart';
