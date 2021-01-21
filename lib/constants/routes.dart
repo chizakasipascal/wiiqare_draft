@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/views/ui/ui.dart';
+import 'package:wiiqare/views/ui/objectis/objectifs.dart';
 
 class Routes {
   Routes._();
@@ -15,6 +16,15 @@ class Routes {
   static const String creeobjectif = '/creeobjectif';
   static const String objectifTYPE = '/objectifTYPE';
 
+  /// Objectif route
+
+  static const String diabete = '/diabete';
+  static const String famille = '/famille';
+  static const String grossesse = '/grossesse';
+  static const String uiMontant = '/uiMontant';
+  static const String sante = '/sante';
+
+  ///
   static final routes = <String, WidgetBuilder>{
     authentification: (BuildContext context) => Authentification(),
     welcome: (BuildContext context) => Welcome(),
@@ -25,6 +35,16 @@ class Routes {
     modePayement: (BuildContext context) => ModePayement(),
     qRCodeScanner: (BuildContext context) => QRCodeScannerViews(),
     creeobjectif: (BuildContext context) => CreeObjectifs(),
-    objectifTYPE: (BuildContext context) => ObjectifsTYPE()
+    objectifTYPE: (BuildContext context) => ObjectifsTYPE(),
+
+    /// Objectif
+
+    diabete: (BuildContext context) => Diabete(),
+    famille: (BuildContext context) => Famille(),
+    grossesse: (BuildContext context) => Grossesse(),
+    uiMontant: (BuildContext context) => UIMontant(),
+    sante: (BuildContext context) => Sante(),
+
+    ///
   };
 }
