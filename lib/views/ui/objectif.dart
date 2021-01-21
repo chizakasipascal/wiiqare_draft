@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
@@ -64,7 +65,25 @@ class _ObjectifsState extends State<Objectifs> {
                 ),
               ),
             ),
-            //   SizedBox(height: 10),
+            SizedBox(height: 10),
+            Center(
+              child: SingleTitle(
+                singleTitle: "Vous pouvez commencer par créer votre objectifs",
+              ),
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              child: Placeholder(),
+              //  Image.asset(
+              //   Pictures.ObjectiSVG,
+              //   fit: BoxFit.cover,
+              // ),
+            ),
+            WikiButtom(
+              descpritionButtom: "Créer ton objectif",
+              onPressed: () {},
+            ),
           ],
         ),
       ),
