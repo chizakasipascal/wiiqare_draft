@@ -81,47 +81,156 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 10),
-            WelcomItemsButtom(
-              size: size,
-              onPressed: () => {
-                ///
-                Navigator.pushNamed(context, Routes.authentification)
-              },
-              widget: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Align(
-                      alignment: Alignment.center,
-                      child: SizedBox(
-                        height: 70,
-                        width: 70,
-                        child: Icon(
-                          Icons.login,
-                          size: 50.0,
-                          color: Yello,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 5),
-                    Center(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                  height: size.height * .2,
+                  width: size.width * .4,
+                  child: WelcomItemsButtom(
+                    size: size,
+                    onPressed: () => {
+                      ///
+                      Navigator.pushNamed(context, Routes.authentification)
+                    },
+                    widget: Padding(
+                      padding: const EdgeInsets.all(8.0),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          Align(
+                            alignment: Alignment.center,
+                            child: SizedBox(
+                                height: 70,
+                                width: 70,
+                                child: Placeholder(
+                                  color: Yello,
+                                )),
+                          ),
+                          SizedBox(height: 20),
                           SingleTitle(
-                            singleTitle: "Créer un compte Wiiqare",
+                            singleTitle: "Ma sante",
                             color: Grey,
                             size: 11.0,
                           ),
                         ],
                       ),
-                    )
-                  ],
+                    ),
+                  ),
                 ),
-              ),
+                SizedBox(
+                  height: size.height * .2,
+                  width: size.width * .4,
+                  child: WelcomItemsButtom(
+                    size: size,
+                    onPressed: () => {
+                      ///
+                      Navigator.pushNamed(context, Routes.authentification)
+                    },
+                    widget: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Align(
+                            alignment: Alignment.center,
+                            child: SizedBox(
+                                height: 70,
+                                width: 70,
+                                child: Placeholder(
+                                  color: Yello,
+                                )),
+                          ),
+                          SizedBox(height: 20),
+                          SingleTitle(
+                            singleTitle: "Diabetes Hyperthension",
+                            color: Grey,
+                            size: 11.0,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                  height: size.height * .2,
+                  width: size.width * .4,
+                  child: WelcomItemsButtom(
+                    size: size,
+                    onPressed: () => {
+                      ///
+                      Navigator.pushNamed(context, Routes.authentification)
+                    },
+                    widget: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Align(
+                            alignment: Alignment.center,
+                            child: SizedBox(
+                                height: 70,
+                                width: 70,
+                                child: Placeholder(
+                                  color: Yello,
+                                )),
+                          ),
+                          SizedBox(height: 20),
+                          SingleTitle(
+                            singleTitle: "Ma famille",
+                            color: Grey,
+                            size: 11.0,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: size.height * .2,
+                  width: size.width * .4,
+                  child: WelcomItemsButtom(
+                    size: size,
+                    onPressed: () => {
+                      ///
+                      Navigator.pushNamed(context, Routes.authentification)
+                    },
+                    widget: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Align(
+                            alignment: Alignment.center,
+                            child: SizedBox(
+                                height: 70,
+                                width: 70,
+                                child: Placeholder(
+                                  color: Yello,
+                                )),
+                          ),
+                          SizedBox(height: 20),
+                          SingleTitle(
+                            singleTitle: "Grossesse",
+                            color: Grey,
+                            size: 11.0,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
