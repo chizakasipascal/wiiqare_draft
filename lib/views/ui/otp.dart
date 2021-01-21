@@ -25,7 +25,16 @@ class OTP extends StatelessWidget {
               color: Grey,
             ),
             SingleTitle(singleTitle: "Code envoye au ***08"),
-            SingleTitle(singleTitle: "Ce code expire dans 02:30"),
+            Row(
+              children: [
+                SingleTitle(singleTitle: "Ce code expire dans "),
+                SingleTitle(
+                  singleTitle: "02:30",
+                  color: Colors.red,
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
             Container(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -44,11 +53,17 @@ class OTP extends StatelessWidget {
                 ), // end PinEntryTextField()
               ), // end Padding()
             ),
-            Center(
-              child: SingleTitle(
-                singleTitle: "Renvoye l'OTP",
-                fontWeight: FontWeight.bold,
-                color: BlueText,
+            SizedBox(height: 40),
+            GestureDetector(
+              onTap: () {
+                //TODO:Code d'envoye OTP
+              },
+              child: Center(
+                child: SingleTitle(
+                  singleTitle: "Renvoye l'OTP",
+                  fontWeight: FontWeight.bold,
+                  color: BlueText,
+                ),
               ),
             )
           ],
