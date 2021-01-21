@@ -149,10 +149,21 @@ class _UIMontantState extends State<UIMontant> {
                       },
                     ),
                     Divider(),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5, right: 5),
+                      child: SizedBox(
+                        height: 50,
+                        child: WikiButtom(
+                          descpritionButtom:
+                              "J’ai préfère choisir moi meme mon objectif",
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
