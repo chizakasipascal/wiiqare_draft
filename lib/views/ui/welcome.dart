@@ -31,9 +31,9 @@ class _WelcomeState extends State<Welcome> {
     _scaffoldKey.currentState
         .showBottomSheet((context) {
           return ListView.builder(
-            itemCount: 60,
+            itemCount: 6,
             itemBuilder: (context, i) => new Container(
-              // height: 300.0,
+              height: 300.0,
               margin: const EdgeInsets.only(top: 20),
               // color: Colors.greenAccent,
 
