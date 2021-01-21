@@ -91,7 +91,7 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                     size: size,
                     onPressed: () => {
                       ///
-                      Navigator.pushNamed(context, Routes.authentification)
+                      Navigator.pushNamed(context, Routes.sante)
                     },
                     widget: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -126,7 +126,7 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                     size: size,
                     onPressed: () => {
                       ///
-                      Navigator.pushNamed(context, Routes.authentification)
+                      Navigator.pushNamed(context, Routes.diabete)
                     },
                     widget: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -166,7 +166,7 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                     size: size,
                     onPressed: () => {
                       ///
-                      Navigator.pushNamed(context, Routes.authentification)
+                      Navigator.pushNamed(context, Routes.famille)
                     },
                     widget: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -201,7 +201,7 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                     size: size,
                     onPressed: () => {
                       ///
-                      Navigator.pushNamed(context, Routes.authentification)
+                      Navigator.pushNamed(context, Routes.grossesse)
                     },
                     widget: Padding(
                       padding: const EdgeInsets.all(8.0),
