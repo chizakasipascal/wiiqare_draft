@@ -91,7 +91,7 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                     size: size,
                     onPressed: () => {
                       ///
-                      Navigator.pushNamed(context, Routes.sante)
+                      Navigator.pushNamed(context, Routes.uiMontant)
                     },
                     widget: Padding(
                       padding: const EdgeInsets.all(8.0),
