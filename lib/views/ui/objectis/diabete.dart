@@ -68,7 +68,7 @@ class _DiabeteState extends State<Diabete> {
         ),
       ),
       bottomSheet: SizedBox(
-        height: size.height * .5,
+        height: size.height * .7,
         child: StepCreateObjectif(
           size: size,
           title: "Créer objectif pour ma maladie",
