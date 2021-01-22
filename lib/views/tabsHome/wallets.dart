@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
@@ -124,10 +125,7 @@ class _WalletsState extends State<Wallets> {
                 onPressed: () {},
               ),
               WikiImtesHome(
-                icon: Icon(
-                  FontAwesomeIcons.moneyBill,
-                  color: Yello,
-                ),
+                icon: Image.asset(Pictures.Sport),
                 chaine: "Sport",
                 textColor: Yello,
                 color: White,

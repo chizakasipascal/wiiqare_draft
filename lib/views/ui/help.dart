@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
@@ -285,7 +286,8 @@ class _HelpState extends State<Help> {
                                       Align(
                                         alignment: Alignment.topCenter,
                                         child: CircleAvatar(
-                                          backgroundColor: BlueText,
+                                          backgroundColor: Colors.transparent,
+                                          child: Image.asset(Pictures.Guide),
                                         ),
                                       ),
                                       SingleTitle(
@@ -312,7 +314,8 @@ class _HelpState extends State<Help> {
                                       Align(
                                         alignment: Alignment.topCenter,
                                         child: CircleAvatar(
-                                          backgroundColor: BlueText,
+                                          backgroundColor: Colors.transparent,
+                                          child: Image.asset(Pictures.MAP),
                                         ),
                                       ),
                                       SingleTitle(
