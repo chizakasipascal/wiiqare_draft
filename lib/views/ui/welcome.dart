@@ -137,11 +137,7 @@ class _WelcomeState extends State<Welcome> {
                               child: SizedBox(
                                 height: 70,
                                 width: 70,
-                                child: Icon(
-                                  Icons.login,
-                                  size: 50.0,
-                                  color: Yello,
-                                ),
+                                child: Image.asset(Pictures.Login),
                               ),
                             ),
                             SizedBox(height: 5),
@@ -175,7 +171,8 @@ class _WelcomeState extends State<Welcome> {
                               Align(
                                 alignment: Alignment.topCenter,
                                 child: CircleAvatar(
-                                  backgroundColor: BlueText,
+                                  backgroundColor: Colors.transparent,
+                                  child: Image.asset(Pictures.Guide),
                                 ),
                               ),
                               SingleTitle(
@@ -201,7 +198,8 @@ class _WelcomeState extends State<Welcome> {
                               Align(
                                 alignment: Alignment.topCenter,
                                 child: CircleAvatar(
-                                  backgroundColor: BlueText,
+                                  backgroundColor: Colors.transparent,
+                                  child: Image.asset(Pictures.MAP),
                                 ),
                               ),
                               SingleTitle(

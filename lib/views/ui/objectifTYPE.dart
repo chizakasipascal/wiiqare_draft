@@ -102,11 +102,12 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                           Align(
                             alignment: Alignment.center,
                             child: SizedBox(
-                                height: 70,
-                                width: 70,
-                                child: Placeholder(
-                                  color: Yello,
-                                )),
+                              height: 70,
+                              width: 70,
+                              child: Placeholder(
+                                color: Yello,
+                              ),
+                            ),
                           ),
                           SizedBox(height: 20),
                           SingleTitle(
