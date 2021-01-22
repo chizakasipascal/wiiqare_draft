@@ -101,7 +101,7 @@ class _DiabeteState extends State<Diabete> {
         ),
       ),
       bottomSheet: SizedBox(
-        height: size.height * .7,
+        height: size.height * .8,
         child: StepCreateObjectif(
           size: size,
           title: "Créer objectif pour ma maladie",
@@ -121,7 +121,7 @@ class _DiabeteState extends State<Diabete> {
                 ),
                 child: wikiText(
                     hint: "Date de naissance",
-                    label: "Date de naissance",
+                    //  label: "Date de naissance",
                     inputType: TextInputType.number),
               ),
               SizedBox(height: 10),
@@ -131,6 +131,7 @@ class _DiabeteState extends State<Diabete> {
                 color: BlackText,
                 fontWeight: FontWeight.bold,
               ),
+              SizedBox(height: 10),
               Container(
                 width: size.width * .4,
                 decoration: BoxDecoration(
@@ -150,6 +151,54 @@ class _DiabeteState extends State<Diabete> {
                     onChanged: onChangeDropdownItem,
                   ),
                 ),
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SingleTitle(
+                        singleTitle: "Montant ",
+                        color: BlackText,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      Container(
+                        width: size.width * .4,
+                        decoration: BoxDecoration(
+                          color: Grey.withOpacity(.1),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: wikiText(
+                            hint: "Date de naissance",
+                            //  label: "Date de naissance",
+                            inputType: TextInputType.number),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SingleTitle(
+                        singleTitle: "Choisir frequence ",
+                        color: BlackText,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      Container(
+                        width: size.width * .4,
+                        decoration: BoxDecoration(
+                          color: Grey.withOpacity(.1),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: wikiText(
+                            hint: "Date de naissance",
+                            //  label: "Date de naissance",
+                            inputType: TextInputType.number),
+                      ),
+                    ],
+                  ),
+                ],
               ),
               SizedBox(height: 10),
               Container(
