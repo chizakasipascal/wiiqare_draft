@@ -109,7 +109,8 @@ class _DiabeteState extends State<Diabete> {
         child: StepCreateObjectif(
           size: size,
           title: "Créer objectif pour ma maladie",
-          widget: Column(
+          widget:
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SingleTitle(
