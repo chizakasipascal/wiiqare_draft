@@ -102,7 +102,7 @@ class _FamilleState extends State<Famille> {
         ),
       ),
       bottomSheet: SizedBox(
-        height: size.height * .8,
+        height: size.height * .7,
         child: StepCreateObjectif(
           size: size,
           title: "Créer objectif pour ma sante",
