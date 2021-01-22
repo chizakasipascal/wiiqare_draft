@@ -15,13 +15,17 @@ class Diabete extends StatefulWidget {
 
 class _DiabeteState extends State<Diabete> {
   List<DiabeteCombo> _diabetes = DiabeteCombo.getComboDiabteMois();
+  List<DiabeteCombo> _diabetesJours = DiabeteCombo.getComboDiabteJours();
   List<DropdownMenuItem<DiabeteCombo>> _dropdownMenuItems;
+
   DiabeteCombo _selectedMois;
+
 
   @override
   void initState() {
     _dropdownMenuItems = buildDropdownMenuItems(_diabetes);
     _selectedMois = _dropdownMenuItems[0].value;
+
     super.initState();
   }
 
@@ -191,10 +195,19 @@ class _DiabeteState extends State<Diabete> {
                           color: Grey.withOpacity(.1),
                           borderRadius: BorderRadius.circular(5),
                         ),
-                        child: wikiText(
-                            hint: "Date de naissance",
-                            //  label: "Date de naissance",
-                            inputType: TextInputType.number),
+                        child: Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: DropdownButton(
+                            style: TextStyle(fontSize: 10.0, color: BlueText),
+                            hint: SingleTitle(
+                              singleTitle: "Selection",
+                              size: 10.0,
+                            ),
+                            value: _selectedMois,
+                            items: _dropdownMenuItems,
+                            onChanged: onChangeDropdownItem,
+                          ),
+                        ),
                       ),
                     ],
                   ),

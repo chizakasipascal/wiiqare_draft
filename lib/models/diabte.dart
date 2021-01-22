@@ -11,5 +11,13 @@ class DiabeteCombo {
 
     ];
   }
+
+  static List<DiabeteCombo> getComboDiabteJours() {
+    return <DiabeteCombo>[
+      DiabeteCombo(1, 'Jour'),
+      DiabeteCombo(2, 'Semaine'),
+
+    ];
+  }
 }
 
