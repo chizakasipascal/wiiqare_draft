@@ -7,7 +7,7 @@ class Pictures {
   static const ObjectiSVG = "${pathAssets}35536-arrow-right.json";
 
   //Icon
-  static const Consltation = "${pathAssets}consulation.png";
+  static const Consltation = "${pathAssets}consultation.png";
   static const Guide = "${pathAssets}Guide.png";
   static const Gym = "${pathAssets}gym.png";
   static const Hopital = "${pathAssets}Hospitalic.png";

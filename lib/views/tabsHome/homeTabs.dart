@@ -27,6 +27,7 @@ class _HomeTabsState extends State<HomeTabs> {
     });
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+
       children: [
         BackGroundHome(
           size: size,
@@ -34,6 +35,7 @@ class _HomeTabsState extends State<HomeTabs> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
+
               children: [
                 SingleTitle(
                   singleTitle: "Mon objectif : 50.000 Fc par semaine",
@@ -109,45 +111,52 @@ class _HomeTabsState extends State<HomeTabs> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            WikiImtesHome(
-              icon: Icon(Icons.headset_mic),
-              chaine: "Sport",
-              onPressed: () {},
+            Column(
+              children: [
+                WikiImtesHome(
+                  icon: Image.asset(Pictures.Sport),
+                  chaine: "Sport",
+                  onPressed: () {},
+                  border: Colors.transparent,
+                ),SizedBox(height: 8.0),WikiImtesHome(
+                  icon: Image.asset(Pictures.Prevention),
+                  chaine: "Prevention",
+                  onPressed: () {},   border: Colors.transparent,
+                ),
+              ],
             ),
-            WikiImtesHome(
-              icon: Icon(Icons.headset_mic),
-              chaine: "Consultation",
-              onPressed: () {},
+            Column(
+              children: [
+                WikiImtesHome(
+                  icon: Image.asset(Pictures.Consltation),
+                  chaine: "Consultation",
+                  onPressed: () {},   border: Colors.transparent,
+                ),SizedBox(height: 8.0),
+                WikiImtesHome(
+                  icon: Image.asset(Pictures.Hopital),
+                  chaine: "Hospitaux",
+                  onPressed: () {},   border: Colors.transparent,
+                ),
+              ],
             ),
-            WikiImtesHome(
-              icon: Icon(Icons.headset_mic),
-              chaine: "Pharmacie",
-              onPressed: () {},
+            Column(
+
+              children: [
+                WikiImtesHome(
+                  icon: Image.asset(Pictures.Pharmacie),
+                  chaine: "Pharmacie",
+                  onPressed: () {},   border: Colors.transparent,
+                ),SizedBox(height: 8.0),
+                WikiImtesHome(
+                  icon: Image.asset(Pictures.Lab),
+                  chaine: "Labo",
+                  onPressed: () {},   border: Colors.transparent,
+                ),
+              ],
             ),
           ],
         ),
         SizedBox(height: 5),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            WikiImtesHome(
-              icon: Icon(Icons.headset_mic),
-              chaine: "Prevention",
-              onPressed: () {},
-            ),
-            WikiImtesHome(
-              icon: Icon(Icons.headset_mic),
-              chaine: "Hospitaux",
-              onPressed: () {},
-            ),
-            WikiImtesHome(
-              icon: Icon(Icons.headset_mic),
-              chaine: "Labo",
-              onPressed: () {},
-            ),
-          ],
-        ),
 
         SizedBox(height: 5),
         Row(
