@@ -102,58 +102,64 @@ class _FamilleState extends State<Famille> {
         ),
       ),
       bottomSheet: SizedBox(
-        height: size.height * .5,
+        height: size.height * .8,
         child: StepCreateObjectif(
           size: size,
           title: "Créer objectif pour ma sante",
           widget:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SingleTitle(
-                singleTitle: "Date de naissance",
-                color: BlackText,
-                fontWeight: FontWeight.bold,
-              ),
-              Container(
-                width: size.width * .5,
-                decoration: BoxDecoration(
-                  color: Grey.withOpacity(.1),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: wikiText(
-                    hint: "Date de naissance",
-                    //  label: "Date de naissance",
-                    inputType: TextInputType.number),
-              ),
-              SizedBox(height: 10),
-              SingleTitle(
-                singleTitle:
-                "Depuis combien de temps été vous diabétique ou hypertendue?",
-                color: BlackText,
-                fontWeight: FontWeight.bold,
-              ),
-              SizedBox(height: 10),
-              Container(
-                width: size.width * .4,
-                decoration: BoxDecoration(
-                  color: Grey.withOpacity(.1),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(3.0),
-                  child: DropdownButton(
-                    style: TextStyle(fontSize: 10.0, color: BlueText),
-                    hint: SingleTitle(
-                      singleTitle: "Selection",
-                      size: 10.0,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    SingleTitle(
+                      singleTitle: "Date de naissance",
+                      color: BlackText,
+                      fontWeight: FontWeight.bold,
                     ),
-                    value: _selectedMois,
-                    items: _dropdownMenuItems,
-                    onChanged: onChangeDropdownItem,
-                  ),
-                ),
+                    Container(
+                      width: size.width * .4,
+                      decoration: BoxDecoration(
+                        color: Grey.withOpacity(.1),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: wikiText(
+                          hint: "Date de naissance",
+                          //  label: "Date de naissance",
+                          inputType: TextInputType.number),
+                    ),
+                  ],)
+
+                 , Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    SingleTitle(
+                      singleTitle: "Nombre des enfants",
+                      color: BlackText,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    Container(
+                      width: size.width * .4,
+                      decoration: BoxDecoration(
+                        color: Grey.withOpacity(.1),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: wikiText(
+                          hint: "Date de naissance",
+                          //  label: "Date de naissance",
+                          inputType: TextInputType.number),
+                    ),
+                  ],)
+
+                ],
               ),
               SizedBox(height: 10),
+
+              SizedBox(height: 10),
+                SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
