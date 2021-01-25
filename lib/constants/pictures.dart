@@ -23,9 +23,13 @@ class Pictures {
   static const Sportgym = "${pathAssets}Sportgym.png";
   static const WELCOME = "${pathAssets}welcome.png";
 
+  static const Credit = "${pathAssets}payer.png";
+  static const Pay = "${pathAssets}payer.png";
+  static const Recharge = "${pathAssets}money-transfer copy.png";
+  static const Autre = "${pathAssets}money-transfer copy.png";
+
   //
 
   //Photo offres
-  static const OffresImages1 =
-      "${pathAssets}240_F_405904726_ZhFrl6TFBGYSMEuaOgfCKC1SSNmCxyeM.jpeg";
+  static const OffresImages1 = "${pathAssets}offre.png";
 }

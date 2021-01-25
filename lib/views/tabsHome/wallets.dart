@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/utils/colors.dart';
@@ -103,10 +105,7 @@ class _WalletsState extends State<Wallets> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               WikiImtesHome(
-                icon: Icon(
-                  FontAwesomeIcons.exchangeAlt,
-                  color: Yello,
-                ),
+                icon: Image.asset(Pictures.Credit),
                 chaine: "Credit",
                 textColor: Yello,
                 color: White,
@@ -114,10 +113,7 @@ class _WalletsState extends State<Wallets> {
                 onPressed: () {},
               ),
               WikiImtesHome(
-                icon: Icon(
-                  FontAwesomeIcons.qrcode,
-                  color: Yello,
-                ),
+                icon: Image.asset(Pictures.Pay),
                 chaine: "Paie credit",
                 textColor: Yello,
                 color: White,
@@ -133,10 +129,7 @@ class _WalletsState extends State<Wallets> {
                 onPressed: () {},
               ),
               WikiImtesHome(
-                icon: Icon(
-                  FontAwesomeIcons.moneyBill,
-                  color: Yello,
-                ),
+                icon: Image.asset(Pictures.Autre),
                 chaine: "Autre",
                 textColor: Yello,
                 color: White,
