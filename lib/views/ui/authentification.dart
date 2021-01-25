@@ -39,83 +39,85 @@ class _AuthentificationState extends State<Authentification>
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: DefaultTabController(
-                length: 2,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: LogoWiiQare(size: size),
-                        ),
-                        Spacer(),
-                        TabBar(
-                          isScrollable: true,
-                          indicatorColor: Yello,
-                          onTap: _getIndex(),
-                          controller: _controller,
-                          labelStyle: TextStyle(
-                            color: BlueText,
-                            fontSize: 14,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Expanded(
+                child: DefaultTabController(
+                  length: 2,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: LogoWiiQare(size: size),
                           ),
-                          indicatorSize: TabBarIndicatorSize.tab,
-                          tabs: [
-                            Tab(
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: const Text(
-                                  "Se connecter",
-                                  style: TextStyle(
-                                    color: BlueText,
-                                  ),
-                                ),
-                              ),
+                          Spacer(),
+                          TabBar(
+                            isScrollable: true,
+                            indicatorColor: Yello,
+                            onTap: _getIndex(),
+                            controller: _controller,
+                            labelStyle: TextStyle(
+                              color: BlueText,
+                              fontSize: 14,
                             ),
-                            Tab(
-                              child: Container(
-                                width: 70,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                ),
+                            indicatorSize: TabBarIndicatorSize.tab,
+                            tabs: [
+                              Tab(
                                 child: Align(
                                   alignment: Alignment.center,
                                   child: const Text(
-                                    "S'inscrire",
+                                    "Se connecter",
                                     style: TextStyle(
                                       color: BlueText,
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Expanded(
-                      child: Container(
-                        child: TabBarView(
-                          controller: _controller,
-                          physics: new NeverScrollableScrollPhysics(),
-                          children: [
-                            Login(),
-                            Sincrire(),
-                          ],
+                              Tab(
+                                child: Container(
+                                  width: 70,
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: const Text(
+                                      "S'inscrire",
+                                      style: TextStyle(
+                                        color: BlueText,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Expanded(
+                        child: Container(
+                          child: TabBarView(
+                            controller: _controller,
+                            physics: new NeverScrollableScrollPhysics(),
+                            children: [
+                              Login(),
+                              Sincrire(),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

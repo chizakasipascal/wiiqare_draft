@@ -14,8 +14,8 @@ class Pictures {
 
   static const Lab2 = "${pathAssets}Lab2.png";
   static const Lab = "${pathAssets}labo.png";
-  static const Login = "${pathAssets}login.png";
-  static const MAP = "${pathAssets}map.png";
+  static const Login = "${pathAssets}singin.png";
+  static const MAP = "${pathAssets}locationMap.png";
 
   static const Pharmacie = "${pathAssets}pharmacie.png";
   static const Prevention = "${pathAssets}Prevention.png";
