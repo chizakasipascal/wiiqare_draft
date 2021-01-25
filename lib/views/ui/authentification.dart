@@ -39,85 +39,83 @@ class _AuthentificationState extends State<Authentification>
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Expanded(
-                child: DefaultTabController(
-                  length: 2,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.only(left: 8.0),
-                            child: LogoWiiQare(size: size),
+        child: Column(
+          children: [
+            Expanded(
+              child: DefaultTabController(
+                length: 2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: LogoWiiQare(size: size),
+                        ),
+                        Spacer(),
+                        TabBar(
+                          isScrollable: true,
+                          indicatorColor: Yello,
+                          onTap: _getIndex(),
+                          controller: _controller,
+                          labelStyle: TextStyle(
+                            color: BlueText,
+                            fontSize: 14,
                           ),
-                          Spacer(),
-                          TabBar(
-                            isScrollable: true,
-                            indicatorColor: Yello,
-                            onTap: _getIndex(),
-                            controller: _controller,
-                            labelStyle: TextStyle(
-                              color: BlueText,
-                              fontSize: 14,
+                          indicatorSize: TabBarIndicatorSize.tab,
+                          tabs: [
+                            Tab(
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: const Text(
+                                  "Se connecter",
+                                  style: TextStyle(
+                                    color: BlueText,
+                                  ),
+                                ),
+                              ),
                             ),
-                            indicatorSize: TabBarIndicatorSize.tab,
-                            tabs: [
-                              Tab(
+                            Tab(
+                              child: Container(
+                                width: 70,
+                                height: 60,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
                                 child: Align(
                                   alignment: Alignment.center,
                                   child: const Text(
-                                    "Se connecter",
+                                    "S'inscrire",
                                     style: TextStyle(
                                       color: BlueText,
                                     ),
                                   ),
                                 ),
                               ),
-                              Tab(
-                                child: Container(
-                                  width: 70,
-                                  height: 60,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  child: Align(
-                                    alignment: Alignment.center,
-                                    child: const Text(
-                                      "S'inscrire",
-                                      style: TextStyle(
-                                        color: BlueText,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Expanded(
-                        child: Container(
-                          child: TabBarView(
-                            controller: _controller,
-                            physics: new NeverScrollableScrollPhysics(),
-                            children: [
-                              Login(),
-                              Sincrire(),
-                            ],
-                          ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: TabBarView(
+                          controller: _controller,
+                          physics: new NeverScrollableScrollPhysics(),
+                          children: [
+                            Login(),
+                            Sincrire(),
+                          ],
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

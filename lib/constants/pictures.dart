@@ -24,4 +24,8 @@ class Pictures {
   static const WELCOME = "${pathAssets}welcome.png";
 
   //
+
+  //Photo offres
+  static const OffresImages1 =
+      "${pathAssets}240_F_405904726_ZhFrl6TFBGYSMEuaOgfCKC1SSNmCxyeM.jpeg";
 }

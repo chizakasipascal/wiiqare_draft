@@ -21,41 +21,41 @@ class _HelpState extends State<Help> {
   @override
   void initState() {
     super.initState();
-    _showPersBottomSheetCallBack = _showPersBottomSheet;
+    //_showPersBottomSheetCallBack = _showPersBottomSheet;
   }
 
-  void _showPersBottomSheet() {
-    setState(() {
-      _showPersBottomSheetCallBack = null;
-    });
-    _scaffoldKey.currentState
-        .showBottomSheet((context) {
-          return ListView.builder(
-            itemCount: 60,
-            itemBuilder: (context, i) => new Container(
-              // height: 300.0,
-              margin: const EdgeInsets.only(top: 20),
-              // color: Colors.greenAccent,
+  // void _showPersBottomSheet() {
+  //   setState(() {
+  //     _showPersBottomSheetCallBack = null;
+  //   });
+  //   _scaffoldKey.currentState
+  //       .showBottomSheet((context) {
+  //         return ListView.builder(
+  //           itemCount: 60,
+  //           itemBuilder: (context, i) => new Container(
+  //             // height: 300.0,
+  //             margin: const EdgeInsets.only(top: 20),
+  //             // color: Colors.greenAccent,
 
-              child: WikiOffres(
-                size: MediaQuery.of(context).size,
-                bonus: 1000,
-                onPressed: () {
-                  //TODO: Code propres aceete fonction
-                },
-              ),
-            ),
-          );
-        })
-        .closed
-        .whenComplete(() {
-          if (mounted) {
-            setState(() {
-              _showPersBottomSheetCallBack = _showPersBottomSheet;
-            });
-          }
-        });
-  }
+  //             child: WikiOffres(
+  //               size: MediaQuery.of(context).size,
+  //               bonus: 1000,
+  //               onPressed: () {
+  //                 //TODO: Code propres aceete fonction
+  //               },
+  //             ),
+  //           ),
+  //         );
+  //       })
+  //       .closed
+  //       .whenComplete(() {
+  //         if (mounted) {
+  //           setState(() {
+  //             _showPersBottomSheetCallBack = _showPersBottomSheet;
+  //           });
+  //         }
+  //       });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -338,65 +338,45 @@ class _HelpState extends State<Help> {
               ///
             ],
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              height: 220,
-              child: Column(
-                children: [
-                  new GestureDetector(
-                    onTap: _showPersBottomSheetCallBack,
-                    child: new Container(
-                      height: 220,
-                      // color: Colors.red,
-                      child: Column(
-                        children: [
-                          Container(
-                            color: Grey.withOpacity(.1),
-                            height: 15,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                SingleTitle(
-                                  singleTitle:
-                                      "Cliquer pour voir plus d'offres",
-                                  size: 9.0,
-                                  color: Colors.black,
-                                ),
-                                Icon(
-                                  Icons.arrow_upward,
-                                  size: 14.0,
-                                ),
-                                SizedBox(width: 10.0)
-                              ],
-                            ),
-                          ),
-                          Column(
-                            children: [
-                              SizedBox(height: 10),
-                              WikiOffres(
-                                size: size,
-                                bonus: 1000,
-                                onPressed: () {
-                                  //Test de navigation to home
-                                  Navigator.pushNamed(context, Routes.home);
+          DraggableScrollableSheet(
+            // maxChildSize: 0.9,
+            initialChildSize: 0.3,
+            minChildSize: 0.3,
+            builder: (context, scrollController) {
+              return Container(
+                decoration: BoxDecoration(
+                  color: White,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                  ),
+                ),
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: 60,
+                  physics: BouncingScrollPhysics(),
+                  itemBuilder: (context, i) => new Container(
+                    // height: 300.0,
+                    //  margin: const EdgeInsets.only(top: 9),
+                    // color: Colors.greenAccent,
 
-                                  //TODO: Code propres aceete fonction
-                                },
-                              ),
-                            ],
-                          ),
-                        ],
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      ),
+                      child: WikiOffres(
+                        size: MediaQuery.of(context).size,
+                        bonus: 1000,
+                        onPressed: () {
+                          //TODO: Code propres aceete fonction
+                        },
                       ),
                     ),
                   ),
-                ],
-              ),
-            ),
-          ),
-          new Padding(
-            padding: const EdgeInsets.only(top: 10.0),
+                ),
+              );
+            },
           ),
         ],
       ),
