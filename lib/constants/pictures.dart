@@ -27,7 +27,7 @@ class Pictures {
   static const Pay = "${pathAssets}payer.png";
   static const Recharge = "${pathAssets}money-transfer copy.png";
   static const Autre = "${pathAssets}money-transfer copy.png";
-
+  static const Trasnfert = "${pathAssets}money-transfer copy.png";
   //
 
   //Photo offres

@@ -17,7 +17,7 @@ class HistoriqueItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       selectedTileColor: BlueText,
-      leading: SizedBox(child: widget),
+      leading: SizedBox(height: 50, width: 50, child: widget),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
