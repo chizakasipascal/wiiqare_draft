@@ -97,9 +97,9 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
                       ],
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Expanded(
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
                       child: DefaultTabController(
                         length: 3,
                         child: Column(
