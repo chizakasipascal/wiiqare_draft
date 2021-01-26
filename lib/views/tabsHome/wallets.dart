@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/utils/colors.dart';
@@ -51,10 +53,7 @@ class _WalletsState extends State<Wallets> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       WikiImtesHome(
-                        icon: Icon(
-                          FontAwesomeIcons.exchangeAlt,
-                          color: Yello,
-                        ),
+                        icon: Image.asset(Pictures.Trasnfert),
                         chaine: "Transfert",
                         textColor: Yello,
                         color: White,
@@ -62,10 +61,7 @@ class _WalletsState extends State<Wallets> {
                         onPressed: () {},
                       ),
                       WikiImtesHome(
-                        icon: Icon(
-                          FontAwesomeIcons.qrcode,
-                          color: Yello,
-                        ),
+                        icon: Image.asset(Pictures.Pay),
                         chaine: "Pay",
                         textColor: Yello,
                         color: White,
@@ -73,10 +69,7 @@ class _WalletsState extends State<Wallets> {
                         onPressed: () {},
                       ),
                       WikiImtesHome(
-                        icon: Icon(
-                          FontAwesomeIcons.moneyBill,
-                          color: Yello,
-                        ),
+                        icon: Image.asset(Pictures.Recharge),
                         chaine: "Recharge",
                         textColor: Yello,
                         color: White,
@@ -103,10 +96,7 @@ class _WalletsState extends State<Wallets> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               WikiImtesHome(
-                icon: Icon(
-                  FontAwesomeIcons.exchangeAlt,
-                  color: Yello,
-                ),
+                icon: Image.asset(Pictures.Credit),
                 chaine: "Credit",
                 textColor: Yello,
                 color: White,
@@ -114,10 +104,7 @@ class _WalletsState extends State<Wallets> {
                 onPressed: () {},
               ),
               WikiImtesHome(
-                icon: Icon(
-                  FontAwesomeIcons.qrcode,
-                  color: Yello,
-                ),
+                icon: Image.asset(Pictures.Pay),
                 chaine: "Paie credit",
                 textColor: Yello,
                 color: White,
@@ -133,10 +120,7 @@ class _WalletsState extends State<Wallets> {
                 onPressed: () {},
               ),
               WikiImtesHome(
-                icon: Icon(
-                  FontAwesomeIcons.moneyBill,
-                  color: Yello,
-                ),
+                icon: Image.asset(Pictures.Autre),
                 chaine: "Autre",
                 textColor: Yello,
                 color: White,
@@ -152,6 +136,34 @@ class _WalletsState extends State<Wallets> {
           child: SingleTitle(singleTitle: "Historique"),
         ),
         SizedBox(height: 10),
+        // Container(
+        //   height: 50,
+        //   child: ListTile(
+        //     selectedTileColor: BlueText,
+        //     leading: SizedBox(height: 50, width: 50, child: widget),
+        //     title: Column(
+        //       crossAxisAlignment: CrossAxisAlignment.start,
+        //       children: [
+        //         SingleTitle(singleTitle: "title"),
+        //         SizedBox(height: 10),
+        //         Row(
+        //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //           children: [
+        //             SingleTitle(
+        //               singleTitle: "date",
+        //               size: 12.0,
+        //             ),
+        //             SingleTitle(
+        //               singleTitle: "typeDescption",
+        //               size: 12.0,
+        //               color: Yello,
+        //             ),
+        //           ],
+        //         ),
+        //       ],
+        //     ),
+        //   ),
+        // )
         // HistoriqueItem(
         //   widget: Placeholder(),
         //   title: "Transfert",

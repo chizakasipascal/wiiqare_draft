@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/welcomItemsButtom.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
@@ -8,12 +9,14 @@ typedef OnPressed();
 class WikiOffres extends StatelessWidget {
   final Size size;
   final bonus;
+  final Widget widget;
   final OnPressed onPressed;
   const WikiOffres({
     Key key,
     @required this.size,
     @required this.bonus,
     @required this.onPressed,
+    this.widget,
   }) : super(key: key);
 
   @override
@@ -26,6 +29,13 @@ class WikiOffres extends StatelessWidget {
         color: Colors.transparent,
         widget: Stack(
           children: [
+            SizedBox(
+              width: size.width,
+              child: Image.asset(
+                Pictures.OffresImages1,
+                fit: BoxFit.cover,
+              ),
+            ),
             Positioned(
               bottom: 0.0,
               child: Container(
