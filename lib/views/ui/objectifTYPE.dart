@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
@@ -178,11 +179,10 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                           Align(
                             alignment: Alignment.center,
                             child: SizedBox(
-                                height: 70,
-                                width: 70,
-                                child: Placeholder(
-                                  color: Yello,
-                                )),
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(Pictures.Familly),
+                            ),
                           ),
                           SizedBox(height: 20),
                           SingleTitle(
@@ -213,11 +213,10 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                           Align(
                             alignment: Alignment.center,
                             child: SizedBox(
-                                height: 70,
-                                width: 70,
-                                child: Placeholder(
-                                  color: Yello,
-                                )),
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(Pictures.Grossesse),
+                            ),
                           ),
                           SizedBox(height: 20),
                           SingleTitle(

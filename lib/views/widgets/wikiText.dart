@@ -5,11 +5,11 @@ typedef String Validator(string);
 typedef void OnSaved(string);
 
 Widget wikiText(
-    {@required String hint,
+    {String hint,
     Widget suffixIcon,
     Widget prefixIcon,
     TextEditingController controller,
-    @required String label,
+    String label,
     Validator validator,
     OnSaved onSaved,
     TextInputType inputType = TextInputType.text,
