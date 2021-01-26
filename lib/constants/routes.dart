@@ -15,6 +15,7 @@ class Routes {
   static const String qRCodeScanner = '/qRCodeScanner';
   static const String creeobjectif = '/creeobjectif';
   static const String objectifTYPE = '/objectifTYPE';
+  static const String goupe = '/groupe';
 
   /// Objectif route
 
@@ -46,5 +47,11 @@ class Routes {
     sante: (BuildContext context) => Sante(),
 
     ///
+    ///
+    ///
+    ///Groupe
+    ///
+
+    goupe: (BuildContext context) => GroupeScafold(),
   };
 }
