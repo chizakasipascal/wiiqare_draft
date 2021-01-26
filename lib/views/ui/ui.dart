@@ -9,3 +9,4 @@ export 'codePin.dart';
 export 'creeobjectif.dart';
 export 'objectifTYPE.dart';
 export 'groupeScafold.dart';
+export 'groupeCreer.dart';

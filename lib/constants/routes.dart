@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/views/ui/GroupeCreer.dart';
 import 'package:wiiqare/views/ui/ui.dart';
 import 'package:wiiqare/views/ui/objectis/objectifs.dart';
+import 'package:wiiqare/views/ui/groupeCreer.dart';
 
 class Routes {
   Routes._();
