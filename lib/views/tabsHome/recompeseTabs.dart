@@ -67,68 +67,66 @@ class _RecompeseTabsState extends State<RecompeseTabs>
                 ),
                 Align(
                   alignment: Alignment.bottomCenter,
-                  child: Expanded(
-                    child: DefaultTabController(
-                      length: 2,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              TabBar(
-                                isScrollable: true,
-                                indicatorColor: Yello,
-                                onTap: _getIndex(),
-                                controller: _controller,
-                                labelStyle: TextStyle(
-                                  color: BlueText,
-                                  fontSize: 14,
-                                ),
-                                indicatorSize: TabBarIndicatorSize.tab,
-                                tabs: [
-                                  Tab(
-                                    child: Container(
-                                      width: 100,
-                                      height: 60,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: const Text(
-                                          "Offres",
-                                          style: TextStyle(
-                                            color: White,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Tab(
-                                    child: Container(
-                                      width: 100,
-                                      height: 60,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: const Text(
-                                          "Gagne bonus",
-                                          style: TextStyle(
-                                            color: White,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                  child: DefaultTabController(
+                    length: 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            TabBar(
+                              isScrollable: true,
+                              indicatorColor: Yello,
+                              onTap: _getIndex(),
+                              controller: _controller,
+                              labelStyle: TextStyle(
+                                color: BlueText,
+                                fontSize: 14,
                               ),
-                            ],
-                          ),
-                        ],
-                      ),
+                              indicatorSize: TabBarIndicatorSize.tab,
+                              tabs: [
+                                Tab(
+                                  child: Container(
+                                    width: 100,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: const Text(
+                                        "Offres",
+                                        style: TextStyle(
+                                          color: White,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Tab(
+                                  child: Container(
+                                    width: 100,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: const Text(
+                                        "Gagne bonus",
+                                        style: TextStyle(
+                                          color: White,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
                 ),
