@@ -118,7 +118,7 @@ class _GroupeStepViewState extends State<GroupeStepView> {
                         title: new Text('Step 3'),
                         content: GroupStep(
                           size: size,
-                          widget: GroupeStep2(),
+                          widget: GroupeStep3(),
                         ),
                         isActive: _currentStep >= 0,
                         state: _currentStep >= 2
