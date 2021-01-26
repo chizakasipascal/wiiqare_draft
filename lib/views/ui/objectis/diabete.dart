@@ -20,7 +20,6 @@ class _DiabeteState extends State<Diabete> {
 
   DiabeteCombo _selectedMois;
 
-
   @override
   void initState() {
     _dropdownMenuItems = buildDropdownMenuItems(_diabetes);
@@ -109,8 +108,7 @@ class _DiabeteState extends State<Diabete> {
         child: StepCreateObjectif(
           size: size,
           title: "Créer objectif pour ma maladie",
-          widget:
-          Column(
+          widget: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SingleTitle(
@@ -126,7 +124,7 @@ class _DiabeteState extends State<Diabete> {
                 ),
                 child: wikiText(
                     hint: "Date de naissance",
-                    //  label: "Date de naissance",
+                    label: "Date de naissance",
                     inputType: TextInputType.number),
               ),
               SizedBox(height: 10),
@@ -162,7 +160,7 @@ class _DiabeteState extends State<Diabete> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
-                   crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SingleTitle(
                         singleTitle: "Montant ",
@@ -177,7 +175,7 @@ class _DiabeteState extends State<Diabete> {
                         ),
                         child: wikiText(
                             hint: "Date de naissance",
-                            //  label: "Date de naissance",
+                            label: "Date de naissance",
                             inputType: TextInputType.number),
                       ),
                     ],

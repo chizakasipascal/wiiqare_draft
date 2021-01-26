@@ -14,7 +14,6 @@ class Famille extends StatefulWidget {
 }
 
 class _FamilleState extends State<Famille> {
-
   List<DiabeteCombo> _diabetes = DiabeteCombo.getComboDiabteMois();
   List<DropdownMenuItem<DiabeteCombo>> _dropdownMenuItems;
   DiabeteCombo _selectedMois;
@@ -106,7 +105,7 @@ class _FamilleState extends State<Famille> {
         child: StepCreateObjectif(
           size: size,
           title: "Créer objectif pour ma sante",
-          widget:Column(
+          widget: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
@@ -115,51 +114,50 @@ class _FamilleState extends State<Famille> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                    SingleTitle(
-                      singleTitle: "Date de naissance",
-                      color: BlackText,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    Container(
-                      width: size.width * .4,
-                      decoration: BoxDecoration(
-                        color: Grey.withOpacity(.1),
-                        borderRadius: BorderRadius.circular(5),
+                      SingleTitle(
+                        singleTitle: "Date de naissance",
+                        color: BlackText,
+                        fontWeight: FontWeight.bold,
                       ),
-                      child: wikiText(
-                          hint: "Date de naissance",
-                          //  label: "Date de naissance",
-                          inputType: TextInputType.number),
-                    ),
-                  ],)
-
-                 , Column(
+                      Container(
+                        width: size.width * .4,
+                        decoration: BoxDecoration(
+                          color: Grey.withOpacity(.1),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: wikiText(
+                            hint: "Date de naissance",
+                            label: "Date de naissance",
+                            inputType: TextInputType.number),
+                      ),
+                    ],
+                  ),
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                    SingleTitle(
-                      singleTitle: "Nombre des enfants",
-                      color: BlackText,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    Container(
-                      width: size.width * .4,
-                      decoration: BoxDecoration(
-                        color: Grey.withOpacity(.1),
-                        borderRadius: BorderRadius.circular(5),
+                      SingleTitle(
+                        singleTitle: "Nombre des enfants",
+                        color: BlackText,
+                        fontWeight: FontWeight.bold,
                       ),
-                      child: wikiText(
-                          hint: "Date de naissance",
-                          //  label: "Date de naissance",
-                          inputType: TextInputType.number),
-                    ),
-                  ],)
-
+                      Container(
+                        width: size.width * .4,
+                        decoration: BoxDecoration(
+                          color: Grey.withOpacity(.1),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: wikiText(
+                            hint: "Date de naissance",
+                            label: "Date de naissance",
+                            inputType: TextInputType.number),
+                      ),
+                    ],
+                  )
                 ],
               ),
               SizedBox(height: 10),
-
               SizedBox(height: 10),
-                SizedBox(height: 10),
+              SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -179,7 +177,7 @@ class _FamilleState extends State<Famille> {
                         ),
                         child: wikiText(
                             hint: "Date de naissance",
-                            //  label: "Date de naissance",
+                            label: "Date de naissance",
                             inputType: TextInputType.number),
                       ),
                     ],
@@ -200,7 +198,7 @@ class _FamilleState extends State<Famille> {
                         ),
                         child: wikiText(
                             hint: "Date de naissance",
-                            //  label: "Date de naissance",
+                            label: "Date de naissance",
                             inputType: TextInputType.number),
                       ),
                     ],
