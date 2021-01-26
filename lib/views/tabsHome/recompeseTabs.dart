@@ -39,96 +39,73 @@ class _RecompeseTabsState extends State<RecompeseTabs>
       child: Column(
         children: [
           Container(
-            height: 220,
+            height: 48,
             color: BlueText,
             child: Column(
               children: [
-                WikiAppBar(name: "Jean"),
-                Padding(
-                  padding:
-                      const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
-                  child: Container(
-                    height: 100,
-                    width: size.width,
-                    margin: const EdgeInsets.only(bottom: 5.0),
-                    decoration: BoxDecoration(
-                      color: Bleu,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: SingleTitle(
-                        singleTitle: "Groupe solde actuel : 250.00 FC",
-                        fontWeight: FontWeight.bold,
-                        textAlign: TextAlign.center,
-                        color: White,
-                      ),
-                    ),
-                  ),
-                ),
+                //  WikiAppBar(name: "Jean"),
                 Align(
                   alignment: Alignment.bottomCenter,
-                  child: Expanded(
-                    child: DefaultTabController(
-                      length: 2,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              TabBar(
-                                isScrollable: true,
-                                indicatorColor: Yello,
-                                onTap: _getIndex(),
-                                controller: _controller,
-                                labelStyle: TextStyle(
-                                  color: BlueText,
-                                  fontSize: 14,
-                                ),
-                                indicatorSize: TabBarIndicatorSize.tab,
-                                tabs: [
-                                  Tab(
-                                    child: Container(
-                                      width: 100,
-                                      height: 60,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: const Text(
-                                          "Offres",
-                                          style: TextStyle(
-                                            color: White,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Tab(
-                                    child: Container(
-                                      width: 100,
-                                      height: 60,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: const Text(
-                                          "Gagne bonus",
-                                          style: TextStyle(
-                                            color: White,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                  child: DefaultTabController(
+                    length: 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            TabBar(
+                              isScrollable: true,
+                              indicatorColor: Yello,
+                              onTap: _getIndex(),
+                              controller: _controller,
+                              labelStyle: TextStyle(
+                                color: BlueText,
+                                fontSize: 14,
                               ),
-                            ],
-                          ),
-                        ],
-                      ),
+                              indicatorSize: TabBarIndicatorSize.tab,
+                              tabs: [
+                                Tab(
+                                  child: Container(
+                                    width: 100,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: const Text(
+                                        "Offres",
+                                        style: TextStyle(
+                                          color: White,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Tab(
+                                  child: Container(
+                                    width: 100,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: const Text(
+                                        "Gagne bonus",
+                                        style: TextStyle(
+                                          color: White,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
                 ),

@@ -8,6 +8,6 @@ class SettingdTabs extends StatefulWidget {
 class _SettingdTabsState extends State<SettingdTabs> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("SettingdTabs"));
+    return Center(child: Text("Setting"));
   }
 }
