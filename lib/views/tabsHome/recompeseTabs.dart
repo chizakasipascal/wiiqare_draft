@@ -2,8 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
-import 'package:wiiqare/views/tabsGroupe/tabsGroupe.dart';
-import 'package:wiiqare/views/widgets/Background/background.dart';
+import 'package:wiiqare/views/tabsRecompense/tabsRecompense.dart';
 
 class RecompeseTabs extends StatefulWidget {
   @override
@@ -89,19 +88,26 @@ class _RecompeseTabsState extends State<RecompeseTabs>
                                 indicatorSize: TabBarIndicatorSize.tab,
                                 tabs: [
                                   Tab(
-                                    child: Align(
-                                      alignment: Alignment.center,
-                                      child: const Text(
-                                        "Offres",
-                                        style: TextStyle(
-                                          color: White,
+                                    child: Container(
+                                      width: 100,
+                                      height: 60,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                      ),
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: const Text(
+                                          "Offres",
+                                          style: TextStyle(
+                                            color: White,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
                                   Tab(
                                     child: Container(
-                                      width: 70,
+                                      width: 100,
                                       height: 60,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(5),
@@ -135,8 +141,8 @@ class _RecompeseTabsState extends State<RecompeseTabs>
                 controller: _controller,
                 physics: new NeverScrollableScrollPhysics(),
                 children: [
-                  Members(),
-                  Historique(),
+                  Offres(),
+                  Gagne(),
                 ],
               ),
             ),
