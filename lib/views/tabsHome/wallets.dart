@@ -40,8 +40,12 @@ class _WalletsState extends State<Wallets> {
                   children: [
                     SingleTitle(
                       singleTitle: "My total balance",
+                      color: White,
                     ),
-                    SingleTitle(singleTitle: "${valeur} FC")
+                    SingleTitle(
+                      singleTitle: "${valeur} FC",
+                      color: White,
+                    )
                   ],
                 ),
                 Divider(
