@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
+import 'package:wiiqare/views/ui/GroupeCreer.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
 import 'package:wiiqare/views/widgets/Groupe/Steps/steps.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
@@ -101,7 +102,9 @@ class _GroupeStepViewState extends State<GroupeStepView> {
                         isActive: _currentStep >= 0,
                         state: _currentStep >= 0
                             ? StepState.complete
-                            : StepState.disabled,
+                            : StepState.disabled
+
+
                       ),
                       new Step(
                         title: new Text('Step 2'),
@@ -112,7 +115,7 @@ class _GroupeStepViewState extends State<GroupeStepView> {
                         isActive: _currentStep >= 0,
                         state: _currentStep >= 1
                             ? StepState.complete
-                            : StepState.disabled,
+                            : StepState.disabled
                       ),
                       new Step(
                         title: new Text('Step 3'),
@@ -123,7 +126,7 @@ class _GroupeStepViewState extends State<GroupeStepView> {
                         isActive: _currentStep >= 0,
                         state: _currentStep >= 2
                             ? StepState.complete
-                            : StepState.disabled,
+                            : StepState.disabled
                       ),
                     ],
                   ),
