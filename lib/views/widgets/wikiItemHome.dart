@@ -22,25 +22,20 @@ class WikiImtesHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-
       children: [
         Container(
-
           decoration: BoxDecoration(
-              color: color,
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: border),
-
-              boxShadow: [
-                BoxShadow(
-                  color: Grey.withOpacity(0.5),
-                  spreadRadius: 2,
-                  blurRadius: 3,
-                  offset: Offset(0, 2), // changes position of shadow
-                ),
-              ],
-
-
+            color: color,
+            borderRadius: BorderRadius.circular(50),
+            border: Border.all(color: border),
+            boxShadow: [
+              BoxShadow(
+                color: Grey.withOpacity(0.5),
+                spreadRadius: 2,
+                blurRadius: 3,
+                offset: Offset(0, 2), // changes position of shadow
+              ),
+            ],
           ),
           child: IconButton(icon: icon, onPressed: onPressed),
         ),
