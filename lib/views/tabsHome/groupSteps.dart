@@ -8,12 +8,12 @@ import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
 import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
 
-class UsesTabs extends StatefulWidget {
+class GroupeStepView extends StatefulWidget {
   @override
-  _UsesTabsState createState() => _UsesTabsState();
+  _GroupeStepViewState createState() => _GroupeStepViewState();
 }
 
-class _UsesTabsState extends State<UsesTabs> {
+class _GroupeStepViewState extends State<GroupeStepView> {
   double percent;
   int _currentStep = 0;
   @override
@@ -80,48 +80,52 @@ class _UsesTabsState extends State<UsesTabs> {
                       topRight: Radius.circular(20),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      //  color: Colors.red,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 100,
-                            width: 100,
-                            child: Placeholder(),
-                          ),
-                          SizedBox(height: 10),
-                          SingleTitle(
-                            singleTitle:
-                                "Créer un groupe santé est une bonne manier de se protege en cas de problème de santé grave",
-                            textAlign: TextAlign.center,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          SizedBox(height: 10),
-                          SingleTitle(
-                            singleTitle:
-                                "Comme pour une tautine ensemble on est plus motive",
-                            textAlign: TextAlign.center,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          SizedBox(height: 80),
-                          SizedBox(
-                            height: 60.0,
-                            child: WikiButtom(
-                              descpritionButtom: "Je cree un groupe sante",
-                              onPressed: () {
-                                Navigator.pushNamed(context, Routes.goupe);
-                              },
-                              color: White,
-                              color2: Yello,
-                              colorBorder: Yello,
-                            ),
-                          ),
-                        ],
+                  child: Stepper(
+                    type: StepperType.horizontal,
+                    currentStep: _currentStep,
+                    onStepTapped: (int step) =>
+                        setState(() => _currentStep = step),
+                    onStepContinue: _currentStep < 2
+                        ? () => setState(() => _currentStep += 1)
+                        : null,
+                    onStepCancel: _currentStep > 0
+                        ? () => setState(() => _currentStep -= 1)
+                        : null,
+                    steps: <Step>[
+                      new Step(
+                        title: new Text('Step 1'),
+                        content: GroupStep(
+                          size: size,
+                          widget: GroupeStep2(),
+                        ),
+                        isActive: _currentStep >= 0,
+                        state: _currentStep >= 0
+                            ? StepState.complete
+                            : StepState.disabled,
                       ),
-                    ),
+                      new Step(
+                        title: new Text('Step 2'),
+                        content: GroupStep(
+                          size: size,
+                          widget: GroupeStep2(),
+                        ),
+                        isActive: _currentStep >= 0,
+                        state: _currentStep >= 1
+                            ? StepState.complete
+                            : StepState.disabled,
+                      ),
+                      new Step(
+                        title: new Text('Step 3'),
+                        content: GroupStep(
+                          size: size,
+                          widget: GroupeStep2(),
+                        ),
+                        isActive: _currentStep >= 0,
+                        state: _currentStep >= 2
+                            ? StepState.complete
+                            : StepState.disabled,
+                      ),
+                    ],
                   ),
                 );
               },

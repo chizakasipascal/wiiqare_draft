@@ -24,7 +24,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     final _pages = [
       HomeTabs(),
       Wallets(),
-      UsersTabs(),
+      UsesTabs(),
       RecompeseTabs(),
       SettingdTabs()
     ];

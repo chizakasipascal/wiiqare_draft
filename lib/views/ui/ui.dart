@@ -8,3 +8,4 @@ export 'otp.dart';
 export 'codePin.dart';
 export 'creeobjectif.dart';
 export 'objectifTYPE.dart';
+export 'groupeScafold.dart';
