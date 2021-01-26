@@ -4,7 +4,7 @@ import 'package:wiiqare/views/widgets/widgets.dart';
 
 typedef OnPressed();
 
-class MontantSetp extends StatelessWidget {
+class MontantSetp extends StatefulWidget {
   final montant, duree;
   final bool value;
   final OnPressed onTap;
@@ -17,6 +17,12 @@ class MontantSetp extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _MontantSetpState createState() => _MontantSetpState();
+}
+
+class _MontantSetpState extends State<MontantSetp> {
+  int _group = 0;
+  @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: Column(
@@ -24,37 +30,26 @@ class MontantSetp extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SingleTitle(
-            singleTitle: montant,
+            singleTitle: widget.montant,
             color: Bleu,
             fontWeight: FontWeight.w500,
           ),
           SizedBox(height: 5.0),
           SingleTitle(
-            singleTitle: duree,
+            singleTitle: widget.duree,
             color: Bleu,
             fontWeight: FontWeight.w500,
           ),
         ],
       ),
-      trailing: InkWell(
-        onTap: onTap,
-        child: Container(
-          decoration: BoxDecoration(shape: BoxShape.circle, color: Yello),
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: value
-                ? Icon(
-                    Icons.check,
-                    size: 15.0,
-                    color: Colors.white,
-                  )
-                : Icon(
-                    Icons.check_box_outline_blank,
-                    size: 15.0,
-                    color: Colors.blue,
-                  ),
-          ),
-        ),
+      trailing: Radio(
+        groupValue: _group,
+        value: 0,
+        onChanged: (t) {
+          setState(() {
+            _group = t;
+          });
+        },
       ),
     );
   }
