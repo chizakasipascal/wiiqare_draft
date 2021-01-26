@@ -39,32 +39,11 @@ class _RecompeseTabsState extends State<RecompeseTabs>
       child: Column(
         children: [
           Container(
-            height: 220,
+            height: 48,
             color: BlueText,
             child: Column(
               children: [
-                WikiAppBar(name: "Jean"),
-                Padding(
-                  padding:
-                      const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
-                  child: Container(
-                    height: 100,
-                    width: size.width,
-                    margin: const EdgeInsets.only(bottom: 5.0),
-                    decoration: BoxDecoration(
-                      color: Bleu,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: SingleTitle(
-                        singleTitle: "Groupe solde actuel : 250.00 FC",
-                        fontWeight: FontWeight.bold,
-                        textAlign: TextAlign.center,
-                        color: White,
-                      ),
-                    ),
-                  ),
-                ),
+                //  WikiAppBar(name: "Jean"),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: DefaultTabController(
