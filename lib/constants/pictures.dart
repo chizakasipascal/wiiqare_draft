@@ -1,3 +1,5 @@
+import 'package:wiiqare/views/ui/objectis/objectifs.dart';
+
 class Pictures {
   static const String pathAssets = "assets/images/";
   Pictures._();
@@ -28,6 +30,9 @@ class Pictures {
   static const Recharge = "${pathAssets}money-transfer copy.png";
   static const Autre = "${pathAssets}money-transfer copy.png";
   static const Trasnfert = "${pathAssets}money-transfer copy.png";
+
+  static const Familly = "${pathAssets}family.png";
+  static const Grossesse = "${pathAssets}pregnancy copy.png";
   //
 
   //Photo offres
