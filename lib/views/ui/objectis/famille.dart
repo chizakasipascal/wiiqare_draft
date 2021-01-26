@@ -55,191 +55,193 @@ class _FamilleState extends State<Famille> {
     });
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            BackGroundHome(
-              size: size,
-              widget: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    RoundedProgressBar(
-                      height: 20,
-                      childCenter: SingleTitle(
-                        singleTitle:
-                            "${percent}", //TODO:Le pourcentage de la bar de progresse
-                      ),
-                      style: RoundedProgressBarStyle(
-                          borderWidth: 0, widthShadow: 0),
-                      margin: EdgeInsets.symmetric(vertical: 16),
-                      borderRadius: BorderRadius.circular(24),
-                      percent: percent,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        WikiObjectifItemBar(
-                          descriptin: "Mon compte",
-                          valeur: 1500,
-                          type: "FC",
-                        ),
-                        WikiObjectifItemBar(
-                          descriptin: "Mes points",
-                          valeur: 150,
-                          type: "Points",
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      bottomSheet: SizedBox(
-        height: size.height * .7,
-        child: StepCreateObjectif(
-          size: size,
-          title: "Créer objectif pour ma sante",
-          widget: Column(
+        child: SingleChildScrollView(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+              BackGroundHome(
+                size: size,
+                widget: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      SingleTitle(
-                        singleTitle: "Date de naissance",
-                        color: BlackText,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      Container(
-                        width: size.width * .4,
-                        decoration: BoxDecoration(
-                          color: Grey.withOpacity(.1),
-                          borderRadius: BorderRadius.circular(5),
+                      RoundedProgressBar(
+                        height: 20,
+                        childCenter: SingleTitle(
+                          singleTitle:
+                              "${percent}", //TODO:Le pourcentage de la bar de progresse
                         ),
-                        child: wikiText(
-                            hint: "Date de naissance",
-                            label: "Date de naissance",
-                            inputType: TextInputType.number),
+                        style: RoundedProgressBarStyle(
+                            borderWidth: 0, widthShadow: 0),
+                        margin: EdgeInsets.symmetric(vertical: 16),
+                        borderRadius: BorderRadius.circular(24),
+                        percent: percent,
                       ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          WikiObjectifItemBar(
+                            descriptin: "Mon compte",
+                            valeur: 1500,
+                            type: "FC",
+                          ),
+                          WikiObjectifItemBar(
+                            descriptin: "Mes points",
+                            valeur: 150,
+                            type: "Points",
+                          ),
+                        ],
+                      )
                     ],
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SingleTitle(
-                        singleTitle: "Nombre des enfants",
-                        color: BlackText,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      Container(
-                        width: size.width * .4,
-                        decoration: BoxDecoration(
-                          color: Grey.withOpacity(.1),
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        child: wikiText(
-                            hint: "Date de naissance",
-                            label: "Date de naissance",
-                            inputType: TextInputType.number),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-              SizedBox(height: 10),
-              SizedBox(height: 10),
-              SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SingleTitle(
-                        singleTitle: "Montant ",
-                        color: BlackText,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      Container(
-                        width: size.width * .4,
-                        decoration: BoxDecoration(
-                          color: Grey.withOpacity(.1),
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        child: wikiText(
-                            hint: "Date de naissance",
-                            label: "Date de naissance",
-                            inputType: TextInputType.number),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SingleTitle(
-                        singleTitle: "Choisir frequence ",
-                        color: BlackText,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      Container(
-                        width: size.width * .4,
-                        decoration: BoxDecoration(
-                          color: Grey.withOpacity(.1),
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        child: wikiText(
-                            hint: "Date de naissance",
-                            label: "Date de naissance",
-                            inputType: TextInputType.number),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: 10),
-              Container(
-                width: size.width,
-                decoration: BoxDecoration(
-                  color: Grey.withOpacity(.1),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: MontantSetp(
-                  montant: "150 FCFA",
-                  duree: "${_selectedMois.name}",
-                  value: false,
-                  onTap: () {
-                    setState(() {
-                      //TODO : Update value to bol
-                    });
-                  },
                 ),
               ),
-              SizedBox(height: 20.0),
               SizedBox(
-                height: 50,
-                child: WikiButtom(
-                  descpritionButtom: "Suivant",
-                  onPressed: () {},
-                ),
-              ),
-              SizedBox(height: 20.0),
-              SizedBox(
-                height: 50,
-                child: WikiButtom(
-                  descpritionButtom: "Retour",
-                  color: White,
-                  color2: Yello,
-                  colorBorder: Yello,
-                  onPressed: () {},
+                height: size.height * .7,
+                child: StepCreateObjectif(
+                  size: size,
+                  title: "Créer objectif pour ma sante",
+                  widget: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SingleTitle(
+                                singleTitle: "Date de naissance",
+                                color: BlackText,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              Container(
+                                width: size.width * .4,
+                                decoration: BoxDecoration(
+                                  color: Grey.withOpacity(.1),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: wikiText(
+                                    hint: "Date de naissance",
+                                    label: "Date de naissance",
+                                    inputType: TextInputType.number),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SingleTitle(
+                                singleTitle: "Nombre des enfants",
+                                color: BlackText,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              Container(
+                                width: size.width * .4,
+                                decoration: BoxDecoration(
+                                  color: Grey.withOpacity(.1),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: wikiText(
+                                    hint: "Date de naissance",
+                                    label: "Date de naissance",
+                                    inputType: TextInputType.number),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      SizedBox(height: 10),
+                      SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SingleTitle(
+                                singleTitle: "Montant ",
+                                color: BlackText,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              Container(
+                                width: size.width * .4,
+                                decoration: BoxDecoration(
+                                  color: Grey.withOpacity(.1),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: wikiText(
+                                    hint: "Date de naissance",
+                                    label: "Date de naissance",
+                                    inputType: TextInputType.number),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SingleTitle(
+                                singleTitle: "Choisir frequence ",
+                                color: BlackText,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              Container(
+                                width: size.width * .4,
+                                decoration: BoxDecoration(
+                                  color: Grey.withOpacity(.1),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: wikiText(
+                                    hint: "Date de naissance",
+                                    label: "Date de naissance",
+                                    inputType: TextInputType.number),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Container(
+                        width: size.width,
+                        decoration: BoxDecoration(
+                          color: Grey.withOpacity(.1),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: MontantSetp(
+                          montant: "150 FCFA",
+                          duree: "${_selectedMois.name}",
+                          value: false,
+                          onTap: () {
+                            setState(() {
+                              //TODO : Update value to bol
+                            });
+                          },
+                        ),
+                      ),
+                      SizedBox(height: 20.0),
+                      SizedBox(
+                        height: 50,
+                        child: WikiButtom(
+                          descpritionButtom: "Suivant",
+                          onPressed: () {},
+                        ),
+                      ),
+                      SizedBox(height: 20.0),
+                      SizedBox(
+                        height: 50,
+                        child: WikiButtom(
+                          descpritionButtom: "Retour",
+                          color: White,
+                          color2: Yello,
+                          colorBorder: Yello,
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

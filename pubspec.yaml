@@ -46,7 +46,6 @@ dev_dependencies:
   animated_icon_button: ^0.3.0
   pin_entry_text_field: ^0.1.4 
   lottie: ^0.7.0+1
-  video_player: ^1.0.1
 
 
 
