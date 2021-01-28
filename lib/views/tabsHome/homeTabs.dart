@@ -21,9 +21,9 @@ class _HomeTabsState extends State<HomeTabs> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final orientation = MediaQuery.of(context).orientation;
+    //final orientation = MediaQuery.of(context).orientation;
     setState(() {
-      percent = 35;
+      percent = 30;
     });
     return SingleChildScrollView(
       child: Column(
@@ -32,13 +32,27 @@ class _HomeTabsState extends State<HomeTabs> {
           BackGroundHome(
             size: size,
             widget: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(5.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SingleTitle(
-                    singleTitle: "Mon objectif : 50.000 Fc par semaine",
-                    color: White,
+                  RichText(
+                    text: TextSpan(
+                      text: 'Mon objectif :',
+                      style: TextStyle(color: White),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: ' 50.000 Fc ',
+                          style: TextStyle(
+                              color: White,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        TextSpan(
+                          text: ' par semaine ',
+                          style: TextStyle(color: White),
+                        )
+                      ],
+                    ),
                   ),
                   RoundedProgressBar(
                     height: 20,
@@ -96,7 +110,7 @@ class _HomeTabsState extends State<HomeTabs> {
               ),
             ),
           ),
-          //   SizedBox(height: 10),
+          SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.only(left: 10, right: 10),
             child: SingleTitle(
@@ -105,7 +119,7 @@ class _HomeTabsState extends State<HomeTabs> {
               color: Bleu,
             ),
           ),
-          SizedBox(height: 5),
+          SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -163,7 +177,6 @@ class _HomeTabsState extends State<HomeTabs> {
               ),
             ],
           ),
-
           SizedBox(height: 10),
           Row(
             children: [
@@ -183,6 +196,7 @@ class _HomeTabsState extends State<HomeTabs> {
               SizedBox(width: 10),
             ],
           ),
+          SizedBox(height: 10),
           Container(
             height: 190,
             child: ListView.builder(
