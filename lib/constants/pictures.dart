@@ -27,12 +27,14 @@ class Pictures {
 
   static const Credit = "${pathAssets}payer.png";
   static const Pay = "${pathAssets}payer.png";
-  static const Recharge = "${pathAssets}money-transfer copy.png";
+  static const Recharge = "${pathAssets}Recharger.png";
   static const Autre = "${pathAssets}money-transfer copy.png";
   static const Trasnfert = "${pathAssets}money-transfer copy.png";
 
   static const Familly = "${pathAssets}family.png";
-  static const Grossesse = "${pathAssets}pregnancy copy.png";
+  static const Grossesse = "${pathAssets}embryo copy.png";
+  static const Diabete = "${pathAssets}sugar-blood-level copy.png";
+  static const Sante = "${pathAssets}personne seving.png";
   //
 
   //Photo offres
