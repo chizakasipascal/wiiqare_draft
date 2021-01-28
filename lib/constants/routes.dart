@@ -19,14 +19,17 @@ class Routes {
   static const String objectifTYPE = '/objectifTYPE';
   static const String goupe = '/groupe';
   static const String hopital = '/hopital';
-
-  /// Objectif route
-
   static const String diabete = '/diabete';
   static const String famille = '/famille';
   static const String grossesse = '/grossesse';
   static const String uiMontant = '/uiMontant';
   static const String sante = '/sante';
+
+  static const String sport = '/sport';
+  static const String consiltation = '/consiltation';
+  static const String pharmacie = '/pharmacie';
+  static const String prevention = '/prevention';
+  static const String labo = '/labo';
 
   ///
   static final routes = <String, WidgetBuilder>{
@@ -46,6 +49,11 @@ class Routes {
     uiMontant: (BuildContext context) => UIMontant(),
     sante: (BuildContext context) => Sante(),
     goupe: (BuildContext context) => GroupeScafold(),
-    hopital: (BuildContext context) => Hopital()
+    hopital: (BuildContext context) => Hopital(),
+    sport: (BuildContext context) => Sport(),
+    consiltation: (BuildContext context) => Consiltation(),
+    pharmacie: (BuildContext context) => Pharmacie(),
+    prevention: (BuildContext context) => Prevention(),
+    labo: (BuildContext context) => Labo(),
   };
 }

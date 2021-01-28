@@ -130,14 +130,15 @@ class _HomeTabsState extends State<HomeTabs> {
                   WikiImtesHome(
                     icon: Image.asset(Pictures.Sport),
                     chaine: "Sport",
-                    onPressed: () {},
+                    onPressed: () => Navigator.pushNamed(context, Routes.sport),
                     border: Colors.transparent,
                   ),
                   SizedBox(height: 8.0),
                   WikiImtesHome(
                     icon: Image.asset(Pictures.Prevention),
                     chaine: "Prevention",
-                    onPressed: () {},
+                    onPressed: () =>
+                        Navigator.pushNamed(context, Routes.prevention),
                     border: Colors.transparent,
                   ),
                 ],
@@ -147,7 +148,8 @@ class _HomeTabsState extends State<HomeTabs> {
                   WikiImtesHome(
                     icon: Image.asset(Pictures.Consltation),
                     chaine: "Consultation",
-                    onPressed: () {},
+                    onPressed: () =>
+                        Navigator.pushNamed(context, Routes.consiltation),
                     border: Colors.transparent,
                   ),
                   SizedBox(height: 8.0),
@@ -166,14 +168,15 @@ class _HomeTabsState extends State<HomeTabs> {
                   WikiImtesHome(
                     icon: Image.asset(Pictures.Pharmacie),
                     chaine: "Pharmacie",
-                    onPressed: () {},
+                    onPressed: () =>
+                        Navigator.pushNamed(context, Routes.pharmacie),
                     border: Colors.transparent,
                   ),
                   SizedBox(height: 8.0),
                   WikiImtesHome(
                     icon: Image.asset(Pictures.Lab),
                     chaine: "Labo",
-                    onPressed: () {},
+                    onPressed: () => Navigator.pushNamed(context, Routes.labo),
                     border: Colors.transparent,
                   ),
                 ],

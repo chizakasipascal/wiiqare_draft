@@ -11,3 +11,8 @@ export 'objectifTYPE.dart';
 export 'groupeScafold.dart';
 export 'groupeCreer.dart';
 export 'hopital.dart';
+export 'sport.dart';
+export 'consilation.dart';
+export 'labo.dart';
+export 'prevention.dart';
+export 'pharmacie.dart';
