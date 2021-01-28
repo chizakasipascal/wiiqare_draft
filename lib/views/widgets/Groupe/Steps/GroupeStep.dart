@@ -12,6 +12,6 @@ class GroupStep extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: widget);
+    return Container(height: size.height * .6, child: widget);
   }
 }

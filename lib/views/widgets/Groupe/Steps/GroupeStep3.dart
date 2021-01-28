@@ -12,7 +12,7 @@ class GroupeStep3 extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * .6,
+      // height: size.height * .6,
       child: Column(
         //  mainAxisAlignment: MainAxisAlignment.center,
         children: [
