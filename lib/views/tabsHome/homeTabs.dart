@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/constants/pictures.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:wiiqare/utils/colors.dart';
@@ -153,7 +154,9 @@ class _HomeTabsState extends State<HomeTabs> {
                   WikiImtesHome(
                     icon: Image.asset(Pictures.Hopital),
                     chaine: "Hospitaux",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.hopital);
+                    },
                     border: Colors.transparent,
                   ),
                 ],

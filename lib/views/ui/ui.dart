@@ -10,3 +10,4 @@ export 'creeobjectif.dart';
 export 'objectifTYPE.dart';
 export 'groupeScafold.dart';
 export 'groupeCreer.dart';
+export 'hopital.dart';

@@ -18,6 +18,7 @@ class Routes {
   static const String creeobjectif = '/creeobjectif';
   static const String objectifTYPE = '/objectifTYPE';
   static const String goupe = '/groupe';
+  static const String hopital = '/hopital';
 
   /// Objectif route
 
@@ -39,21 +40,12 @@ class Routes {
     qRCodeScanner: (BuildContext context) => QRCodeScannerViews(),
     creeobjectif: (BuildContext context) => CreeObjectifs(),
     objectifTYPE: (BuildContext context) => ObjectifsTYPE(),
-
-    /// Objectif
-
     diabete: (BuildContext context) => Diabete(),
     famille: (BuildContext context) => Famille(),
     grossesse: (BuildContext context) => Grossesse(),
     uiMontant: (BuildContext context) => UIMontant(),
     sante: (BuildContext context) => Sante(),
-
-    ///
-    ///
-    ///
-    ///Groupe
-    ///
-
     goupe: (BuildContext context) => GroupeScafold(),
+    hopital: (BuildContext context) => Hopital()
   };
 }

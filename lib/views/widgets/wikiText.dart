@@ -27,7 +27,7 @@ Widget wikiText(
       border: InputBorder.none,
       filled: true,
       fillColor: Colors.transparent,
-      contentPadding: const EdgeInsets.fromLTRB(20.0, 20.0, 30.0, 10.0),
+      contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 30.0, 10.0),
       labelText: label,
       labelStyle: TextStyle(
         fontSize: 15,
