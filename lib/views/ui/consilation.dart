@@ -9,13 +9,13 @@ class Consiltation extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
-          child: Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-            child: Column(
-              children: [
-                Row(
+          //   physics: BouncingScrollPhysics(),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 10.0, vertical: 10.0),
+                child: Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Container(
@@ -49,8 +49,36 @@ class Consiltation extends StatelessWidget {
                     )
                   ],
                 ),
-              ],
-            ),
+              ),
+              Stack(
+                overflow: Overflow.visible,
+                children: [
+                  Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.green[900],
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 100),
+                    child: Container(
+                      height: size.height,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),
