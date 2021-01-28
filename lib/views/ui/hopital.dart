@@ -47,13 +47,24 @@ class Hopital extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                    color: Grey.withOpacity(.1),
-                    borderRadius: BorderRadius.circular(10)),
+                  color: Grey.withOpacity(.1),
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 width: size.width,
                 child: wikiText(
                   hint: "Chercher",
-                  suffixIcon: Icon(Icons.search, size: 20),
+                  suffixIcon: Icon(
+                    Icons.search,
+                    size: 20,
+                    color: Grey,
+                  ),
                 ),
+              ),
+              SizedBox(height: 10.0),
+              SingleTitle(
+                singleTitle: "Specialist",
+                fontWeight: FontWeight.bold,
+                color: Grey,
               )
             ],
           ),
