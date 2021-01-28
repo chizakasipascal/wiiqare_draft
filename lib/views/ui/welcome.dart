@@ -113,7 +113,7 @@ class _WelcomeState extends State<Welcome> {
                 ),
               ),
               // Spacer(),
-              SizedBox(height: 90),
+              SizedBox(height: size.height * .14),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10.0, vertical: 0.0),

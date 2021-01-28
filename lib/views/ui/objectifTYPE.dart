@@ -246,7 +246,9 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                 color: White,
                 color2: Yello,
                 colorBorder: Yello,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
               ),
             ),
           ],
