@@ -111,7 +111,7 @@ class _HelpState extends State<Help> {
                 ),
               ),
               // Spacer(),
-              SizedBox(height: 90),
+              SizedBox(height: size.height * .14),
 
               ///
 

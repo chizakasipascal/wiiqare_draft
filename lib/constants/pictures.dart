@@ -1,5 +1,3 @@
-import 'package:wiiqare/views/ui/objectis/objectifs.dart';
-
 class Pictures {
   static const String pathAssets = "assets/images/";
   Pictures._();

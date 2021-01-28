@@ -56,7 +56,7 @@ class _SanteState extends State<Sante> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          // physics: BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -99,8 +99,8 @@ class _SanteState extends State<Sante> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: size.height * .5,
+              Container(
+                height: size.height * .66,
                 child: StepCreateObjectif(
                   size: size,
                   title: "Créer objectif pour ma sante",

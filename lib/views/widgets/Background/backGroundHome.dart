@@ -40,9 +40,9 @@ class BackGroundHome extends StatelessWidget {
             ],
           ),
           child: Container(
-            height: 100,
+            height: 10,
             width: size.width,
-            child: widget,
+            child: Center(child: widget),
           ),
         ),
       ],

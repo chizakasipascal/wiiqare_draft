@@ -105,9 +105,7 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                             child: SizedBox(
                               height: 70,
                               width: 70,
-                              child: Placeholder(
-                                color: Yello,
-                              ),
+                              child: Image.asset(Pictures.Sante),
                             ),
                           ),
                           SizedBox(height: 20),
@@ -139,11 +137,10 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                           Align(
                             alignment: Alignment.center,
                             child: SizedBox(
-                                height: 70,
-                                width: 70,
-                                child: Placeholder(
-                                  color: Yello,
-                                )),
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(Pictures.Diabete),
+                            ),
                           ),
                           SizedBox(height: 20),
                           SingleTitle(
@@ -236,7 +233,9 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
               height: 50,
               child: WikiButtom(
                 descpritionButtom: "Suivant",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, Routes.uiMontant);
+                },
               ),
             ),
             SizedBox(height: 20.0),
@@ -247,7 +246,9 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
                 color: White,
                 color2: Yello,
                 colorBorder: Yello,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
               ),
             ),
           ],

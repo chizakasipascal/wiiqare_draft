@@ -24,166 +24,180 @@ class _UIMontantState extends State<UIMontant> {
       percent = 35;
     });
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            BackGroundHome(
-              size: size,
-              widget: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    RoundedProgressBar(
-                      height: 20,
-                      childCenter: SingleTitle(
-                        singleTitle:
-                            "${percent}", //TODO:Le pourcentage de la bar de progresse
-                      ),
-                      style: RoundedProgressBarStyle(
-                          borderWidth: 0, widthShadow: 0),
-                      margin: EdgeInsets.symmetric(vertical: 16),
-                      borderRadius: BorderRadius.circular(24),
-                      percent: percent,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        WikiObjectifItemBar(
-                          descriptin: "Mon compte",
-                          valeur: 1500,
-                          type: "FC",
-                        ),
-                        WikiObjectifItemBar(
-                          descriptin: "Mes points",
-                          valeur: 150,
-                          type: "Points",
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      bottomSheet: StepCreateObjectif(
-        size: size,
-        title: "Définir montant objectif",
-        widget: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SingleTitle(
-              singleTitle: "Choissez la fréquence adapetee a votre situation",
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: 20),
-            Center(
-              child: Container(
-                height: size.height * .5,
-                width: size.width * .9,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10),
-                      bottomLeft: Radius.circular(10),
-                      bottomRight: Radius.circular(10)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Grey.withOpacity(0.5),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    MontantSetp(
-                      montant: "150 FCFA",
-                      duree: "Par jour",
-                      value: false,
-                      onTap: () {
-                        setState(() {
-                          //TODO : Update value to bol
-                        });
-                      },
-                    ),
-                    Divider(),
-                    MontantSetp(
-                      montant: "447 FCFA",
-                      duree: "Par semaine",
-                      value: false,
-                      onTap: () {
-                        setState(() {
-                          //TODO : Update value to bol
-                        });
-                      },
-                    ),
-                    Divider(),
-                    MontantSetp(
-                      montant: "447 FCFA",
-                      duree: "Chaque deux semaine",
-                      value: false,
-                      onTap: () {
-                        setState(() {
-                          //TODO : Update value to bol
-                        });
-                      },
-                    ),
-                    Divider(),
-                    MontantSetp(
-                      montant: "447 FCFA",
-                      duree: "Chaque mois",
-                      value: false,
-                      onTap: () {
-                        setState(() {
-                          //TODO : Update value to bol
-                        });
-                      },
-                    ),
-                    Divider(),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 5, right: 5),
-                      child: SizedBox(
-                        height: 50,
-                        child: WikiButtom(
-                          descpritionButtom:
-                              "J’ai préfère choisir moi meme mon objectif",
-                          onPressed: () {},
-                        ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Stack(
+                overflow: Overflow.visible,
+                children: [
+                  BackGroundHome(
+                    size: size,
+                    widget: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          RoundedProgressBar(
+                            height: 20,
+                            childCenter: SingleTitle(
+                              singleTitle:
+                                  "${percent}", //TODO:Le pourcentage de la bar de progresse
+                            ),
+                            style: RoundedProgressBarStyle(
+                                borderWidth: 0, widthShadow: 0),
+                            margin: EdgeInsets.symmetric(vertical: 16),
+                            borderRadius: BorderRadius.circular(24),
+                            percent: percent,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              WikiObjectifItemBar(
+                                descriptin: "Mon compte",
+                                valeur: 1500,
+                                type: "FC",
+                              ),
+                              WikiObjectifItemBar(
+                                descriptin: "Mes points",
+                                valeur: 150,
+                                type: "Points",
+                              ),
+                            ],
+                          )
+                        ],
                       ),
                     ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(height: 20.0),
-            SizedBox(
-              height: 50,
-              child: WikiButtom(
-                descpritionButtom: "Suivant",
-                onPressed: () {},
-              ),
-            ),
-            SizedBox(height: 20.0),
-            SizedBox(
-              height: 50,
-              child: WikiButtom(
-                descpritionButtom: "Retour",
-                color: White,
-                color2: Yello,
-                colorBorder: Yello,
-                onPressed: () {},
-              ),
-            ),
-          ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 100.0),
+                    child: StepCreateObjectif(
+                      size: size,
+                      title: "Définir montant objectif",
+                      widget: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SingleTitle(
+                            singleTitle:
+                                "Choissez la fréquence adapetee a votre situation",
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: 20),
+                          Center(
+                            child: Container(
+                              height: size.height * .5,
+                              width: size.width * .9,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(10),
+                                    topRight: Radius.circular(10),
+                                    bottomLeft: Radius.circular(10),
+                                    bottomRight: Radius.circular(10)),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Grey.withOpacity(0.5),
+                                    spreadRadius: 5,
+                                    blurRadius: 7,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  MontantSetp(
+                                    montant: "150 FCFA",
+                                    duree: "Par jour",
+                                    value: false,
+                                    onTap: () {
+                                      setState(() {
+                                        //TODO : Update value to bol
+                                      });
+                                    },
+                                  ),
+                                  Divider(),
+                                  MontantSetp(
+                                    montant: "447 FCFA",
+                                    duree: "Par semaine",
+                                    value: false,
+                                    onTap: () {
+                                      setState(() {
+                                        //TODO : Update value to bol
+                                      });
+                                    },
+                                  ),
+                                  Divider(),
+                                  MontantSetp(
+                                    montant: "447 FCFA",
+                                    duree: "Chaque deux semaine",
+                                    value: false,
+                                    onTap: () {
+                                      setState(() {
+                                        //TODO : Update value to bol
+                                      });
+                                    },
+                                  ),
+                                  Divider(),
+                                  MontantSetp(
+                                    montant: "447 FCFA",
+                                    duree: "Chaque mois",
+                                    value: false,
+                                    onTap: () {
+                                      setState(() {
+                                        //TODO : Update value to bol
+                                      });
+                                    },
+                                  ),
+                                  Divider(),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 5, right: 5),
+                                    child: SizedBox(
+                                      height: 50,
+                                      child: WikiButtom(
+                                        descpritionButtom:
+                                            "J’ai préfère choisir moi meme mon objectif",
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 20.0),
+                          SizedBox(
+                            height: 50,
+                            child: WikiButtom(
+                              descpritionButtom: "Suivant",
+                              onPressed: () {},
+                            ),
+                          ),
+                          SizedBox(height: 20.0),
+                          SizedBox(
+                            height: 50,
+                            child: WikiButtom(
+                              descpritionButtom: "Retour",
+                              color: White,
+                              color2: Yello,
+                              colorBorder: Yello,
+                              onPressed: () {},
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
