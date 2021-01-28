@@ -25,7 +25,7 @@ class StepCreateObjectif extends StatelessWidget {
         height: size.height * .9,
         width: size.width,
         decoration: BoxDecoration(
-          //   color: Colors.green,
+          color: White,
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(10),
             topLeft: Radius.circular(10),
@@ -34,7 +34,7 @@ class StepCreateObjectif extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 50,
+              height: 60,
               width: size.width,
               color: Yello,
               child: AppBar(
