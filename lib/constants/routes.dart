@@ -57,6 +57,6 @@ class Routes {
     pharmacie: (BuildContext context) => Pharmacie(),
     prevention: (BuildContext context) => Prevention(),
     labo: (BuildContext context) => Labo(),
-    chat: (BuildContext context) => ChatPage()
+    chat: (BuildContext context) => ChatScreen()
   };
 }
