@@ -13,7 +13,9 @@ class Consiltation extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: BlueText),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: SingleTitle(
           singleTitle: "Consultation",
@@ -213,12 +215,18 @@ From what I see, it is not a good idea to set the From what I see, it is not a g
                               title: "Voice call",
                               subtitle: "Can make call with audio",
                               price: 10,
+                              onTap: () {
+                                //TODO: Add code for voice call
+                              },
                             ),
                             FreeInformation(
                               size: size,
                               title: "Message",
                               subtitle: "Write message",
                               price: 5,
+                              onTap: () {
+                                //TODO: Add code for Message
+                              },
                               color: Colors.deepOrange,
                               priceColor: Colors.amberAccent,
                             ),
