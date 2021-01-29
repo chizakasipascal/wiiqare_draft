@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:wiiqare/views/widgets/chat/sendButtom.dart';
-import 'package:wiiqare/views/widgets/chat/chat_message.dart';
-import 'package:wiiqare/views/widgets/chat/message_input_box.dart';
-import 'package:wiiqare/views/widgets/chat/chat_header.dart';
-import 'package:wiiqare/views/widgets/chat/flat_page_wrapper.dart';
-import 'package:wiiqare/views/widgets/chat/profile_image.dart';
+import 'package:wiiqare/views/widgets/chat/chat.dart';
 
-class ChatPage extends StatefulWidget {
+class ChatScreen extends StatefulWidget {
   static final String id = "ChatPage";
 
   @override
-  _ChatPageState createState() => _ChatPageState();
+  _ChatScreenState createState() => _ChatScreenState();
 }
 
-class _ChatPageState extends State<ChatPage> {
+class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

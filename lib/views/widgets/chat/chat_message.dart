@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/utils/colors.dart';
 
 enum MessageType { sent, received }
 
@@ -68,7 +69,7 @@ class ChatMessage extends StatelessWidget {
         time ?? "Time",
         style: TextStyle(
           fontSize: 12.0,
-          color: Color(0xFF666666),
+          color: Grey,
         ),
       );
     } else {
