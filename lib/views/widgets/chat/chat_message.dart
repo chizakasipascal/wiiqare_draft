@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 enum MessageType { sent, received }
 
-class FlatChatMessage extends StatelessWidget {
+class ChatMessage extends StatelessWidget {
   final String message;
   final MessageType messageType;
   final Color backgroundColor;
@@ -12,7 +12,7 @@ class FlatChatMessage extends StatelessWidget {
   final double maxWidth;
   final double minWidth;
 
-  FlatChatMessage(
+  ChatMessage(
       {this.message,
       this.messageType,
       this.backgroundColor,
@@ -103,7 +103,7 @@ class FlatChatMessage extends StatelessWidget {
               horizontal: 16.0,
             ),
             child: Text(
-              message ?? "Message here...",
+              message ?? "Message ...",
               style: TextStyle(
                 color: textColor ?? messageTextColor(context),
                 fontWeight: FontWeight.w500,

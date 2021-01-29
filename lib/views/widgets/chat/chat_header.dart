@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/utils/colors.dart';
 
-class FlatPageHeader extends StatelessWidget {
+class ChatHeader extends StatelessWidget {
   final String title;
   final double textSize;
   final FontWeight fontWeight;
@@ -8,7 +9,7 @@ class FlatPageHeader extends StatelessWidget {
   final Color textColor;
   final Widget suffixWidget;
   final Widget prefixWidget;
-  FlatPageHeader(
+  ChatHeader(
       {this.title,
       this.textSize,
       this.fontWeight,
@@ -47,7 +48,7 @@ class FlatPageHeader extends StatelessWidget {
       if (backgroundColor != null) {
         return backgroundColor;
       } else {
-        return Theme.of(context).primaryColorLight;
+        return White;
       }
     }
 
@@ -67,7 +68,7 @@ class FlatPageHeader extends StatelessWidget {
             _backgroundColor().withOpacity(0.0),
           ])),
       padding: EdgeInsets.only(
-        top: 50.0,
+        top: 20.0,
         left: paddingLeft(),
         right: paddingRight(),
         bottom: 24.0,
@@ -84,10 +85,10 @@ class FlatPageHeader extends StatelessWidget {
                     left: headerPadding(),
                   ),
                   child: Text(
-                    title ?? "Header",
+                    title ?? "Chat",
                     style: TextStyle(
-                        color: textColor ?? Theme.of(context).primaryColorDark,
-                        fontSize: textSize ?? 30.0,
+                        color: textColor ?? BlueText,
+                        fontSize: textSize ?? 15.0,
                         fontWeight: fontWeight ?? FontWeight.w700),
                   ),
                 ),
