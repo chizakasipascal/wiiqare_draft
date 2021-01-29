@@ -87,7 +87,7 @@ class _ModePayementState extends State<ModePayement> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(50),
                       child: Material(
-                        color: Yello,
+                        color: WikiBleu,
                         child: IconButton(
                           icon: Icon(
                             Icons.qr_code_scanner,

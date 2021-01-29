@@ -115,8 +115,8 @@ class _UsesTabsState extends State<UsesTabs> {
                                 Navigator.pushNamed(context, Routes.goupe);
                               },
                               color: White,
-                              color2: Yello,
-                              colorBorder: Yello,
+                              color2: WikiBleu,
+                              colorBorder: WikiBleu,
                             ),
                           ),
                         ],

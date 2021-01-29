@@ -33,7 +33,7 @@ class HistoriqueItem extends StatelessWidget {
               SingleTitle(
                 singleTitle: typeDescption,
                 size: 12.0,
-                color: Yello,
+                color: WikiBleu,
               ),
             ],
           ),

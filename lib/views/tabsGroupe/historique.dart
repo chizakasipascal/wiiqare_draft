@@ -49,7 +49,7 @@ class _HistoriqueState extends State<Historique> {
                 ),
                 SingleTitle(
                   singleTitle: "Rercharger",
-                  color: Yello,
+                  color: WikiBleu,
                   size: 12.0,
                   fontWeight: FontWeight.w500,
                 ),

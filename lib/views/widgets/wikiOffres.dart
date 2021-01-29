@@ -54,7 +54,7 @@ class WikiOffres extends StatelessWidget {
                       ),
                     ),
                     FlatButton(
-                      color: Yello,
+                      color: WikiBleu,
                       onPressed: onPressed,
                       //TODO:Code de commande de produit
 

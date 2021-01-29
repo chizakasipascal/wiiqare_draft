@@ -35,6 +35,7 @@ class _WalletsState extends State<Wallets> {
           widget: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -42,9 +43,12 @@ class _WalletsState extends State<Wallets> {
                     SingleTitle(
                       singleTitle: "My total balance",
                       color: White,
+                      size: 20.0,
                     ),
                     SingleTitle(
                       singleTitle: "${valeur} FC",
+                      size: 20.0,
+                      fontWeight: FontWeight.bold,
                       color: White,
                     )
                   ],
@@ -60,9 +64,9 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Trasnfert),
                         chaine: "Transfert",
-                        textColor: Yello,
+                        textColor: WikiBleu,
                         color: White,
-                        border: Yello,
+                        border: WikiBleu,
                         onPressed: () {
                           Navigator.pushNamed(context, Routes.transfert);
                         },
@@ -70,9 +74,9 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Pay),
                         chaine: "Pay",
-                        textColor: Yello,
+                        textColor: WikiBleu,
                         color: White,
-                        border: Yello,
+                        border: WikiBleu,
                         onPressed: () {
                           Navigator.pushNamed(context, Routes.pay);
                         },
@@ -80,9 +84,9 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Recharge),
                         chaine: "Recharge",
-                        textColor: Yello,
+                        textColor: WikiBleu,
                         color: White,
-                        border: Yello,
+                        border: WikiBleu,
                         onPressed: () {
                           Navigator.pushNamed(context, Routes.recharge);
                         },
@@ -115,7 +119,7 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Credit),
                         chaine: "Credit",
-                        textColor: Yello,
+                        textColor: WikiBleu,
                         color: White,
                         border: Colors.transparent,
                         onPressed: () {},
@@ -123,7 +127,7 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Pay),
                         chaine: "Paie credit",
-                        textColor: Yello,
+                        textColor: WikiBleu,
                         color: White,
                         border: Colors.transparent,
                         onPressed: () {},
@@ -131,7 +135,7 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Sport),
                         chaine: "Sport",
-                        textColor: Yello,
+                        textColor: WikiBleu,
                         color: White,
                         border: Colors.transparent,
                         onPressed: () {},
@@ -139,7 +143,7 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Autre),
                         chaine: "Autre",
-                        textColor: Yello,
+                        textColor: WikiBleu,
                         color: White,
                         border: Colors.transparent,
                         onPressed: () {},
@@ -192,7 +196,7 @@ class _WalletsState extends State<Wallets> {
                     ),
                     SingleTitle(
                       singleTitle: "Rercharger",
-                      color: Yello,
+                      color: WikiBleu,
                       size: 12.0,
                       fontWeight: FontWeight.w500,
                     ),

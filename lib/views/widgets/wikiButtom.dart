@@ -17,7 +17,7 @@ class WikiButtom extends StatelessWidget {
     this.onPressed,
     this.onHighlightChanged,
     this.isPressed = false,
-    this.color = Yello,
+    this.color = WikiBleu,
     this.colorBorder = White,
     this.color2 = White,
   }) : super(key: key);

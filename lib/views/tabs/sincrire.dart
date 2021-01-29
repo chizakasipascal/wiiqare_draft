@@ -51,7 +51,7 @@ class _SincrireState extends State<Sincrire> {
                 color: White,
                 borderRadius: BorderRadius.circular(9),
                 border: Border.all(
-                  color: Yello,
+                  color: WikiBleu,
                 ),
                 boxShadow: [
                   BoxShadow(
@@ -70,7 +70,7 @@ class _SincrireState extends State<Sincrire> {
                 color: White,
                 borderRadius: BorderRadius.circular(9),
                 border: Border.all(
-                  color: Yello,
+                  color: WikiBleu,
                 ),
                 boxShadow: [
                   BoxShadow(
@@ -119,7 +119,7 @@ class _SincrireState extends State<Sincrire> {
                 color: White,
                 borderRadius: BorderRadius.circular(9),
                 border: Border.all(
-                  color: Yello,
+                  color: WikiBleu,
                 ),
                 boxShadow: [
                   BoxShadow(
@@ -140,7 +140,7 @@ class _SincrireState extends State<Sincrire> {
             SizedBox(
               height: 60,
               child: WikiButtom(
-                color: Yello,
+                color: WikiBleu,
                 descpritionButtom: "S'inscrire",
                 onPressed: () => {
                   // formKey.currentState.validate() //Function to validate number
