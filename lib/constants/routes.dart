@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:wiiqare/views/ui/GroupeCreer.dart';
+
 import 'package:wiiqare/views/ui/ui.dart';
 import 'package:wiiqare/views/ui/objectis/objectifs.dart';
-import 'package:wiiqare/views/ui/groupeCreer.dart';
+import 'package:wiiqare/views/ui/wallet/wallet.dart';
 
 class Routes {
   Routes._();
@@ -32,6 +32,9 @@ class Routes {
   static const String labo = '/labo';
 
   static const String chat = '/chat';
+  static const String pay = '/pay';
+  static const String transfert = '/transfert';
+  static const String recharge = '/recharge';
 
   ///
   static final routes = <String, WidgetBuilder>{
@@ -57,6 +60,9 @@ class Routes {
     pharmacie: (BuildContext context) => Pharmacie(),
     prevention: (BuildContext context) => Prevention(),
     labo: (BuildContext context) => Labo(),
-    chat: (BuildContext context) => ChatScreen()
+    chat: (BuildContext context) => ChatScreen(),
+    transfert: (BuildContext context) => Transfert(),
+    pay: (BuildContext context) => Pay(),
+    recharge: (BuildContext context) => Recharge(),
   };
 }
