@@ -16,3 +16,4 @@ export 'consilation.dart';
 export 'labo.dart';
 export 'prevention.dart';
 export 'pharmacie.dart';
+export 'chatPage.dart';

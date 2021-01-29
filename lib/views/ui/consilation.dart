@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/consultation/consultattion.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
@@ -226,6 +227,7 @@ From what I see, it is not a good idea to set the From what I see, it is not a g
                               price: 5,
                               onTap: () {
                                 //TODO: Add code for Message
+                                Navigator.pushNamed(context, Routes.chat);
                               },
                               color: Colors.deepOrange,
                               priceColor: Colors.amberAccent,

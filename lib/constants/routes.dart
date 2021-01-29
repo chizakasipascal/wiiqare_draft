@@ -31,6 +31,8 @@ class Routes {
   static const String prevention = '/prevention';
   static const String labo = '/labo';
 
+  static const String chat = '/chat';
+
   ///
   static final routes = <String, WidgetBuilder>{
     authentification: (BuildContext context) => Authentification(),
@@ -55,5 +57,6 @@ class Routes {
     pharmacie: (BuildContext context) => Pharmacie(),
     prevention: (BuildContext context) => Prevention(),
     labo: (BuildContext context) => Labo(),
+    chat: (BuildContext context) => ChatPage()
   };
 }
