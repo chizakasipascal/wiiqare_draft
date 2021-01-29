@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:wiiqare/constants/pictures.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
@@ -62,7 +63,9 @@ class _WalletsState extends State<Wallets> {
                         textColor: Yello,
                         color: White,
                         border: Yello,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, Routes.transfert);
+                        },
                       ),
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Pay),
@@ -70,7 +73,9 @@ class _WalletsState extends State<Wallets> {
                         textColor: Yello,
                         color: White,
                         border: Yello,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, Routes.pay);
+                        },
                       ),
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Recharge),
@@ -78,7 +83,9 @@ class _WalletsState extends State<Wallets> {
                         textColor: Yello,
                         color: White,
                         border: Yello,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, Routes.recharge);
+                        },
                       ),
                     ],
                   ),
