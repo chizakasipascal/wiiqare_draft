@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/pictures.dart';
+import 'package:wiiqare/utils/colors.dart';
 
-class FlatProfileImage extends StatelessWidget {
+class ProfileImage extends StatelessWidget {
   final bool outlineIndicator;
   final Color outlineColor;
   final bool onlineIndicator;
@@ -10,7 +12,7 @@ class FlatProfileImage extends StatelessWidget {
   final Function onPressed;
   final Color backgroundColor;
 
-  FlatProfileImage({
+  ProfileImage({
     this.outlineIndicator,
     this.onlineColor,
     this.outlineColor,
@@ -146,7 +148,11 @@ class FlatIndicatorImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.grey, shape: BoxShape.circle),
+      decoration: BoxDecoration(
+        color: White,
+        shape: BoxShape.circle,
+        border: Border.all(color: BlueText),
+      ),
       margin: EdgeInsets.all(imageMargin()),
       width: width,
       height: height,
@@ -159,7 +165,7 @@ class FlatIndicatorImage extends StatelessWidget {
   Widget profileImage() {
     if (image == null || image.isEmpty) {
       return Image.asset(
-        'assets/images/default_profile_image.png',
+        Pictures.Familly,
         fit: BoxFit.cover,
       );
     } else {

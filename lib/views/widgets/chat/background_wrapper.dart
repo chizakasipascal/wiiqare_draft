@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/functionsChat/glowRemoveScrollBehaviour.dart';
+import 'package:wiiqare/utils/colors.dart';
 
 enum ScrollType {
   fixedHeader,
@@ -28,7 +29,7 @@ class FlatPageWrapper extends StatelessWidget {
       padding: EdgeInsets.only(
         top: 24.0,
       ),
-      color: backgroundColor ?? Theme.of(context).primaryColorLight,
+      color: backgroundColor ?? White,
       child: _PageBodyWidget(
         scrollType: scrollType,
         children: children,

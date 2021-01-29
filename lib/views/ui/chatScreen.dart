@@ -1,95 +1,91 @@
 import 'package:flutter/material.dart';
-import 'package:wiiqare/views/widgets/chat/flat_action_btn.dart';
-import 'package:wiiqare/views/widgets/chat/flat_chat_message.dart';
-import 'package:wiiqare/views/widgets/chat/flat_message_input_box.dart';
-import 'package:wiiqare/views/widgets/chat/flat_page_header.dart';
-import 'package:wiiqare/views/widgets/chat/flat_page_wrapper.dart';
-import 'package:wiiqare/views/widgets/chat/flat_profile_image.dart';
+import 'package:wiiqare/views/widgets/chat/chat.dart';
 
-class ChatPage extends StatefulWidget {
+class ChatScreen extends StatefulWidget {
   static final String id = "ChatPage";
 
   @override
-  _ChatPageState createState() => _ChatPageState();
+  _ChatScreenState createState() => _ChatScreenState();
 }
 
-class _ChatPageState extends State<ChatPage> {
+class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: FlatPageWrapper(
         scrollType: ScrollType.floatingHeader,
         reverseBodyList: true,
-        header: FlatPageHeader(
-          prefixWidget: FlatActionButton(
+        header: ChatHeader(
+          prefixWidget: SendButtom(
             onPressed: () {
               Navigator.pop(context);
             },
           ),
-          title: "Alix Cage",
-          suffixWidget: FlatProfileImage(
+          title: "WiiQare",
+          suffixWidget: ProfileImage(
             size: 35.0,
             onlineIndicator: true,
-            imageUrl:
-                'https://images.pexels.com/photos/3866555/pexels-photo-3866555.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            // imageUrl:
+            //     'https://africatravelco.com/wp-content/uploads/2019/08/lion-870x480.jpg',
             onPressed: () {
               print("Clicked Profile Image");
             },
           ),
         ),
         children: [
-          FlatChatMessage(
+          ChatMessage(
             message: "Hello World!, This is the first message.",
             messageType: MessageType.sent,
             showTime: true,
             time: "2 mins ago",
           ),
-          FlatChatMessage(
+          ChatMessage(
             message: "Typing another message from the input box.",
-            messageType: MessageType.sent,
+            messageType: MessageType.received,
             showTime: true,
             time: "2 mins ago",
           ),
-          FlatChatMessage(
+          ChatMessage(
             message: "Message Length Small.",
             showTime: true,
             time: "2 mins ago",
           ),
-          FlatChatMessage(
+          ChatMessage(
             message:
                 "Message Length Large. This message has more text to configure the size of the message box.",
             showTime: true,
+            messageType: MessageType.sent,
             time: "2 mins ago",
           ),
-          FlatChatMessage(
+          ChatMessage(
             message: "Meet me tomorrow at the coffee shop.",
             showTime: true,
             time: "2 mins ago",
           ),
-          FlatChatMessage(
+          ChatMessage(
             message: "Around 11 o'clock.",
             showTime: true,
             time: "2 mins ago",
           ),
-          FlatChatMessage(
+          ChatMessage(
             message:
                 "Flat Social UI kit is going really well. Hope this finishes soon.",
             showTime: true,
             time: "2 mins ago",
           ),
-          FlatChatMessage(
+          ChatMessage(
             message: "Final Message in the list.",
             showTime: true,
             time: "2 mins ago",
           ),
         ],
-        footer: FlatMessageInputBox(
-          prefix: FlatActionButton(
+        footer: MessageInputBox(
+          prefix: SendButtom(
             iconData: Icons.add,
             iconSize: 24.0,
           ),
           roundedCorners: true,
-          suffix: FlatActionButton(
+          suffix: SendButtom(
             iconData: Icons.image,
             iconSize: 24.0,
           ),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:wiiqare/views/widgets/chat/flat_action_btn.dart';
+import 'package:wiiqare/views/widgets/chat/sendButtom.dart';
 
-class FlatMessageInputBox extends StatelessWidget {
+class MessageInputBox extends StatelessWidget {
   final Widget prefix;
   final Widget suffix;
   final bool roundedCorners;
   final Function onChanged;
   final Function onSubmitted;
-  FlatMessageInputBox(
+  MessageInputBox(
       {this.prefix,
       this.suffix,
       this.roundedCorners,
@@ -84,7 +84,7 @@ class FlatMessageInputBox extends StatelessWidget {
                   width: 0,
                   height: 0,
                 ),
-            FlatActionButton(
+            SendButtom(
               icon: Icon(
                 Icons.send,
                 size: 24.0,
