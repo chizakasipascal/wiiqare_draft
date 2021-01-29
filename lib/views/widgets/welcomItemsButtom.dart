@@ -14,7 +14,7 @@ class WelcomItemsButtom extends StatelessWidget {
     @required this.size,
     @required this.widget,
     this.onPressed,
-    this.color = Yello,
+    this.color = WikiBleu,
     this.background = White,
   }) : super(key: key);
 

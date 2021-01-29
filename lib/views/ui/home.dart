@@ -45,7 +45,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         type: BottomNavigationBarType.shifting,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            activeIcon: Icon(FontAwesomeIcons.home, size: 20, color: Yello),
+            activeIcon: Icon(FontAwesomeIcons.home, size: 20, color: WikiBleu),
             icon: Icon(
               FontAwesomeIcons.home,
               size: 20,
@@ -59,7 +59,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             ),
           ),
           BottomNavigationBarItem(
-            activeIcon: Icon(FontAwesomeIcons.wallet, size: 20, color: Yello),
+            activeIcon:
+                Icon(FontAwesomeIcons.wallet, size: 20, color: WikiBleu),
             icon: Icon(
               FontAwesomeIcons.wallet,
               size: 20,
@@ -73,7 +74,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             ),
           ),
           BottomNavigationBarItem(
-            activeIcon: Icon(FontAwesomeIcons.users, size: 20, color: Yello),
+            activeIcon: Icon(FontAwesomeIcons.users, size: 20, color: WikiBleu),
             icon: Icon(
               FontAwesomeIcons.users,
               size: 20,
@@ -87,7 +88,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             ),
           ),
           BottomNavigationBarItem(
-            activeIcon: Icon(FontAwesomeIcons.boxOpen, size: 20, color: Yello),
+            activeIcon:
+                Icon(FontAwesomeIcons.boxOpen, size: 20, color: WikiBleu),
             icon: Icon(
               FontAwesomeIcons.boxOpen,
               size: 20,
@@ -101,7 +103,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             ),
           ),
           BottomNavigationBarItem(
-            activeIcon: Icon(FontAwesomeIcons.cog, size: 20, color: Yello),
+            activeIcon: Icon(FontAwesomeIcons.cog, size: 20, color: WikiBleu),
             icon: Icon(
               FontAwesomeIcons.cog,
               size: 20,
@@ -116,7 +118,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Yello,
+        selectedItemColor: WikiBleu,
         unselectedItemColor: BlueText,
         unselectedLabelStyle: TextStyle(
           color: BlueText,

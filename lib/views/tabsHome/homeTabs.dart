@@ -5,7 +5,7 @@ import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
-import 'package:lottie/lottie.dart';
+
 import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
 import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
 import 'package:wiiqare/views/widgets/wikiItemHome.dart';
@@ -73,7 +73,7 @@ class _HomeTabsState extends State<HomeTabs> {
                     children: [
                       WikiButtom(
                         descpritionButtom: "Recharge",
-                        color: Yello,
+                        color: WikiBleu,
                         onPressed: () {
                           //TODO:Mettre le code recharge aproprie
                         },
@@ -82,7 +82,7 @@ class _HomeTabsState extends State<HomeTabs> {
                         height: 60,
                         width: 150,
                         decoration: BoxDecoration(
-                            border: Border.all(color: Yello),
+                            border: Border.all(color: WikiBleu),
                             borderRadius: BorderRadius.circular(10)),
                         child: Center(
                           child: Padding(

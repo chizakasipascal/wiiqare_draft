@@ -35,7 +35,7 @@ class _LoginState extends State<Login> {
                 color: White,
                 borderRadius: BorderRadius.circular(9),
                 border: Border.all(
-                  color: Yello,
+                  color: WikiBleu,
                 ),
                 boxShadow: [
                   BoxShadow(
@@ -54,7 +54,7 @@ class _LoginState extends State<Login> {
                 color: White,
                 borderRadius: BorderRadius.circular(9),
                 border: Border.all(
-                  color: Yello,
+                  color: WikiBleu,
                 ),
                 boxShadow: [
                   BoxShadow(

@@ -113,7 +113,8 @@ class _QRCodeScannerViewsState extends State<QRCodeScannerViews>
                                     _handleOnPressed();
                                   }),
                                   duration: Duration(milliseconds: 200),
-                                  endIcon: Icon(Icons.flash_on, color: Yello),
+                                  endIcon:
+                                      Icon(Icons.flash_on, color: WikiBleu),
                                   startIcon: Icon(Icons.flash_off, color: Grey),
                                 );
                               },
@@ -148,8 +149,8 @@ class _QRCodeScannerViewsState extends State<QRCodeScannerViews>
                                       _handleOnPressed();
                                     }),
                                     duration: Duration(milliseconds: 200),
-                                    endIcon:
-                                        Icon(Icons.camera_front, color: Yello),
+                                    endIcon: Icon(Icons.camera_front,
+                                        color: WikiBleu),
                                     startIcon:
                                         Icon(Icons.camera_alt, color: Grey),
                                   );

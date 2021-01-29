@@ -85,7 +85,7 @@ class GroupeStep3 extends StatelessWidget {
                       ),
                       SingleTitle(
                         singleTitle: "Rercharger",
-                        color: Yello,
+                        color: WikiBleu,
                         size: 12.0,
                         fontWeight: FontWeight.w500,
                       ),

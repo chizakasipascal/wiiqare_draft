@@ -243,8 +243,8 @@ class _DiabeteState extends State<Diabete> {
                         child: WikiButtom(
                           descpritionButtom: "Retour",
                           color: White,
-                          color2: Yello,
-                          colorBorder: Yello,
+                          color2: WikiBleu,
+                          colorBorder: WikiBleu,
                           onPressed: () {},
                         ),
                       ),

@@ -31,10 +31,10 @@ class StepCreateObjectif extends StatelessWidget {
           Container(
             height: 60,
             width: size.width,
-            color: Yello,
+            color: WikiBleu,
             child: AppBar(
               centerTitle: true,
-              backgroundColor: Yello,
+              backgroundColor: WikiBleu,
               leading: IconButton(
                 icon: Icon(Icons.close_sharp, color: Colors.red),
                 onPressed: () {
