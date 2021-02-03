@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:otp_screen/otp_screen.dart';
 import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
-import 'package:wiiqare/views/widgets/widgets.dart';
 
 class OTP extends StatelessWidget {
   Future<String> validateOtp(String otp) async {

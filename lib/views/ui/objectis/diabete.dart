@@ -48,7 +48,7 @@ class _DiabeteState extends State<Diabete> {
   }
 
   double percent;
-  bool valeur = false;
+  int valeur = 0;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -142,11 +142,8 @@ class _DiabeteState extends State<Diabete> {
                         child: Padding(
                           padding: const EdgeInsets.all(3.0),
                           child: DropdownButton(
+                            underline: Container(),
                             style: TextStyle(fontSize: 10.0, color: BlueText),
-                            hint: SingleTitle(
-                              singleTitle: "Selection",
-                              size: 10.0,
-                            ),
                             value: _selectedMois,
                             items: _dropdownMenuItems,
                             onChanged: onChangeDropdownItem,
@@ -195,12 +192,9 @@ class _DiabeteState extends State<Diabete> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(3.0),
                                   child: DropdownButton(
+                                    underline: Container(),
                                     style: TextStyle(
                                         fontSize: 10.0, color: BlueText),
-                                    hint: SingleTitle(
-                                      singleTitle: "Selection",
-                                      size: 10.0,
-                                    ),
                                     value: _selectedMois,
                                     items: _dropdownMenuItems,
                                     onChanged: onChangeDropdownItem,
@@ -221,10 +215,11 @@ class _DiabeteState extends State<Diabete> {
                         child: MontantSetp(
                           montant: "150 FCFA",
                           duree: "${_selectedMois.name}",
-                          value: false,
-                          onTap: () {
+                          value: valeur,
+                          onTap: (valeur) {
                             setState(() {
                               //TODO : Update value to bol
+                              valeur = 1;
                             });
                           },
                         ),

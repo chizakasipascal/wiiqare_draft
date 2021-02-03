@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import '../../../models/comboxSante.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
@@ -22,6 +23,7 @@ class _SanteState extends State<Sante> {
   void initState() {
     _dropdownMenuItems = buildDropdownMenuItems(_santesss);
     _selectedSanteDure = _dropdownMenuItems[0].value;
+
     super.initState();
   }
 
@@ -45,13 +47,14 @@ class _SanteState extends State<Sante> {
   }
 
   double percent;
-  bool valeur = false;
+  int valeur = 0;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
     setState(() {
       percent = 35;
+      // valeur = valeur;
     });
     return Scaffold(
       body: SafeArea(
@@ -130,12 +133,9 @@ class _SanteState extends State<Sante> {
                             child: Padding(
                               padding: const EdgeInsets.all(3.0),
                               child: DropdownButton(
+                                underline: Container(),
                                 style:
-                                    TextStyle(fontSize: 10.0, color: BlueText),
-                                hint: SingleTitle(
-                                  singleTitle: "Selection",
-                                  size: 10.0,
-                                ),
+                                    TextStyle(fontSize: 11.0, color: BlueText),
                                 value: _selectedSanteDure,
                                 items: _dropdownMenuItems,
                                 onChanged: onChangeDropdownItem,
@@ -154,11 +154,16 @@ class _SanteState extends State<Sante> {
                         child: MontantSetp(
                           montant: "150 FCFA",
                           duree: "${_selectedSanteDure.name}",
-                          value: false,
-                          onTap: () {
+                          value: valeur,
+                          onTap: (_) {
                             setState(() {
-                              //TODO : Update value to bol
+                              valeur = 0;
                             });
+
+                            // setState(() {
+                            //   //TODO : Update value to bol
+                            //   valeur != valeur;
+                            // });
                           },
                         ),
                       ),
@@ -167,7 +172,13 @@ class _SanteState extends State<Sante> {
                         height: 50,
                         child: WikiButtom(
                           descpritionButtom: "Suivant",
-                          onPressed: () {},
+                          onPressed: () {
+                            print("Objectif creer avec success");
+                            Navigator.pushReplacementNamed(
+                              context,
+                              Routes.home,
+                            );
+                          },
                         ),
                       ),
                       SizedBox(height: 20.0),
@@ -178,7 +189,9 @@ class _SanteState extends State<Sante> {
                           color: White,
                           color2: WikiBleu,
                           colorBorder: WikiBleu,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                         ),
                       ),
                     ],

@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
-typedef OnPressed();
-
 class MontantSetp extends StatefulWidget {
   final montant, duree;
-  final bool value;
-  final OnPressed onTap;
+  final int value;
+  final void Function(int) onTap;
   const MontantSetp({
     Key key,
     this.montant,
@@ -43,13 +41,15 @@ class _MontantSetpState extends State<MontantSetp> {
         ],
       ),
       trailing: Radio(
-        groupValue: _group,
-        value: 0,
-        onChanged: (t) {
-          setState(() {
-            _group = t;
-          });
-        },
+        groupValue: widget.value,
+        value: widget.value,
+        onChanged: widget.onTap,
+
+        // (t) {
+        //   setState(() {
+        //     _group = t;
+        //   });
+        // },
       ),
     );
   }
