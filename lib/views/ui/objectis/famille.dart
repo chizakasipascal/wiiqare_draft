@@ -70,8 +70,8 @@ class _FamilleState extends State<Famille> {
     final DateTime picked = await showDatePicker(
       context: context,
       initialDate: selectedDate,
-      firstDate: DateTime(2000),
-      lastDate: DateTime(2025),
+      firstDate: DateTime(1900),
+      lastDate: DateTime(2030),
       builder: (context, child) {
         return Theme(
           data: ThemeData.light(),
@@ -102,8 +102,8 @@ class _FamilleState extends State<Famille> {
                   });
               },
               initialDateTime: selectedDate,
-              minimumYear: 2000,
-              maximumYear: 2025,
+              minimumYear: 1900,
+              maximumYear: 2030,
             ),
           );
         });
