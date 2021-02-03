@@ -14,3 +14,4 @@ export '../ui/qrCodeViewsScanncer.dart';
 export 'hitoriqueItem.dart';
 export 'wikiObjectifItemBar.dart';
 export 'stepCreateObjectif.dart';
+export 'mapButtom.dart';

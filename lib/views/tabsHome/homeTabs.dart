@@ -155,8 +155,7 @@ class _HomeTabsState extends State<HomeTabs> {
                     icon: Image.asset(Pictures.Hopital),
                     chaine: "Hospitaux",
                     onPressed: () {
-                      Navigator.pushNamed(
-                          context, Routes.consiltationListeDoctor);
+                      Navigator.pushNamed(context, Routes.hopital);
                     },
                     border: Colors.transparent,
                   ),

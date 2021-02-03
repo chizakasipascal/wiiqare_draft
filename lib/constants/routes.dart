@@ -35,6 +35,7 @@ class Routes {
   static const String pay = '/pay';
   static const String transfert = '/transfert';
   static const String recharge = '/recharge';
+  static const String hopital = '/hopital';
 
   ///
   static final routes = <String, WidgetBuilder>{
@@ -65,5 +66,6 @@ class Routes {
     transfert: (BuildContext context) => Transfert(),
     pay: (BuildContext context) => Pay(),
     recharge: (BuildContext context) => Recharge(),
+    hopital: (BuildContext context) => Hopital()
   };
 }
