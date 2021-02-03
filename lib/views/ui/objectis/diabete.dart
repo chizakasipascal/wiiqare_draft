@@ -182,10 +182,27 @@ class _DiabeteState extends State<Diabete> {
                           color: Grey.withOpacity(.1),
                           borderRadius: BorderRadius.circular(5),
                         ),
-                        child: wikiText(
-                            hint: "Date de naissance",
-                            label: "Date de naissance",
-                            inputType: TextInputType.number),
+                        child: Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SingleTitle(
+                                singleTitle:
+                                    "${selectedDate.day}/${selectedDate.month}/${selectedDate.year}",
+                              ),
+                              IconButton(
+                                onPressed: () {
+                                  _selectDate(context);
+                                },
+                                icon: Icon(
+                                  Icons.calendar_today,
+                                  color: BlueText,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                       SizedBox(height: 10),
                       SingleTitle(
@@ -220,39 +237,20 @@ class _DiabeteState extends State<Diabete> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SingleTitle(
-                                singleTitle: "Date de naissance ",
+                                singleTitle: "Montant ",
                                 color: BlackText,
                                 fontWeight: FontWeight.bold,
                               ),
                               Container(
                                 width: size.width * .4,
-                                constraints: BoxConstraints(minHeight: 54),
                                 decoration: BoxDecoration(
                                   color: Grey.withOpacity(.1),
                                   borderRadius: BorderRadius.circular(5),
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(3.0),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      SingleTitle(
-                                        singleTitle:
-                                            "${selectedDate.day}/${selectedDate.month}/${selectedDate.year}",
-                                      ),
-                                      IconButton(
-                                        onPressed: () {
-                                          _selectDate(context);
-                                        },
-                                        icon: Icon(
-                                          Icons.calendar_today,
-                                          color: BlueText,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                                child: wikiText(
+                                    hint: "2500 FC/FC",
+                                    //  label: "Date de naissance",
+                                    inputType: TextInputType.number),
                               ),
                             ],
                           ),
