@@ -17,3 +17,4 @@ export 'labo.dart';
 export 'prevention.dart';
 export 'pharmacie.dart';
 export 'chatScreen.dart';
+export 'hopital.dart';
