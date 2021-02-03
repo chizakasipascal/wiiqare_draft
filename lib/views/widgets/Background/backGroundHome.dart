@@ -19,7 +19,7 @@ class BackGroundHome extends StatelessWidget {
       children: [
         Container(
           height: size.height * .2,
-          color: BlueText,
+          color: BACKGROUND_CARD,
           child: WikiAppBar(
             name: "Ebene jean",
           ),
