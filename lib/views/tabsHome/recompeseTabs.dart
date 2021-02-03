@@ -114,6 +114,7 @@ class _RecompeseTabsState extends State<RecompeseTabs>
           ),
           Expanded(
             child: Container(
+              color: BACKGROUND,
               child: TabBarView(
                 controller: _controller,
                 physics: new NeverScrollableScrollPhysics(),
