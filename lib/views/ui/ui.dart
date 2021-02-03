@@ -10,7 +10,7 @@ export 'creeobjectif.dart';
 export 'objectifTYPE.dart';
 export 'groupeScafold.dart';
 export 'groupeCreer.dart';
-export 'hopital.dart';
+export 'conslutationListDoctor.dart';
 export 'sport.dart';
 export 'consilation.dart';
 export 'labo.dart';

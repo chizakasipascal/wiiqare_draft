@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
+import 'package:wiiqare/views/widgets/Doctor/doctor.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
-class Hopital extends StatelessWidget {
+class ConsiltationListeDoctor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -44,6 +46,7 @@ class Hopital extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 decoration: BoxDecoration(
@@ -65,7 +68,49 @@ class Hopital extends StatelessWidget {
                 singleTitle: "Specialist",
                 fontWeight: FontWeight.bold,
                 color: Grey,
-              )
+              ),
+              SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    DoctotPrefences(
+                      widget: WikiButtom(
+                        descpritionButtom: "All",
+                        onPressed: () {},
+                      ),
+                    ),
+                    DoctotPrefences(
+                      widget: WikiButtom(
+                        descpritionButtom: "Cardio",
+                        colorBorder: Bleu,
+                        color2: Bleu,
+                        color: White,
+                        onPressed: () {},
+                      ),
+                    ),
+                    DoctotPrefences(
+                      widget: WikiButtom(
+                        descpritionButtom: "Dentist",
+                        colorBorder: Bleu,
+                        color2: Bleu,
+                        color: White,
+                        onPressed: () {},
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              DoctorCard(
+                size: size,
+                image: Placeholder(),
+                name: "Dr Muhamund Nik Hassan",
+                autre: "4.5/27 Reviews",
+                descrption: "Descprion",
+                onTap: () {
+                  Navigator.pushNamed(context, Routes.consiltation);
+                },
+              ),
             ],
           ),
         ),
