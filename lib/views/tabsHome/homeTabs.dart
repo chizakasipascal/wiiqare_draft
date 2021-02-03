@@ -146,8 +146,8 @@ class _HomeTabsState extends State<HomeTabs> {
                   WikiImtesHome(
                     icon: Image.asset(Pictures.Consltation),
                     chaine: "Consultation",
-                    onPressed: () =>
-                        Navigator.pushNamed(context, Routes.consiltation),
+                    onPressed: () => Navigator.pushNamed(
+                        context, Routes.consiltationListeDoctor),
                     border: Colors.transparent,
                   ),
                   SizedBox(height: 8.0),
@@ -155,7 +155,8 @@ class _HomeTabsState extends State<HomeTabs> {
                     icon: Image.asset(Pictures.Hopital),
                     chaine: "Hospitaux",
                     onPressed: () {
-                      Navigator.pushNamed(context, Routes.hopital);
+                      Navigator.pushNamed(
+                          context, Routes.consiltationListeDoctor);
                     },
                     border: Colors.transparent,
                   ),
