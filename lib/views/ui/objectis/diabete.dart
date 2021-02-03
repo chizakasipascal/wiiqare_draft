@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import '../../../models/diabte.dart';
 import 'package:wiiqare/views/widgets/Background/background.dart';
@@ -14,6 +16,8 @@ class Diabete extends StatefulWidget {
 }
 
 class _DiabeteState extends State<Diabete> {
+  DateTime selectedDate = DateTime.now();
+
   List<DiabeteCombo> _diabetes = DiabeteCombo.getComboDiabteMois();
   List<DiabeteCombo> _diabetesJours = DiabeteCombo.getComboDiabteJours();
   List<DropdownMenuItem<DiabeteCombo>> _dropdownMenuItems;
@@ -49,6 +53,66 @@ class _DiabeteState extends State<Diabete> {
 
   double percent;
   int valeur = 0;
+
+  _selectDate(BuildContext context) async {
+    final ThemeData theme = Theme.of(context);
+    assert(theme.platform != null);
+    switch (theme.platform) {
+      case TargetPlatform.android:
+      case TargetPlatform.fuchsia:
+      case TargetPlatform.linux:
+      case TargetPlatform.windows:
+        return buildMaterialDatePicker(context);
+      case TargetPlatform.iOS:
+      case TargetPlatform.macOS:
+        return buildCupertinoDatePicker(context);
+    }
+  }
+
+  /// This builds material date picker in Android
+  buildMaterialDatePicker(BuildContext context) async {
+    final DateTime picked = await showDatePicker(
+      context: context,
+      initialDate: selectedDate,
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2025),
+      builder: (context, child) {
+        return Theme(
+          data: ThemeData.light(),
+          child: child,
+        );
+      },
+    );
+    if (picked != null && picked != selectedDate)
+      setState(() {
+        selectedDate = picked;
+      });
+  }
+
+  /// This builds cupertion date picker in iOS
+  buildCupertinoDatePicker(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (BuildContext builder) {
+          return Container(
+            height: MediaQuery.of(context).copyWith().size.height / 3,
+            color: Colors.white,
+            child: CupertinoDatePicker(
+              mode: CupertinoDatePickerMode.date,
+              onDateTimeChanged: (picked) {
+                if (picked != null && picked != selectedDate)
+                  setState(() {
+                    selectedDate = picked;
+                  });
+              },
+              initialDateTime: selectedDate,
+              minimumYear: 2000,
+              maximumYear: 2025,
+            ),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -143,7 +207,7 @@ class _DiabeteState extends State<Diabete> {
                           padding: const EdgeInsets.all(3.0),
                           child: DropdownButton(
                             underline: Container(),
-                            style: TextStyle(fontSize: 10.0, color: BlueText),
+                            style: TextStyle(fontSize: 11.0, color: BlueText),
                             value: _selectedMois,
                             items: _dropdownMenuItems,
                             onChanged: onChangeDropdownItem,
@@ -158,20 +222,39 @@ class _DiabeteState extends State<Diabete> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SingleTitle(
-                                singleTitle: "Montant ",
+                                singleTitle: "Date de naissance ",
                                 color: BlackText,
                                 fontWeight: FontWeight.bold,
                               ),
                               Container(
                                 width: size.width * .4,
+                                constraints: BoxConstraints(minHeight: 54),
                                 decoration: BoxDecoration(
                                   color: Grey.withOpacity(.1),
                                   borderRadius: BorderRadius.circular(5),
                                 ),
-                                child: wikiText(
-                                    hint: "Date de naissance",
-                                    label: "Date de naissance",
-                                    inputType: TextInputType.number),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(3.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      SingleTitle(
+                                        singleTitle:
+                                            "${selectedDate.day}/${selectedDate.month}/${selectedDate.year}",
+                                      ),
+                                      IconButton(
+                                        onPressed: () {
+                                          _selectDate(context);
+                                        },
+                                        icon: Icon(
+                                          Icons.calendar_today,
+                                          color: BlueText,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -194,7 +277,7 @@ class _DiabeteState extends State<Diabete> {
                                   child: DropdownButton(
                                     underline: Container(),
                                     style: TextStyle(
-                                        fontSize: 10.0, color: BlueText),
+                                        fontSize: 11.0, color: BlueText),
                                     value: _selectedMois,
                                     items: _dropdownMenuItems,
                                     onChanged: onChangeDropdownItem,
@@ -229,7 +312,13 @@ class _DiabeteState extends State<Diabete> {
                         height: 50,
                         child: WikiButtom(
                           descpritionButtom: "Suivant",
-                          onPressed: () {},
+                          onPressed: () {
+                            print("Objectif creer avec success");
+                            Navigator.pushReplacementNamed(
+                              context,
+                              Routes.home,
+                            );
+                          },
                         ),
                       ),
                       SizedBox(height: 20.0),
@@ -240,7 +329,9 @@ class _DiabeteState extends State<Diabete> {
                           color: White,
                           color2: WikiBleu,
                           colorBorder: WikiBleu,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                         ),
                       ),
                     ],
