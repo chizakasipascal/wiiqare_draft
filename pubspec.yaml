@@ -36,10 +36,8 @@ dev_dependencies:
     sdk: flutter
   intl_phone_number_input: ^0.6.0
   cached_network_image: ^2.4.1
-  font_awesome_flutter: ^8.10.0
-  flutter_svg: ^0.18.1
-  flutter_launcher_icons: ^0.8.1
-  google_fonts: ^1.1.1
+  font_awesome_flutter: ^8.10.0 
+  flutter_launcher_icons: ^0.8.1 
   introduction_screen: ^1.0.9
   flutter_rounded_progress_bar: ^0.1.2
   qr_code_scanner: ^0.3.0

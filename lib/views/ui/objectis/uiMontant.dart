@@ -15,7 +15,7 @@ class UIMontant extends StatefulWidget {
 
 class _UIMontantState extends State<UIMontant> {
   double percent;
-  bool valeur = false;
+  int valeur = 0;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -114,10 +114,11 @@ class _UIMontantState extends State<UIMontant> {
                                   MontantSetp(
                                     montant: "150 FCFA",
                                     duree: "Par jour",
-                                    value: false,
-                                    onTap: () {
+                                    value: valeur,
+                                    onTap: (valeur) {
                                       setState(() {
                                         //TODO : Update value to bol
+                                        valeur = 1;
                                       });
                                     },
                                   ),
@@ -125,10 +126,11 @@ class _UIMontantState extends State<UIMontant> {
                                   MontantSetp(
                                     montant: "447 FCFA",
                                     duree: "Par semaine",
-                                    value: false,
-                                    onTap: () {
+                                    value: valeur,
+                                    onTap: (valeur) {
                                       setState(() {
                                         //TODO : Update value to bol
+                                        valeur = 1;
                                       });
                                     },
                                   ),
@@ -136,10 +138,11 @@ class _UIMontantState extends State<UIMontant> {
                                   MontantSetp(
                                     montant: "447 FCFA",
                                     duree: "Chaque deux semaine",
-                                    value: false,
-                                    onTap: () {
+                                    value: valeur,
+                                    onTap: (valeur) {
                                       setState(() {
                                         //TODO : Update value to bol
+                                        valeur = 1;
                                       });
                                     },
                                   ),
@@ -147,10 +150,11 @@ class _UIMontantState extends State<UIMontant> {
                                   MontantSetp(
                                     montant: "447 FCFA",
                                     duree: "Chaque mois",
-                                    value: false,
-                                    onTap: () {
+                                    value: valeur,
+                                    onTap: (valeur) {
                                       setState(() {
                                         //TODO : Update value to bol
+                                        valeur = 1;
                                       });
                                     },
                                   ),

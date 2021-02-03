@@ -45,7 +45,7 @@ class _FamilleState extends State<Famille> {
   }
 
   double percent;
-  bool valeur = false;
+  int valeur = 0;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -213,10 +213,11 @@ class _FamilleState extends State<Famille> {
                         child: MontantSetp(
                           montant: "150 FCFA",
                           duree: "${_selectedMois.name}",
-                          value: false,
-                          onTap: () {
+                          value: valeur,
+                          onTap: (valeur) {
                             setState(() {
                               //TODO : Update value to bol
+                              valeur = 1;
                             });
                           },
                         ),
