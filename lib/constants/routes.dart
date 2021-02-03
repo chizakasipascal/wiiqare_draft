@@ -18,7 +18,7 @@ class Routes {
   static const String creeobjectif = '/creeobjectif';
   static const String objectifTYPE = '/objectifTYPE';
   static const String goupe = '/groupe';
-  static const String hopital = '/hopital';
+  static const String consiltationListeDoctor = '/consiltationListeDoctor';
   static const String diabete = '/diabete';
   static const String famille = '/famille';
   static const String grossesse = '/grossesse';
@@ -54,7 +54,8 @@ class Routes {
     uiMontant: (BuildContext context) => UIMontant(),
     sante: (BuildContext context) => Sante(),
     goupe: (BuildContext context) => GroupeScafold(),
-    hopital: (BuildContext context) => Hopital(),
+    consiltationListeDoctor: (BuildContext context) =>
+        ConsiltationListeDoctor(),
     sport: (BuildContext context) => Sport(),
     consiltation: (BuildContext context) => Consiltation(),
     pharmacie: (BuildContext context) => Pharmacie(),
