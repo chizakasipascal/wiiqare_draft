@@ -88,7 +88,7 @@ class Sport extends StatelessWidget {
                       ),
                       DoctotPrefences(
                         widget: WikiButtom(
-                          descpritionButtom: "Cardio",
+                          descpritionButtom: "Femme ancient",
                           colorBorder: Bleu,
                           color2: Bleu,
                           color: White,
@@ -97,7 +97,7 @@ class Sport extends StatelessWidget {
                       ),
                       DoctotPrefences(
                         widget: WikiButtom(
-                          descpritionButtom: "Dentist",
+                          descpritionButtom: "Dianbetique",
                           colorBorder: Bleu,
                           color2: Bleu,
                           color: White,
@@ -110,9 +110,9 @@ class Sport extends StatelessWidget {
                 DoctorCard(
                   size: size,
                   image: Placeholder(),
-                  name: "Dr Muhamund Nik Hassan",
-                  autre: "4.5/27 Reviews",
-                  descrption: "Descprion",
+                  name: "Coach Julien",
+                  autre: "100 - 180 kg",
+                  descrption: "Body building",
                   onTap: () {
                     Navigator.pushNamed(context, Routes.inforCoach);
                   },
