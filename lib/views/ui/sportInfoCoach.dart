@@ -47,17 +47,17 @@ class SportInfoCoach extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SingleTitle(
-                          singleTitle: "Dr Arsene",
+                          singleTitle: "Coach Julien",
                           size: 18.0,
                           color: Grey,
                           fontWeight: FontWeight.bold,
                         ),
                         SingleTitle(
-                          singleTitle: "Cardialogue",
+                          singleTitle: "Body building",
                           color: Grey,
                         ),
                         SingleTitle(
-                          singleTitle: "Hopital genreal",
+                          singleTitle: "Maison de jeune Goma",
                           color: Grey,
                         ),
                       ],
