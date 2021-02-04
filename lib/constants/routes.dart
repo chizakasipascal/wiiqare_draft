@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wiiqare/views/tabsHome/tabsHome.dart';
+import 'package:wiiqare/views/ui/sportInfoCoach.dart';
 
 import 'package:wiiqare/views/ui/ui.dart';
 import 'package:wiiqare/views/ui/objectis/objectifs.dart';
@@ -38,6 +39,7 @@ class Routes {
   static const String recharge = '/recharge';
   static const String hopital = '/hopital';
   static const String setting = '/setting';
+  static const String inforCoach = '/inforCoach';
 
   ///
   static final routes = <String, WidgetBuilder>{
@@ -70,5 +72,6 @@ class Routes {
     recharge: (BuildContext context) => Recharge(),
     hopital: (BuildContext context) => Hopital(),
     setting: (BuildContext context) => SettingdTabs(),
+    inforCoach: (BuildContext context) => SportInfoCoach(),
   };
 }

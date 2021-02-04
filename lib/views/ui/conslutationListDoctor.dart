@@ -14,9 +14,11 @@ class ConsiltationListeDoctor extends StatelessWidget {
         backgroundColor: White,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Container(
-            color: Grey,
-            child: Icon(Icons.person),
+          child: IconButton(
+            icon: Icon(Icons.arrow_back, color: BlueText),
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
         ),
         title: Column(
@@ -37,8 +39,17 @@ class ConsiltationListeDoctor extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Icon(Icons.calendar_today, color: BlueText),
-          )
+            child: Container(
+              width: 40,
+              height: 40,
+              color: Grey,
+              child: Icon(Icons.person),
+            ),
+          ),
+          // Padding(
+          //   padding: const EdgeInsets.all(8.0),
+          //   child: Icon(Icons.calendar_today, color: BlueText),
+          // )
         ],
       ),
       body: SingleChildScrollView(

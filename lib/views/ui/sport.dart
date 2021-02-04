@@ -12,12 +12,11 @@ class Sport extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: White,
-        leading: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            color: Grey,
-            child: Icon(Icons.person),
-          ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: BlueText),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,8 +36,13 @@ class Sport extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Icon(Icons.calendar_today, color: BlueText),
-          )
+            child: Container(
+              height: 40,
+              width: 40,
+              color: Grey,
+              child: Icon(Icons.person),
+            ),
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -108,7 +112,7 @@ class Sport extends StatelessWidget {
                 autre: "4.5/27 Reviews",
                 descrption: "Descprion",
                 onTap: () {
-                  Navigator.pushNamed(context, Routes.consiltation);
+                  Navigator.pushNamed(context, Routes.inforCoach);
                 },
               ),
             ],
