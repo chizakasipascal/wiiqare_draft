@@ -172,8 +172,8 @@ class _HomeTabsState extends State<HomeTabs> {
                   ),
                   SizedBox(height: 8.0),
                   WikiImtesHome(
-                    icon: Image.asset(Pictures.Lab),
-                    chaine: "Labo",
+                    icon: Image.asset(Pictures.Familly),
+                    chaine: "Parenage", //TODO:Icons Parenage
                     onPressed: () => Navigator.pushNamed(context, Routes.labo),
                     border: Colors.transparent,
                   ),
