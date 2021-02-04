@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
@@ -34,6 +35,8 @@ class Pharmacie extends StatelessWidget {
                     widget: Placeholder(),
                     onTap: () {
                       //TODO: add Method form map d
+
+                      Navigator.pushNamed(context, Routes.home);
                     },
                   ),
                   MapButtom(
@@ -41,6 +44,7 @@ class Pharmacie extends StatelessWidget {
                     widget: Placeholder(),
                     onTap: () {
                       //TODO: add Method form map d
+                      Navigator.pushNamed(context, Routes.setting);
                     },
                   ),
                   MapButtom(
