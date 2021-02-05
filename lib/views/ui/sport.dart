@@ -54,20 +54,35 @@ class Sport extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Grey.withOpacity(.1),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  width: size.width,
-                  child: wikiText(
-                    hint: "Chercher",
-                    suffixIcon: Icon(
-                      Icons.search,
-                      size: 20,
-                      color: Grey,
+                Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: BlueText,
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                     ),
-                  ),
+                    Flexible(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Grey.withOpacity(.1),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        width: size.width,
+                        child: wikiText(
+                          hint: "Chercher",
+                          suffixIcon: Icon(
+                            Icons.search,
+                            size: 20,
+                            color: Grey,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(height: 10.0),
                 SingleTitle(
