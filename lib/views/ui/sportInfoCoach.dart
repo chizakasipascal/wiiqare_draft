@@ -72,7 +72,7 @@ class SportInfoCoach extends StatelessWidget {
                     height: 100,
                     width: size.width,
                     decoration: BoxDecoration(
-                      color: Colors.green[900],
+                      color: Bleu,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
@@ -229,9 +229,42 @@ From what I see, it is not a good idea to set the From what I see, it is not a g
                             ),
                             SizedBox(height: 10.0),
                             SingleTitle(
-                              singleTitle: "Frees information ",
+                              singleTitle: "Tarif ",
                               color: BlueText,
                               fontWeight: FontWeight.bold,
+                            ),
+                            SizedBox(height: 5.0),
+                            RichText(
+                              text: TextSpan(
+                                text: 'Journalieur',
+                                style: TextStyle(
+                                  color: BlueText,
+                                ),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: ' 100\$',
+                                    style: TextStyle(
+                                        color: BlueText,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            RichText(
+                              text: TextSpan(
+                                text: 'Mensuel',
+                                style: TextStyle(
+                                  color: BlueText,
+                                ),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: ' 100\$',
+                                    style: TextStyle(
+                                        color: BlueText,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
                             ),
                             SizedBox(height: 20.0),
                             FreeInformation(
