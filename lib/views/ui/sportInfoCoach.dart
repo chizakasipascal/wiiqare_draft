@@ -102,7 +102,7 @@ class SportInfoCoach extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                               SingleTitle(
-                                singleTitle: "Par semaine",
+                                singleTitle: "Personne par semaine",
                                 size: 10.0,
                                 color: White.withOpacity(.6),
                               )
