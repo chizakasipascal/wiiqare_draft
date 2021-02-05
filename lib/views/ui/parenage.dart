@@ -75,13 +75,14 @@ class Parenage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Wrap(
                         children: [
                           Container(
                             height: 130,
-                            width: size.width * .5,
+                            width: size.width * .4,
+                            margin: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               color: White,
                               borderRadius: BorderRadius.circular(10),
@@ -95,21 +96,16 @@ class Parenage extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ),
-                          Container(
-                            height: 130,
-                            width: size.width * .5,
-                            decoration: BoxDecoration(
-                              color: White,
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 2), // changes position of shadow
-                                ),
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                  bottom: 10,
+                                  right: 0,
+                                  child: SingleTitle(
+                                    singleTitle: "50 poinst",
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
                               ],
                             ),
                           ),
