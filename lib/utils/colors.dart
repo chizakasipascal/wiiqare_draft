@@ -19,3 +19,4 @@ const WelcomBack = const LinearGradient(
   begin: Alignment.topCenter,
 );
 var HintText = Colors.grey[400];
+var Red = Colors.red[400];

@@ -174,7 +174,8 @@ class _HomeTabsState extends State<HomeTabs> {
                   WikiImtesHome(
                     icon: Image.asset(Pictures.Familly),
                     chaine: "Parenage", //TODO:Icons Parenage
-                    onPressed: () => Navigator.pushNamed(context, Routes.labo),
+                    onPressed: () =>
+                        Navigator.pushNamed(context, Routes.parainage),
                     border: Colors.transparent,
                   ),
                 ],

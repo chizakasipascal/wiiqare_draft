@@ -8,19 +8,9 @@ class HopitalTabs extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: White,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: BlueText),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
       body: Stack(
         children: [
-          Placeholder(), //TODO:Map
+          Placeholder(), //TODO:Map hopital
           Positioned(
             bottom: 0,
             child: Container(

@@ -31,7 +31,7 @@ class Routes {
   static const String consiltation = '/consiltation';
   static const String pharmacie = '/pharmacie';
   static const String prevention = '/prevention';
-  static const String labo = '/labo';
+  static const String parainage = '/parainage';
 
   static const String chat = '/chat';
   static const String pay = '/pay';
@@ -72,5 +72,6 @@ class Routes {
     hopital: (BuildContext context) => Hopital(),
     setting: (BuildContext context) => SettingdTabs(),
     inforCoach: (BuildContext context) => SportInfoCoach(),
+    parainage: (BuildContext context) => Parenage(),
   };
 }

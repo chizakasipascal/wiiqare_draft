@@ -10,9 +10,13 @@ class Pharmacie extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: White,
+        backgroundColor: BlueText,
+        title: SingleTitle(
+          singleTitle: "Pharmacie",
+          color: White,
+        ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: BlueText),
+          icon: Icon(Icons.arrow_back, color: White),
           onPressed: () {
             Navigator.pop(context);
           },
