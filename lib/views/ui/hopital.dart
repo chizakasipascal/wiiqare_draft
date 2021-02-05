@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:ui';
-
 import 'package:wiiqare/utils/colors.dart';
-import 'package:wiiqare/views/ui/labo.dart';
-import 'package:wiiqare/views/widgets/widgets.dart';
+import 'package:wiiqare/views/tabsHopital/tabsHopital.dart';
 
 class Hopital extends StatefulWidget {
   @override
@@ -128,7 +125,7 @@ class _HopitalState extends State<Hopital> with SingleTickerProviderStateMixin {
                 child: TabBarView(
                   controller: _controller,
                   physics: new NeverScrollableScrollPhysics(),
-                  children: [Text("data"), Text("data")],
+                  children: [HopitalTabs(), LaboTabs()],
                 ),
               ),
             ),
