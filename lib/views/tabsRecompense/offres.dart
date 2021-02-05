@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wiiqare/constants/routes.dart';
-import 'package:wiiqare/utils/colors.dart';
-import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:wiiqare/views/widgets/wikiOffres.dart';
 
 class Offres extends StatefulWidget {
