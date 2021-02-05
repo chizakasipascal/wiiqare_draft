@@ -65,7 +65,6 @@ class Routes {
     consiltation: (BuildContext context) => Consiltation(),
     pharmacie: (BuildContext context) => Pharmacie(),
     prevention: (BuildContext context) => Prevention(),
-    labo: (BuildContext context) => Labo(),
     chat: (BuildContext context) => ChatScreen(),
     transfert: (BuildContext context) => Transfert(),
     pay: (BuildContext context) => Pay(),
