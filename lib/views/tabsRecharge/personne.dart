@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
@@ -8,7 +7,7 @@ class Personne extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return SingleChildScrollView(
-      child: Padding(
+      child: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -17,7 +16,7 @@ class Personne extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SingleTitle(
-                  singleTitle: "Local",
+                  singleTitle: "LOCAL",
                   color: Grey,
                   fontWeight: FontWeight.bold,
                 ),
