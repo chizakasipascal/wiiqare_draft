@@ -131,6 +131,54 @@ class Parenage extends StatelessWidget {
           ),
         ),
       ),
+      bottomSheet: Container(
+        height: 100,
+        width: size.width,
+        decoration: BoxDecoration(
+          color: White,
+          boxShadow: [
+            BoxShadow(
+              color: Grey.withOpacity(0.5),
+              spreadRadius: 2,
+              blurRadius: 3,
+              offset: Offset(0, 2), // changes position of shadow
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            InkWell(
+              onTap: () {
+                //TODO:Code Share
+              },
+              child: Container(
+                width: 150,
+                height: 40,
+                margin: const EdgeInsets.only(bottom: 10),
+                decoration: BoxDecoration(
+                  color: Bleu,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SingleTitle(
+                      singleTitle: "Refer & Earn",
+                      color: White,
+                    ),
+                    SizedBox(width: 5),
+                    Icon(
+                      Icons.share,
+                      color: White,
+                    )
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
