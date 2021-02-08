@@ -29,10 +29,19 @@ class Parenage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        height: 100,
+                        height: 70,
                         width: size.width,
                         decoration: BoxDecoration(
-                          color: Grey.withOpacity(0.2),
+                          color: White,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Grey.withOpacity(0.5),
+                              spreadRadius: 2,
+                              blurRadius: 3,
+                              offset:
+                                  Offset(0, 2), // changes position of shadow
+                            ),
+                          ],
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Row(
@@ -100,10 +109,13 @@ class Parenage extends StatelessWidget {
                               children: [
                                 Positioned(
                                   bottom: 10,
+                                  left: 0,
                                   right: 0,
-                                  child: SingleTitle(
-                                    singleTitle: "50 poinst",
-                                    fontWeight: FontWeight.bold,
+                                  child: Center(
+                                    child: SingleTitle(
+                                      singleTitle: "50 poinst",
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 )
                               ],

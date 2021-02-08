@@ -74,6 +74,7 @@ class _HomeTabsState extends State<HomeTabs> {
                         color: WikiBleu,
                         onPressed: () {
                           //TODO:Mettre le code recharge aproprie
+                          Navigator.pushNamed(context, Routes.recharge);
                         },
                       ),
                       Container(
