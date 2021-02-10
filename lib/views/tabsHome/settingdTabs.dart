@@ -15,44 +15,15 @@ class _SettingdTabsState extends State<SettingdTabs> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                height: 60,
-                decoration: BoxDecoration(
-                  color: White,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Grey.withOpacity(0.5),
-                      spreadRadius: 2,
-                      blurRadius: 3,
-                      offset: Offset(0, 2), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        child: Icon(Icons.person),
-                      ),
-                      SizedBox(width: 10),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SingleTitle(
-                            singleTitle: "Bienvenue Zigabe mugomba",
-                            fontWeight: FontWeight.bold,
-                          ),
-                          SingleTitle(
-                            singleTitle: "0978xxxxxx",
-                            color: Grey,
-                          ),
-                        ],
-                      ),
-                    ],
+              ExpandeItemSetting(
+                title: "Bienvenue Zigabe mugomba",
+                tage: "@zibage",
+                children: [
+                  SingleTitle(
+                    singleTitle: "@bienvenuezigabe",
+                    color: Grey,
                   ),
-                ),
+                ],
               ),
               SizedBox(height: 20.0),
               Container(
@@ -305,5 +276,25 @@ class _SettingdTabsState extends State<SettingdTabs> {
         ),
       ),
     );
+  }
+}
+
+class ExpandeItemSetting extends StatelessWidget {
+  final String title, tage;
+  List<Widget> children = const <Widget>[];
+  ExpandeItemSetting({Key key, this.title, this.tage, this.children})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ExpansionTile(
+        expandedAlignment: Alignment.topLeft,
+        childrenPadding: const EdgeInsets.all(10.0),
+        title: SingleTitle(singleTitle: title),
+        leading: Icon(Icons.person),
+        subtitle: SingleTitle(
+          singleTitle: tage,
+        ),
+        children: children);
   }
 }
