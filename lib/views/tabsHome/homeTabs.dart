@@ -137,7 +137,8 @@ class _HomeTabsState extends State<HomeTabs> {
                     icon: Image.asset(Pictures.Prevention),
                     chaine: "Prevention",
                     onPressed: () =>
-                        Navigator.pushNamed(context, Routes.prevention),
+                        //  Navigator.pushNamed(context, Routes.prevention),
+                        Navigator.pushNamed(context, Routes.hopital),
                     border: Colors.transparent,
                   ),
                 ],
