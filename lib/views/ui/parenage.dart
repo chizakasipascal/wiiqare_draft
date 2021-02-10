@@ -1,13 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
-import 'package:wiiqare/views/widgets/Background/background.dart';
-import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
-import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
-import 'package:wiiqare/views/widgets/objectifWidgets/montantSetp.dart';
-import 'package:flutter/src/material/dropdown.dart';
-import 'package:wiiqare/views/widgets/welcomItemsButtom.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
 class Parenage extends StatelessWidget {

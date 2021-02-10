@@ -5,10 +5,7 @@ import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
-
 import 'package:wiiqare/views/widgets/Background/background.dart';
-
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:wiiqare/views/widgets/wikiItemHome.dart';
 
 class Wallets extends StatefulWidget {
@@ -88,7 +85,7 @@ class _WalletsState extends State<Wallets> {
                         color: White,
                         border: WikiBleu,
                         onPressed: () {
-                          Navigator.pushNamed(context, Routes.recharge);
+                          Navigator.pushNamed(context, Routes.homeRecharge);
                         },
                       ),
                     ],

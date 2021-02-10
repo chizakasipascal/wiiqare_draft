@@ -24,6 +24,25 @@ class _HelpState extends State<Help> {
     //_showPersBottomSheetCallBack = _showPersBottomSheet;
   }
 
+  guideModalSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: Icon(Icons.phone),
+              title: SingleTitle(
+                singleTitle: "WiiQare",
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   // void _showPersBottomSheet() {
   //   setState(() {
   //     _showPersBottomSheetCallBack = null;
@@ -274,27 +293,32 @@ class _HelpState extends State<Help> {
                             SizedBox(
                               height: 100,
                               width: 90,
-                              child: WelcomItemsButtom(
-                                size: size,
-                                color: BlueText,
-                                widget: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Align(
-                                        alignment: Alignment.topCenter,
-                                        child: CircleAvatar(
-                                          backgroundColor: Colors.transparent,
-                                          child: Image.asset(Pictures.Guide),
+                              child: InkWell(
+                                onTap: () {
+                                  guideModalSheet(context);
+                                },
+                                child: WelcomItemsButtom(
+                                  size: size,
+                                  color: BlueText,
+                                  widget: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.topCenter,
+                                          child: CircleAvatar(
+                                            backgroundColor: Colors.transparent,
+                                            child: Image.asset(Pictures.Guide),
+                                          ),
                                         ),
-                                      ),
-                                      SingleTitle(
-                                        singleTitle: "Guide",
-                                        size: 10.0,
-                                      )
-                                    ],
+                                        SingleTitle(
+                                          singleTitle: "Guide",
+                                          size: 10.0,
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -302,27 +326,33 @@ class _HelpState extends State<Help> {
                             SizedBox(
                               height: 100,
                               width: 90,
-                              child: WelcomItemsButtom(
-                                size: size,
-                                color: BlueText,
-                                widget: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Align(
-                                        alignment: Alignment.topCenter,
-                                        child: CircleAvatar(
-                                          backgroundColor: Colors.transparent,
-                                          child: Image.asset(Pictures.MAP),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, Routes.pharmacie);
+                                },
+                                child: WelcomItemsButtom(
+                                  size: size,
+                                  color: BlueText,
+                                  widget: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.topCenter,
+                                          child: CircleAvatar(
+                                            backgroundColor: Colors.transparent,
+                                            child: Image.asset(Pictures.MAP),
+                                          ),
                                         ),
-                                      ),
-                                      SingleTitle(
-                                        singleTitle: "Map",
-                                        size: 10.0,
-                                      )
-                                    ],
+                                        SingleTitle(
+                                          singleTitle: "Map",
+                                          size: 10.0,
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
