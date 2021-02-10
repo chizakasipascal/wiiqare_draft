@@ -41,6 +41,7 @@ class Routes {
   static const String setting = '/setting';
   static const String inforCoach = '/inforCoach';
   static const String homeRecharge = 'homeRecharge';
+  static const String recompeseTabs = 'recompeseTabs';
 
   ///
   static final routes = <String, WidgetBuilder>{
@@ -74,6 +75,7 @@ class Routes {
     setting: (BuildContext context) => SettingdTabs(),
     inforCoach: (BuildContext context) => SportInfoCoach(),
     parainage: (BuildContext context) => Parenage(),
-    homeRecharge: (BuildContext context) => HomeRecharge()
+    homeRecharge: (BuildContext context) => HomeRecharge(),
+    recompeseTabs: (BuildContext context) => RecompeseTabs(),
   };
 }
