@@ -40,7 +40,7 @@ class _RecompeseTabsState extends State<RecompeseTabs>
           children: [
             Container(
               height: 48,
-              color: BlueText,
+              color: BACKGROUND,
               child: Column(
                 children: [
                   //  WikiAppBar(name: "Jean"),
@@ -56,11 +56,11 @@ class _RecompeseTabsState extends State<RecompeseTabs>
                             children: <Widget>[
                               TabBar(
                                 isScrollable: true,
-                                indicatorColor: WikiBleu,
+                                indicatorColor: BleuFonce,
                                 onTap: _getIndex(),
                                 controller: _controller,
                                 labelStyle: TextStyle(
-                                  color: BlueText,
+                                  color: BleuFonce,
                                   fontSize: 14,
                                 ),
                                 indicatorSize: TabBarIndicatorSize.tab,
@@ -77,7 +77,7 @@ class _RecompeseTabsState extends State<RecompeseTabs>
                                         child: const Text(
                                           "Offres",
                                           style: TextStyle(
-                                            color: White,
+                                            color: BleuFonce,
                                           ),
                                         ),
                                       ),
@@ -95,7 +95,7 @@ class _RecompeseTabsState extends State<RecompeseTabs>
                                         child: const Text(
                                           "Gagne bonus",
                                           style: TextStyle(
-                                            color: White,
+                                            color: BleuFonce,
                                           ),
                                         ),
                                       ),

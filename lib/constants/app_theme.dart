@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:wiiqare/utils/colors.dart';
 
 final ThemeData themeData = ThemeData(
-  backgroundColor: White,
+  backgroundColor: BACKGROUND,
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  primaryColor: Bleu,
-  accentColor: Bleu.withOpacity(.5),
+  primaryColor: BlueText,
+  accentColor: BlueText.withOpacity(.5),
   //fontFamily: GoogleFonts.roboto().fontFamily,
-  splashColor: Colors.transparent,
+  splashColor: BACKGROUND,
 );

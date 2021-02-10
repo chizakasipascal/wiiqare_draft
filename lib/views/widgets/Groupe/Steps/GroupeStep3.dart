@@ -64,7 +64,7 @@ class GroupeStep3 extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                 margin: const EdgeInsets.only(bottom: 2.5, top: 2.5),
                 decoration: BoxDecoration(
-                  color: BlueText.withOpacity(.5),
+                  color: BACKGROUND,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
                 // selectedTileColor: BlueText,
@@ -99,7 +99,11 @@ class GroupeStep3 extends StatelessWidget {
           GestureDetector(
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Creer()));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Creer(),
+                ),
+              );
               //TODO:ShowDialog contact
               // showDialog(
               //   context: context,

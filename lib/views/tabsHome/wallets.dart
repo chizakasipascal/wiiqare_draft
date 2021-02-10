@@ -61,9 +61,9 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Trasnfert),
                         chaine: "Transfert",
-                        textColor: WikiBleu,
+                        textColor: White,
                         color: White,
-                        border: WikiBleu,
+                        border: Colors.transparent,
                         onPressed: () {
                           Navigator.pushNamed(context, Routes.recharge);
                         },
@@ -71,9 +71,9 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Pay),
                         chaine: "Pay",
-                        textColor: WikiBleu,
+                        textColor: White,
                         color: White,
-                        border: WikiBleu,
+                        border: Colors.transparent,
                         onPressed: () {
                           Navigator.pushNamed(context, Routes.modePayement);
                         },
@@ -81,9 +81,9 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Recharge),
                         chaine: "Recharge",
-                        textColor: WikiBleu,
+                        textColor: White,
                         color: White,
-                        border: WikiBleu,
+                        border: Colors.transparent,
                         onPressed: () {
                           Navigator.pushNamed(context, Routes.homeRecharge);
                         },
@@ -100,7 +100,7 @@ class _WalletsState extends State<Wallets> {
           child: Container(
             height: 80,
             decoration: BoxDecoration(
-              color: White,
+              color: BACKGROUND,
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
                 BoxShadow(
@@ -160,7 +160,7 @@ class _WalletsState extends State<Wallets> {
               padding: const EdgeInsets.only(left: 10.0, right: 10.0),
               margin: const EdgeInsets.only(bottom: 2.5, top: 2.5),
               decoration: BoxDecoration(
-                color: BlueText.withOpacity(.5),
+                color: BACKGROUND,
                 borderRadius: BorderRadius.circular(5.0),
               ),
               // selectedTileColor: BlueText,

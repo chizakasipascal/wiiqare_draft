@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 import 'package:wiiqare/views/tabsGroupe/tabsGroupe.dart';
@@ -43,13 +44,28 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
           children: [
             Container(
               height: 268,
-              color: BlueText,
+              color: BACKGROUND,
               child: Column(
                 children: [
-                  WikiAppBar(name: "Jean"),
+                  Stack(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: IconButton(
+                            icon: Icon(Icons.arrow_back),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            }),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 40),
+                        child: WikiAppBar(name: "Jean"),
+                      ),
+                    ],
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(
-                        top: 10.0, left: 10.0, right: 10.0),
+                        top: 9.0, left: 10.0, right: 10.0),
                     child: Container(
                       height: 100,
                       width: size.width,
@@ -78,7 +94,7 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
                             child: SingleTitle(
                               singleTitle: "Contribution 100FC par semaine",
                               textAlign: TextAlign.center,
-                              color: White,
+                              color: BlueText,
                             ),
                           ),
                         ),
@@ -110,7 +126,7 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
                               children: <Widget>[
                                 TabBar(
                                   isScrollable: true,
-                                  indicatorColor: WikiBleu,
+                                  indicatorColor: BlueText,
                                   onTap: _getIndex(),
                                   controller: _controller,
                                   labelStyle: TextStyle(
@@ -125,7 +141,7 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
                                         child: const Text(
                                           "Membres",
                                           style: TextStyle(
-                                            color: White,
+                                            color: BlueText,
                                           ),
                                         ),
                                       ),
@@ -143,7 +159,7 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
                                           child: const Text(
                                             "Historique",
                                             style: TextStyle(
-                                              color: White,
+                                              color: BlueText,
                                             ),
                                           ),
                                         ),
@@ -162,7 +178,7 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
                                           child: const Text(
                                             "Depense",
                                             style: TextStyle(
-                                              color: White,
+                                              color: BlueText,
                                             ),
                                           ),
                                         ),

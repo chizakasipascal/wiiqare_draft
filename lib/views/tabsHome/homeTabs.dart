@@ -81,7 +81,8 @@ class _HomeTabsState extends State<HomeTabs> {
                         height: 60,
                         width: 150,
                         decoration: BoxDecoration(
-                            border: Border.all(color: WikiBleu),
+                            color: Yellow,
+                            border: Border.all(color: Yellow),
                             borderRadius: BorderRadius.circular(10)),
                         child: Center(
                           child: Padding(
