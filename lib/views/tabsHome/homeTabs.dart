@@ -74,13 +74,15 @@ class _HomeTabsState extends State<HomeTabs> {
                         color: WikiBleu,
                         onPressed: () {
                           //TODO:Mettre le code recharge aproprie
+                          Navigator.pushNamed(context, Routes.homeRecharge);
                         },
                       ),
                       Container(
                         height: 60,
                         width: 150,
                         decoration: BoxDecoration(
-                            border: Border.all(color: WikiBleu),
+                            color: Yellow,
+                            border: Border.all(color: Yellow),
                             borderRadius: BorderRadius.circular(10)),
                         child: Center(
                           child: Padding(
@@ -136,7 +138,8 @@ class _HomeTabsState extends State<HomeTabs> {
                     icon: Image.asset(Pictures.Prevention),
                     chaine: "Prevention",
                     onPressed: () =>
-                        Navigator.pushNamed(context, Routes.prevention),
+                        //  Navigator.pushNamed(context, Routes.prevention),
+                        Navigator.pushNamed(context, Routes.hopital),
                     border: Colors.transparent,
                   ),
                 ],
@@ -174,7 +177,8 @@ class _HomeTabsState extends State<HomeTabs> {
                   WikiImtesHome(
                     icon: Image.asset(Pictures.Familly),
                     chaine: "Parenage", //TODO:Icons Parenage
-                    onPressed: () => Navigator.pushNamed(context, Routes.labo),
+                    onPressed: () =>
+                        Navigator.pushNamed(context, Routes.parainage),
                     border: Colors.transparent,
                   ),
                 ],

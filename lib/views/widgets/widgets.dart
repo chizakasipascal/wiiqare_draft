@@ -15,3 +15,5 @@ export 'hitoriqueItem.dart';
 export 'wikiObjectifItemBar.dart';
 export 'stepCreateObjectif.dart';
 export 'mapButtom.dart';
+export 'rechargerTelecomButtom.dart';
+export 'expandeItemSetting.dart';

@@ -4,7 +4,7 @@ import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/consultation/consultattion.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
 
-class Consiltation extends StatelessWidget {
+class SportInfoCoach extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -19,7 +19,7 @@ class Consiltation extends StatelessWidget {
           },
         ),
         title: SingleTitle(
-          singleTitle: "Consultation",
+          singleTitle: "Details sur le Caoch",
         ),
       ),
       body: SafeArea(
@@ -47,17 +47,17 @@ class Consiltation extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SingleTitle(
-                          singleTitle: "Dr Arsene",
+                          singleTitle: "Coach Julien",
                           size: 18.0,
                           color: Grey,
                           fontWeight: FontWeight.bold,
                         ),
                         SingleTitle(
-                          singleTitle: "Cardialogue",
+                          singleTitle: "Body building",
                           color: Grey,
                         ),
                         SingleTitle(
-                          singleTitle: "Hopital genreal",
+                          singleTitle: "Maison de jeune Goma",
                           color: Grey,
                         ),
                       ],
@@ -92,6 +92,7 @@ class Consiltation extends StatelessWidget {
                               child: Icon(Icons.group, color: White)),
                           SizedBox(width: 10.0),
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               SingleTitle(
@@ -101,7 +102,7 @@ class Consiltation extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                               SingleTitle(
-                                singleTitle: "Patient +",
+                                singleTitle: "Personne par semaine",
                                 size: 10.0,
                                 color: White.withOpacity(.6),
                               )
@@ -157,7 +158,7 @@ class Consiltation extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SingleTitle(
-                              singleTitle: "About doctor",
+                              singleTitle: "About Coach",
                               color: BlueText,
                               fontWeight: FontWeight.bold,
                             ),
@@ -184,13 +185,35 @@ From what I see, it is not a good idea to set the From what I see, it is not a g
                             SizedBox(height: 5.0),
                             RichText(
                               text: TextSpan(
-                                text: 'Lun - vendredi',
+                                text: 'Lundi :Matin',
                                 style: TextStyle(
                                   color: BlueText,
                                 ),
                                 children: <TextSpan>[
                                   TextSpan(
-                                    text: ' 09:00 AM -',
+                                    text: ' 06:00 AM -',
+                                    style: TextStyle(
+                                        color: BlueText,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                    text: ' 08:00 AM',
+                                    style: TextStyle(
+                                        color: BlueText,
+                                        fontWeight: FontWeight.bold),
+                                  )
+                                ],
+                              ),
+                            ),
+                            RichText(
+                              text: TextSpan(
+                                text: 'Lundi :Soire',
+                                style: TextStyle(
+                                  color: BlueText,
+                                ),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: ' 06:00 PM -',
                                     style: TextStyle(
                                         color: BlueText,
                                         fontWeight: FontWeight.bold),
@@ -206,9 +229,42 @@ From what I see, it is not a good idea to set the From what I see, it is not a g
                             ),
                             SizedBox(height: 10.0),
                             SingleTitle(
-                              singleTitle: "Frees information ",
+                              singleTitle: "Tarif ",
                               color: BlueText,
                               fontWeight: FontWeight.bold,
+                            ),
+                            SizedBox(height: 5.0),
+                            RichText(
+                              text: TextSpan(
+                                text: 'Journalieur',
+                                style: TextStyle(
+                                  color: BlueText,
+                                ),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: ' 100\$',
+                                    style: TextStyle(
+                                        color: BlueText,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            RichText(
+                              text: TextSpan(
+                                text: 'Mensuel',
+                                style: TextStyle(
+                                  color: BlueText,
+                                ),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: ' 100\$',
+                                    style: TextStyle(
+                                        color: BlueText,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
                             ),
                             SizedBox(height: 20.0),
                             FreeInformation(
@@ -238,6 +294,25 @@ From what I see, it is not a good idea to set the From what I see, it is not a g
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 50,
+                child: WikiButtom(
+                  descpritionButtom: "Invite des amis",
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Text(
+                            "List de contact nos inscrit dans WiiQare",
+                          ),
+                          content: Text("List vide"),
+                        );
+                      },
+                    );
+                  },
+                ),
               ),
             ],
           ),

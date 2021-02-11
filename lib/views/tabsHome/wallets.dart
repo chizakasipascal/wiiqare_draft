@@ -5,10 +5,7 @@ import 'package:wiiqare/constants/pictures.dart';
 import 'package:wiiqare/constants/routes.dart';
 import 'package:wiiqare/utils/colors.dart';
 import 'package:wiiqare/views/widgets/widgets.dart';
-
 import 'package:wiiqare/views/widgets/Background/background.dart';
-
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:wiiqare/views/widgets/wikiItemHome.dart';
 
 class Wallets extends StatefulWidget {
@@ -64,31 +61,31 @@ class _WalletsState extends State<Wallets> {
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Trasnfert),
                         chaine: "Transfert",
-                        textColor: WikiBleu,
+                        textColor: White,
                         color: White,
-                        border: WikiBleu,
+                        border: Colors.transparent,
                         onPressed: () {
-                          Navigator.pushNamed(context, Routes.transfert);
+                          Navigator.pushNamed(context, Routes.recharge);
                         },
                       ),
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Pay),
                         chaine: "Pay",
-                        textColor: WikiBleu,
+                        textColor: White,
                         color: White,
-                        border: WikiBleu,
+                        border: Colors.transparent,
                         onPressed: () {
-                          Navigator.pushNamed(context, Routes.pay);
+                          Navigator.pushNamed(context, Routes.modePayement);
                         },
                       ),
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Recharge),
                         chaine: "Recharge",
-                        textColor: WikiBleu,
+                        textColor: White,
                         color: White,
-                        border: WikiBleu,
+                        border: Colors.transparent,
                         onPressed: () {
-                          Navigator.pushNamed(context, Routes.recharge);
+                          Navigator.pushNamed(context, Routes.homeRecharge);
                         },
                       ),
                     ],
@@ -99,69 +96,57 @@ class _WalletsState extends State<Wallets> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 220),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 10, right: 10, top: 5),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          padding: const EdgeInsets.only(top: 240, left: 10.0, right: 10.0),
+          child: Container(
+            height: 80,
+            decoration: BoxDecoration(
+              color: BACKGROUND,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  color: Grey.withOpacity(0.5),
+                  spreadRadius: 2,
+                  blurRadius: 3,
+                  offset: Offset(0, 2), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Row(
               children: [
-                SizedBox(height: 10),
-                Container(
-                  width: size.width,
-                  height: size.height * .14,
-                  padding: const EdgeInsets.only(left: 10, right: 10, top: 5),
-                  decoration: BoxDecoration(
-                      color: BlueText, borderRadius: BorderRadius.circular(10)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      WikiImtesHome(
-                        icon: Image.asset(Pictures.Credit),
-                        chaine: "Credit",
-                        textColor: WikiBleu,
-                        color: White,
-                        border: Colors.transparent,
-                        onPressed: () {},
-                      ),
-                      WikiImtesHome(
-                        icon: Image.asset(Pictures.Pay),
-                        chaine: "Paie credit",
-                        textColor: WikiBleu,
-                        color: White,
-                        border: Colors.transparent,
-                        onPressed: () {},
-                      ),
-                      WikiImtesHome(
-                        icon: Image.asset(Pictures.Sport),
-                        chaine: "Sport",
-                        textColor: WikiBleu,
-                        color: White,
-                        border: Colors.transparent,
-                        onPressed: () {},
-                      ),
-                      WikiImtesHome(
-                        icon: Image.asset(Pictures.Autre),
-                        chaine: "Autre",
-                        textColor: WikiBleu,
-                        color: White,
-                        border: Colors.transparent,
-                        onPressed: () {},
-                      ),
-                    ],
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SingleTitle(
+                    singleTitle: "Payer vos soins de sante\nen plusieur fois",
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0),
-                  child: SingleTitle(
-                    singleTitle: "Historique",
+                Spacer(),
+                Container(
+                  height: 40,
+                  width: 100,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
                     color: Bleu,
-                    fontWeight: FontWeight.bold,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.play_arrow,
+                      color: White,
+                    ),
+                    onPressed: () {},
                   ),
                 ),
               ],
             ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 340, left: 10.0, right: 10.0),
+          child: SingleTitle(
+            singleTitle: "Historique",
+            color: Bleu,
+            fontWeight: FontWeight.bold,
           ),
         ),
         Padding(
@@ -175,7 +160,7 @@ class _WalletsState extends State<Wallets> {
               padding: const EdgeInsets.only(left: 10.0, right: 10.0),
               margin: const EdgeInsets.only(bottom: 2.5, top: 2.5),
               decoration: BoxDecoration(
-                color: BlueText.withOpacity(.5),
+                color: BACKGROUND,
                 borderRadius: BorderRadius.circular(5.0),
               ),
               // selectedTileColor: BlueText,

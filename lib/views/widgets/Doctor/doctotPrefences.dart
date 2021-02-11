@@ -11,7 +11,7 @@ class DoctotPrefences extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
-      width: 120,
+      // width: 120,
       child: Padding(
         padding: const EdgeInsets.all(5.0),
         child: widget,

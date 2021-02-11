@@ -28,7 +28,7 @@ class _HistoriqueState extends State<Historique> {
           padding: const EdgeInsets.only(left: 10.0, right: 10.0),
           margin: const EdgeInsets.only(bottom: 2.5, top: 2.5),
           decoration: BoxDecoration(
-            color: BlueText.withOpacity(.5),
+            color: BACKGROUND,
             borderRadius: BorderRadius.circular(5.0),
           ),
           // selectedTileColor: BlueText,
