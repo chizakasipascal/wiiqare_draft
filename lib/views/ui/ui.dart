@@ -19,3 +19,4 @@ export 'chatScreen.dart';
 export 'hopital.dart';
 export 'parenage.dart';
 export 'homeRecharge.dart';
+export 'introdiction_page.dart';
