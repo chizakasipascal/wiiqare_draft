@@ -27,13 +27,12 @@ dependencies:
 
   
   
-  cupertino_icons: ^1.0.1
+  cupertino_icons: ^1.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  integration_test:
-    sdk: flutter
+
   intl_phone_number_input: ^0.6.0
   cached_network_image: ^2.4.1
   font_awesome_flutter: ^8.10.0 
