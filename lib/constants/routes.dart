@@ -9,6 +9,7 @@ import 'package:wiiqare/views/ui/wallet/wallet.dart';
 class Routes {
   Routes._();
 
+  static const String introdiction_page = '/introdiction_page';
   static const String authentification = '/authentification';
   static const String welcome = '/welcome';
   static const String help = '/help';
@@ -45,6 +46,7 @@ class Routes {
 
   ///
   static final routes = <String, WidgetBuilder>{
+    introdiction_page: (BuildContext context) => Introdiction_page(),
     authentification: (BuildContext context) => Authentification(),
     welcome: (BuildContext context) => Welcome(),
     help: (BuildContext context) => Help(),

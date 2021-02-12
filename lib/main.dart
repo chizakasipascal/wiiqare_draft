@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: Strings.AppName,
       theme: themeData,
-      home: Welcome(),
-      initialRoute: Routes.welcome,
+      home: Introdiction_page(),
+      initialRoute: Routes.introdiction_page,
       routes: Routes.routes,
     );
   }
