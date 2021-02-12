@@ -15,7 +15,7 @@ class _OnBoardingPageState extends State<Introdiction_page> {
   final introKey = GlobalKey<IntroductionScreenState>();
 
   void _onIntroEnd(context) {
-    Navigator.pushNamed(context, Routes.welcome);
+    Navigator.pushReplacementNamed(context, Routes.welcome);
   }
 
   Widget _buildImage(String assetName) {
@@ -103,17 +103,23 @@ class _OnBoardingPageState extends State<Introdiction_page> {
         singleTitle: 'Passer',
         color: BlueText,
       ),
-      next: const Icon(Icons.arrow_forward),
+      next: const SingleTitle(
+        singleTitle: 'Suivant',
+        color: BlueText,
+      ),
       done: const SingleTitle(
-        singleTitle: 'Done',
+        singleTitle: 'Terminer',
         color: BlueText,
       ),
       dotsDecorator: const DotsDecorator(
-        size: Size(10.0, 10.0),
+        size: Size(5.0, 5.0),
         color: BlueText,
-        activeSize: Size(22.0, 10.0),
+        activeSize: Size(10.0, 10.0),
+        activeColor: Yellow,
         activeShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(25.0)),
+          borderRadius: BorderRadius.all(Radius.circular(
+            25.0,
+          )),
         ),
       ),
     );
