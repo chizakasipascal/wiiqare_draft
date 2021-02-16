@@ -12,10 +12,20 @@ class Banque extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SingleTitle(
-              singleTitle: "BANQUES",
-              color: Grey,
-              fontWeight: FontWeight.bold,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SingleTitle(
+                  singleTitle: "BANQUES",
+                  color: Grey,
+                  fontWeight: FontWeight.bold,
+                ),
+                Container(
+                  height: 2,
+                  width: size.width,
+                  color: Bleu,
+                )
+              ],
             ),
             SizedBox(height: 10),
             Wrap(
