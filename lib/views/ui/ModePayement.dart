@@ -54,7 +54,8 @@ class _ModePayementState extends State<ModePayement> {
                                     Icons.phone_android,
                                     color: Bleu,
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () => Navigator.pushNamed(
+                                      context, Routes.recharge),
                                 ),
                               ),
                             ),
@@ -73,7 +74,8 @@ class _ModePayementState extends State<ModePayement> {
                                     FontAwesomeIcons.barcode,
                                     color: Bleu,
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () => Navigator.pushNamed(
+                                      context, Routes.qRCodeScanner),
                                 ),
                               ),
                             ),
@@ -87,7 +89,7 @@ class _ModePayementState extends State<ModePayement> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(50),
                       child: Material(
-                        color: WikiBleu,
+                        color: BlueText.withOpacity(.4),
                         child: IconButton(
                           icon: Icon(
                             Icons.qr_code_scanner,
