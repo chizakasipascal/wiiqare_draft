@@ -96,7 +96,7 @@ class _WalletsState extends State<Wallets> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 240, left: 10.0, right: 10.0),
+          padding: const EdgeInsets.only(top: 290, left: 10.0, right: 10.0),
           child: Container(
             height: 80,
             decoration: BoxDecoration(
@@ -142,7 +142,7 @@ class _WalletsState extends State<Wallets> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 340, left: 10.0, right: 10.0),
+          padding: const EdgeInsets.only(top: 390, left: 10.0, right: 10.0),
           child: SingleTitle(
             singleTitle: "Historique",
             color: Bleu,
@@ -150,7 +150,7 @@ class _WalletsState extends State<Wallets> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 360, left: 10.0, right: 10.0),
+          padding: const EdgeInsets.only(top: 420, left: 10.0, right: 10.0),
           child: ListView.builder(
             physics: BouncingScrollPhysics(),
             itemCount: 60,
