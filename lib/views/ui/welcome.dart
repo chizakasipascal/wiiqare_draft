@@ -168,7 +168,7 @@ class _WelcomeState extends State<Welcome> {
                                   SingleTitle(
                                     singleTitle: "Créer un compte Wiiqare",
                                     color: Grey,
-                                    // size: 11.0,
+                                    size: 11.0,
                                   ),
                                 ],
                               ),
@@ -204,8 +204,7 @@ class _WelcomeState extends State<Welcome> {
                                   SizedBox(height: 10),
                                   SingleTitle(
                                     singleTitle: "Guide",
-
-                                    // size: 10.0,
+                                    size: 10.0,
                                   )
                                 ],
                               ),
@@ -241,7 +240,7 @@ class _WelcomeState extends State<Welcome> {
                                   SizedBox(height: 10),
                                   SingleTitle(
                                     singleTitle: "Map",
-                                    //   size: 10.0,
+                                    size: 10.0,
                                   )
                                 ],
                               ),

@@ -51,7 +51,7 @@ class WikiOffres extends StatelessWidget {
                         singleTitle:
                             "Commander ce produit et gagner ${bonus}fc de credit santé dans votre compte Wiiqare",
                         color: Grey,
-                        //size: 11.0,
+                        size: 11.0,
                       ),
                     ),
                     Spacer(),
@@ -69,7 +69,7 @@ class WikiOffres extends StatelessWidget {
                         ),
                         child: SingleTitle(
                           singleTitle: "Commander les produits",
-                          //  size: 10.0,
+                          size: 10.0,
                           color: White,
                         ),
                       ),

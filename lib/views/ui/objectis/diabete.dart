@@ -149,7 +149,7 @@ class _DiabeteState extends State<Diabete> {
                         children: [
                           Expanded(
                             child: Container(
-                              height: 90,
+                              height: size.height * .08,
                               decoration: BoxDecoration(
                                 color: Yellow,
                                 borderRadius: BorderRadius.circular(10),
@@ -164,7 +164,7 @@ class _DiabeteState extends State<Diabete> {
                           SizedBox(width: 10),
                           Expanded(
                             child: Container(
-                              height: 90,
+                              height: size.height * .08,
                               decoration: BoxDecoration(
                                 border: Border.all(color: Yellow),
                                 borderRadius: BorderRadius.circular(10),

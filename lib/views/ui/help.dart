@@ -163,12 +163,12 @@ class _HelpState extends State<Help> {
                               SingleTitle(
                                 singleTitle: "Salut",
                                 color: Grey,
-                                // size: 11.0,
+                                size: 11.0,
                               ),
                               SingleTitle(
                                 singleTitle: "Christopher Bengangine",
                                 color: Grey,
-                                // size: 11.0,
+                                size: 11.0,
                               ),
                               SizedBox(height: 5),
                               Center(
@@ -178,7 +178,7 @@ class _HelpState extends State<Help> {
                                     SingleTitle(
                                       singleTitle: "Votre solde est:",
                                       color: Grey,
-                                      //  size: 12.0,
+                                      size: 12.0,
                                     ),
                                     SizedBox(height: 10),
                                     // getMontant
@@ -217,7 +217,7 @@ class _HelpState extends State<Help> {
                                         child: SingleTitle(
                                           singleTitle: "Enligne",
                                           color: Colors.green,
-                                          size: 10.0,
+                                          size: 9.0,
                                         ),
                                       ),
                                     ),
@@ -269,12 +269,12 @@ class _HelpState extends State<Help> {
                                               SingleTitle(
                                                 singleTitle: "Dr",
                                                 color: Grey,
-                                                //size: 11.0,
+                                                size: 11.0,
                                               ),
                                               SingleTitle(
                                                 singleTitle: "Robert  M.",
                                                 color: Grey,
-                                                // size: 11.0,
+                                                size: 11.0,
                                               ),
                                               SingleTitle(
                                                 singleTitle:
@@ -286,7 +286,7 @@ class _HelpState extends State<Help> {
                                                 singleTitle:
                                                     "besoin d’assistance?",
                                                 color: Grey,
-                                                //  size: 10.0,
+                                                size: 10.0,
                                               ),
                                             ],
                                           )

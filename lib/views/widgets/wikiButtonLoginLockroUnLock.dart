@@ -23,7 +23,7 @@ class WikiButtonLoginLockroUnLock extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return SizedBox(
       height: size.height * .06,
-      width: size.width * .2,
+      width: 100,
       // decoration: BoxDecoration(
       //   color: White,
       //   borderRadius: BorderRadius.only(

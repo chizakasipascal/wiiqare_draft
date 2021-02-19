@@ -88,7 +88,7 @@ class _SanteState extends State<Sante> {
                         children: [
                           Expanded(
                             child: Container(
-                              height: 90,
+                              height: size.height * .08,
                               decoration: BoxDecoration(
                                 color: Yellow,
                                 borderRadius: BorderRadius.circular(10),
@@ -103,7 +103,7 @@ class _SanteState extends State<Sante> {
                           SizedBox(width: 10),
                           Expanded(
                             child: Container(
-                              height: 90,
+                              height: size.height * .08,
                               decoration: BoxDecoration(
                                 border: Border.all(color: Yellow),
                                 borderRadius: BorderRadius.circular(10),
