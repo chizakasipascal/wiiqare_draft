@@ -43,7 +43,7 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
         child: Column(
           children: [
             Container(
-              height: 268,
+              height: 260,
               color: BACKGROUND,
               child: Column(
                 children: [
@@ -67,7 +67,7 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
                     padding: const EdgeInsets.only(
                         top: 9.0, left: 10.0, right: 10.0),
                     child: Container(
-                      height: 100,
+                      height: 90,
                       width: size.width,
                       margin: const EdgeInsets.only(bottom: 5.0),
                       decoration: BoxDecoration(
@@ -77,6 +77,7 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
                       child: Center(
                         child: SingleTitle(
                           singleTitle: "Groupe solde actuel : 250.00 FC",
+                          size: 20.0,
                           fontWeight: FontWeight.bold,
                           textAlign: TextAlign.center,
                           color: White,
@@ -147,39 +148,23 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
                                       ),
                                     ),
                                     Tab(
-                                      child: Container(
-                                        width: 70,
-                                        height: 60,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                        ),
-                                        child: Align(
-                                          alignment: Alignment.center,
-                                          child: const Text(
-                                            "Historique",
-                                            style: TextStyle(
-                                              color: BlueText,
-                                            ),
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: const Text(
+                                          "Historique",
+                                          style: TextStyle(
+                                            color: BlueText,
                                           ),
                                         ),
                                       ),
                                     ),
                                     Tab(
-                                      child: Container(
-                                        width: 70,
-                                        height: 60,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                        ),
-                                        child: Align(
-                                          alignment: Alignment.center,
-                                          child: const Text(
-                                            "Depense",
-                                            style: TextStyle(
-                                              color: BlueText,
-                                            ),
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: const Text(
+                                          "Depense",
+                                          style: TextStyle(
+                                            color: BlueText,
                                           ),
                                         ),
                                       ),

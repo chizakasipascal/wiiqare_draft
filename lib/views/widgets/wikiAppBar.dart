@@ -13,9 +13,9 @@ class WikiAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.only(top: 20.0),
+      padding: const EdgeInsets.only(top: 17.0),
       child: Container(
-        height: 35,
+        height: 38,
         width: size.width,
         padding: const EdgeInsets.only(left: 10.0, right: 10.0),
         child: Row(
