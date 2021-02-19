@@ -48,7 +48,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             activeIcon: Icon(FontAwesomeIcons.home, size: 20, color: WikiBleu),
             icon: Icon(
               FontAwesomeIcons.home,
-              size: 20,
+              // size: 20,
               color: BlueText,
             ),
             title: const Text(
@@ -63,7 +63,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 Icon(FontAwesomeIcons.wallet, size: 20, color: WikiBleu),
             icon: Icon(
               FontAwesomeIcons.wallet,
-              size: 20,
+              // size: 20,
               color: BlueText,
             ),
             title: const Text(
@@ -77,7 +77,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             activeIcon: Icon(FontAwesomeIcons.users, size: 20, color: WikiBleu),
             icon: Icon(
               FontAwesomeIcons.users,
-              size: 20,
+              // size: 20,
               color: BlueText,
             ),
             title: const Text(
@@ -92,7 +92,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 Icon(FontAwesomeIcons.boxOpen, size: 20, color: WikiBleu),
             icon: Icon(
               FontAwesomeIcons.boxOpen,
-              size: 20,
+              //size: 20,
               color: BlueText,
             ),
             title: const Text(
@@ -106,7 +106,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             activeIcon: Icon(FontAwesomeIcons.cog, size: 20, color: WikiBleu),
             icon: Icon(
               FontAwesomeIcons.cog,
-              size: 20,
+              //size: 20,
               color: BlueText,
             ),
             title: const Text(
