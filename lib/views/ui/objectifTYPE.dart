@@ -28,227 +28,209 @@ class _ObjectifsTYPEState extends State<ObjectifsTYPE> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            BackGroundHome(
-              size: size,
-              widget: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+            Expanded(
+              child: StepCreateObjectif(
+                size: size,
+                title: "Créer objectif",
+                widget: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    RoundedProgressBar(
-                      height: 20,
-                      childCenter: SingleTitle(
-                        singleTitle:
-                            "${percent}", //TODO:Le pourcentage de la bar de progresse
-                      ),
-                      style: RoundedProgressBarStyle(
-                          borderWidth: 0, widthShadow: 0),
-                      margin: EdgeInsets.symmetric(vertical: 16),
-                      borderRadius: BorderRadius.circular(24),
-                      percent: percent,
+                    SingleTitle(
+                      singleTitle:
+                          "Definir votre objectif sante en fonction de votre situation personnelle",
+                      textAlign: TextAlign.center,
                     ),
+                    SizedBox(height: 10),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        WikiObjectifItemBar(
-                          descriptin: "Mon compte",
-                          valeur: 1500,
-                          type: "FC",
+                        Expanded(
+                          child: SizedBox(
+                            // height: size.height * .2,
+                            // width: size.width * .4,
+                            child: WelcomItemsButtom(
+                              size: size,
+                              onPressed: () => {
+                                ///
+                                Navigator.pushNamed(context, Routes.sante)
+                              },
+                              widget: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Align(
+                                      alignment: Alignment.center,
+                                      child: SizedBox(
+                                        // height: 70,
+                                        // width: 70,
+                                        child: Image.asset(Pictures.Sante),
+                                      ),
+                                    ),
+                                    SizedBox(height: 20),
+                                    SingleTitle(
+                                      singleTitle: "Ma sante",
+                                      color: Grey,
+                                      // size: 11.0,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
-                        WikiObjectifItemBar(
-                          descriptin: "Mes points",
-                          valeur: 150,
-                          type: "Points",
+                        Expanded(
+                          child: SizedBox(
+                            // height: size.height * .2,
+                            // width: size.width * .4,
+                            child: WelcomItemsButtom(
+                              size: size,
+                              onPressed: () => {
+                                ///
+                                Navigator.pushNamed(context, Routes.diabete)
+                              },
+                              widget: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.center,
+                                        child: SizedBox(
+                                          // height: 70,
+                                          // width: 70,
+                                          child: Image.asset(Pictures.Diabete),
+                                        ),
+                                      ),
+                                      SizedBox(height: 20),
+                                      SingleTitle(
+                                        singleTitle: "Diabetes Hyperthension",
+                                        color: Grey,
+                                        //  size: 11.0,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
                       ],
-                    )
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Expanded(
+                          child: SizedBox(
+                            // height: size.height * .2,
+                            // width: size.width * .4,
+                            child: WelcomItemsButtom(
+                              size: size,
+                              onPressed: () => {
+                                ///
+                                Navigator.pushNamed(context, Routes.famille)
+                              },
+                              widget: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.center,
+                                        child: SizedBox(
+                                          // height: 70,
+                                          // width: 70,
+                                          child: Image.asset(Pictures.Familly),
+                                        ),
+                                      ),
+                                      SizedBox(height: 20),
+                                      SingleTitle(
+                                        singleTitle: "Ma famille",
+                                        color: Grey,
+
+                                        ///  size: 11.0,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: SizedBox(
+                            // height: size.height * .2,
+                            // width: size.width * .4,
+                            child: WelcomItemsButtom(
+                              size: size,
+                              onPressed: () => {
+                                ///
+                                Navigator.pushNamed(context, Routes.grossesse)
+                              },
+                              widget: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.center,
+                                        child: SizedBox(
+                                          // height: 70,
+                                          // width: 70,
+                                          child:
+                                              Image.asset(Pictures.Grossesse),
+                                        ),
+                                      ),
+                                      SizedBox(height: 20),
+                                      SingleTitle(
+                                        singleTitle: "Grossesse",
+                                        color: Grey,
+                                        // size: 11.0,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20.0),
+                    SizedBox(
+                      height: 50,
+                      child: WikiButtom(
+                        descpritionButtom: "Suivant",
+                        onPressed: () {
+                          Navigator.pushNamed(context, Routes.uiMontant);
+                        },
+                      ),
+                    ),
+                    SizedBox(height: 20.0),
+                    SizedBox(
+                      height: 50,
+                      child: WikiButtom(
+                        descpritionButtom: "Retour",
+                        color: White,
+                        color2: WikiBleu,
+                        colorBorder: WikiBleu,
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                    ),
                   ],
                 ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      bottomSheet: StepCreateObjectif(
-        size: size,
-        title: "Créer objectif",
-        widget: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SingleTitle(
-              singleTitle:
-                  "Definir votre objectif sante en fonction de votre situation personnelle",
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                SizedBox(
-                  height: size.height * .2,
-                  width: size.width * .4,
-                  child: WelcomItemsButtom(
-                    size: size,
-                    onPressed: () => {
-                      ///
-                      Navigator.pushNamed(context, Routes.sante)
-                    },
-                    widget: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Align(
-                            alignment: Alignment.center,
-                            child: SizedBox(
-                              height: 70,
-                              width: 70,
-                              child: Image.asset(Pictures.Sante),
-                            ),
-                          ),
-                          SizedBox(height: 20),
-                          SingleTitle(
-                            singleTitle: "Ma sante",
-                            color: Grey,
-                            size: 11.0,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: size.height * .2,
-                  width: size.width * .4,
-                  child: WelcomItemsButtom(
-                    size: size,
-                    onPressed: () => {
-                      ///
-                      Navigator.pushNamed(context, Routes.diabete)
-                    },
-                    widget: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Align(
-                            alignment: Alignment.center,
-                            child: SizedBox(
-                              height: 70,
-                              width: 70,
-                              child: Image.asset(Pictures.Diabete),
-                            ),
-                          ),
-                          SizedBox(height: 20),
-                          SingleTitle(
-                            singleTitle: "Diabetes Hyperthension",
-                            color: Grey,
-                            size: 11.0,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                SizedBox(
-                  height: size.height * .2,
-                  width: size.width * .4,
-                  child: WelcomItemsButtom(
-                    size: size,
-                    onPressed: () => {
-                      ///
-                      Navigator.pushNamed(context, Routes.famille)
-                    },
-                    widget: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Align(
-                            alignment: Alignment.center,
-                            child: SizedBox(
-                              height: 70,
-                              width: 70,
-                              child: Image.asset(Pictures.Familly),
-                            ),
-                          ),
-                          SizedBox(height: 20),
-                          SingleTitle(
-                            singleTitle: "Ma famille",
-                            color: Grey,
-                            size: 11.0,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: size.height * .2,
-                  width: size.width * .4,
-                  child: WelcomItemsButtom(
-                    size: size,
-                    onPressed: () => {
-                      ///
-                      Navigator.pushNamed(context, Routes.grossesse)
-                    },
-                    widget: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Align(
-                            alignment: Alignment.center,
-                            child: SizedBox(
-                              height: 70,
-                              width: 70,
-                              child: Image.asset(Pictures.Grossesse),
-                            ),
-                          ),
-                          SizedBox(height: 20),
-                          SingleTitle(
-                            singleTitle: "Grossesse",
-                            color: Grey,
-                            size: 11.0,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 20.0),
-            SizedBox(
-              height: 50,
-              child: WikiButtom(
-                descpritionButtom: "Suivant",
-                onPressed: () {
-                  Navigator.pushNamed(context, Routes.uiMontant);
-                },
-              ),
-            ),
-            SizedBox(height: 20.0),
-            SizedBox(
-              height: 50,
-              child: WikiButtom(
-                descpritionButtom: "Retour",
-                color: White,
-                color2: WikiBleu,
-                colorBorder: WikiBleu,
-                onPressed: () {
-                  Navigator.pop(context);
-                },
               ),
             ),
           ],

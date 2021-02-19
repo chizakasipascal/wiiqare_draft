@@ -24,6 +24,8 @@ class WikiImtesHome extends StatelessWidget {
     return Column(
       children: [
         Container(
+          height: 80,
+          width: 80,
           decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.circular(50),
@@ -37,7 +39,10 @@ class WikiImtesHome extends StatelessWidget {
               ),
             ],
           ),
-          child: IconButton(icon: icon, onPressed: onPressed),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(icon: icon, onPressed: onPressed),
+          ),
         ),
         SizedBox(height: 5),
         SingleTitle(

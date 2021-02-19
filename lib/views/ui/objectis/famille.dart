@@ -145,15 +145,34 @@ class _FamilleState extends State<Famille> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          WikiObjectifItemBar(
-                            descriptin: "Mon compte",
-                            valeur: 1500,
-                            type: "FC",
+                          Expanded(
+                            child: Container(
+                              height: size.height * .08,
+                              decoration: BoxDecoration(
+                                color: Yellow,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: WikiObjectifItemBar(
+                                descriptin: "Mon compte",
+                                valeur: 1500,
+                                type: "FC",
+                              ),
+                            ),
                           ),
-                          WikiObjectifItemBar(
-                            descriptin: "Mes points",
-                            valeur: 150,
-                            type: "Points",
+                          SizedBox(width: 10),
+                          Expanded(
+                            child: Container(
+                              height: size.height * .08,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Yellow),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: WikiObjectifItemBar(
+                                descriptin: "Mes points",
+                                valeur: 150,
+                                type: "Points",
+                              ),
+                            ),
                           ),
                         ],
                       )

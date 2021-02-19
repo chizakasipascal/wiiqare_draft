@@ -18,7 +18,7 @@ class MapButtom extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 8),
+        padding: const EdgeInsets.all(10),
         child: Container(
           // height: 80,
           //width: 60,
@@ -46,6 +46,7 @@ class MapButtom extends StatelessWidget {
               SingleTitle(
                 singleTitle: description, // "Acceuil",
                 fontWeight: FontWeight.w500,
+                size: 11.0,
               )
             ],
           ),

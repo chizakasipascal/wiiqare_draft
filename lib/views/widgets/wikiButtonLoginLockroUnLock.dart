@@ -20,8 +20,10 @@ class WikiButtonLoginLockroUnLock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return SizedBox(
-      height: 50,
+      height: size.height * .06,
+      width: 100,
       // decoration: BoxDecoration(
       //   color: White,
       //   borderRadius: BorderRadius.only(
@@ -41,24 +43,23 @@ class WikiButtonLoginLockroUnLock extends StatelessWidget {
           ),
         ),
         onHighlightChanged: onHighlightChanged,
-        child: Center(
-          child: Row(
-            children: [
-              Text(
-                descpritionButtom,
-                style: TextStyle(
-                  color:
-                      BlueText, // this.isPressed ? RedColor : Color(0xffFFFFFF),
-                  fontSize: 14,
-                ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              descpritionButtom,
+              style: TextStyle(
+                color:
+                    BlueText, // this.isPressed ? RedColor : Color(0xffFFFFFF),
+                fontSize: 14,
               ),
-              Icon(
-                Icons.lock,
-                color: BlueText,
-                size: 15,
-              ),
-            ],
-          ),
+            ),
+            Icon(
+              Icons.lock,
+              color: BlueText,
+              size: 15,
+            ),
+          ],
         ),
       ),
     );

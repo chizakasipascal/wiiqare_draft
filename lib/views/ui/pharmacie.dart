@@ -81,38 +81,46 @@ class _PharmacieState extends State<Pharmacie> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  MapButtom(
-                    description: "Acceuil",
-                    widget: Placeholder(),
-                    onTap: () {
-                      //TODO: add Method form map d
+                  Expanded(
+                    child: MapButtom(
+                      description: "Acceuil",
+                      widget: Placeholder(),
+                      onTap: () {
+                        //TODO: add Method form map d
 
-                      Navigator.pushNamed(context, Routes.home);
-                    },
+                        Navigator.pushNamed(context, Routes.home);
+                      },
+                    ),
                   ),
-                  MapButtom(
-                    description: "Compte",
-                    widget: Placeholder(),
-                    onTap: () {
-                      //TODO: add Method form map d
-                      Navigator.pushNamed(context, Routes.setting);
-                    },
+                  Expanded(
+                    child: MapButtom(
+                      description: "Compte",
+                      widget: Placeholder(),
+                      onTap: () {
+                        //TODO: add Method form map d
+                        Navigator.pushNamed(context, Routes.setting);
+                      },
+                    ),
                   ),
-                  MapButtom(
-                    description: "Commande",
-                    widget: Placeholder(),
-                    onTap: () {
-                      //TODO: add Method form map d
-                    },
+                  Expanded(
+                    child: MapButtom(
+                      description: "Commande",
+                      widget: Placeholder(),
+                      onTap: () {
+                        //TODO: add Method form map d
+                      },
+                    ),
                   ),
-                  MapButtom(
-                    description: "Aider",
-                    widget: Placeholder(),
-                    onTap: () {
-                      //TODO: add Method form map d
-                      guideModalSheet(context);
-                      //TODO:Buttom Sheet (Call contact center,email contact centre ,visist facebook page,tweet us,,,,, Cancel )
-                    },
+                  Expanded(
+                    child: MapButtom(
+                      description: "Aider",
+                      widget: Placeholder(),
+                      onTap: () {
+                        //TODO: add Method form map d
+                        guideModalSheet(context);
+                        //TODO:Buttom Sheet (Call contact center,email contact centre ,visist facebook page,tweet us,,,,, Cancel )
+                      },
+                    ),
                   )
                 ],
               ),

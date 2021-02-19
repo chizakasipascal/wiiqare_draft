@@ -20,6 +20,7 @@ class WelcomItemsButtom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.all(5.0),
       child: InkWell(
@@ -28,19 +29,16 @@ class WelcomItemsButtom extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
           child: Material(
             child: Container(
-              height: 180,
+              // height: 190,
               color: background,
               width: size.width * .4,
-              child: Stack(
+              child: Column(
                 children: [
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Container(
-                      height: 5,
-                      color: color,
-                    ),
-                  ),
                   widget,
+                  Container(
+                    height: 5,
+                    color: color,
+                  ),
                 ],
               ),
             ),

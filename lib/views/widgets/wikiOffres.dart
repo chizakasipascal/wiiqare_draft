@@ -25,7 +25,7 @@ class WikiOffres extends StatelessWidget {
       width: size.width,
       child: WelcomItemsButtom(
         size: size,
-        background: Color(0xFFEEF3F3),
+        // background: Colors.deepOrange,
         color: Colors.transparent,
         widget: Stack(
           children: [
@@ -40,7 +40,8 @@ class WikiOffres extends StatelessWidget {
               bottom: 0.0,
               child: Container(
                 width: size.width,
-                height: 50.0,
+
+                // height: 50.0,
                 color: White.withOpacity(.7),
                 child: Row(
                   children: [
@@ -53,21 +54,24 @@ class WikiOffres extends StatelessWidget {
                         size: 11.0,
                       ),
                     ),
-                    FlatButton(
-                      color: WikiBleu,
-                      onPressed: onPressed,
-                      //TODO:Code de commande de produit
+                    Spacer(),
+                    SizedBox(
+                      child: FlatButton(
+                        color: WikiBleu,
+                        onPressed: onPressed,
+                        //TODO:Code de commande de produit
 
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            color: White,
+                          ), //Theme.of(context).primaryColor),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: SingleTitle(
+                          singleTitle: "Commander les produits",
+                          size: 10.0,
                           color: White,
-                        ), //Theme.of(context).primaryColor),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: SingleTitle(
-                        singleTitle: "Commander les produits",
-                        size: 10.0,
-                        color: White,
+                        ),
                       ),
                     )
                   ],

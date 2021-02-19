@@ -80,6 +80,7 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final double height = .2;
     return Scaffold(
       key: _scaffoldKey,
       body: Stack(
@@ -132,10 +133,9 @@ class _WelcomeState extends State<Welcome> {
                 ),
               ),
               // Spacer(),
-              SizedBox(height: size.height * .14),
+              SizedBox(height: size.height * .23),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 0.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -155,12 +155,12 @@ class _WelcomeState extends State<Welcome> {
                             Align(
                               alignment: Alignment.center,
                               child: SizedBox(
-                                height: 70,
-                                width: 70,
+                                // height: 70,
+                                // width: 70,
                                 child: Image.asset(Pictures.Login),
                               ),
                             ),
-                            SizedBox(height: 5),
+                            SizedBox(height: 10),
                             Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -177,65 +177,73 @@ class _WelcomeState extends State<Welcome> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 100,
-                      width: 90,
-                      child: InkWell(
-                        onTap: () {
-                          guideModalSheet(context);
-                        },
-                        child: WelcomItemsButtom(
-                          size: size,
-                          color: BlueText,
-                          widget: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Align(
-                                  alignment: Alignment.topCenter,
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.transparent,
-                                    child: Image.asset(Pictures.Guide),
+                    Expanded(
+                      child: SizedBox(
+                        // height: 100,
+                        // width: 90,
+                        child: InkWell(
+                          onTap: () {
+                            guideModalSheet(context);
+                          },
+                          child: WelcomItemsButtom(
+                            size: size,
+                            color: BlueText,
+                            widget: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Align(
+                                    alignment: Alignment.topCenter,
+                                    child: CircleAvatar(
+                                      backgroundColor: Colors.transparent,
+                                      child: Image.asset(Pictures.Guide),
+                                    ),
                                   ),
-                                ),
-                                SingleTitle(
-                                  singleTitle: "Guide",
-                                  size: 10.0,
-                                )
-                              ],
+                                  SizedBox(height: 10),
+                                  SingleTitle(
+                                    singleTitle: "Guide",
+                                    size: 10.0,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 100,
-                      width: 90,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.pharmacie);
-                        },
-                        child: WelcomItemsButtom(
-                          size: size,
-                          color: BlueText,
-                          widget: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Align(
-                                  alignment: Alignment.topCenter,
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.transparent,
-                                    child: Image.asset(Pictures.MAP),
+                    Expanded(
+                      child: SizedBox(
+                        // height: 100,
+                        // width: 90,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, Routes.pharmacie);
+                          },
+                          child: WelcomItemsButtom(
+                            size: size,
+                            color: BlueText,
+                            widget: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Align(
+                                    alignment: Alignment.topCenter,
+                                    child: CircleAvatar(
+                                      backgroundColor: Colors.transparent,
+                                      child: Image.asset(Pictures.MAP),
+                                    ),
                                   ),
-                                ),
-                                SingleTitle(
-                                  singleTitle: "Map",
-                                  size: 10.0,
-                                )
-                              ],
+                                  SizedBox(height: 10),
+                                  SingleTitle(
+                                    singleTitle: "Map",
+                                    size: 10.0,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -249,8 +257,8 @@ class _WelcomeState extends State<Welcome> {
 
           DraggableScrollableSheet(
             // maxChildSize: 0.9,
-            initialChildSize: 0.3,
-            minChildSize: 0.3,
+            initialChildSize: height.toDouble(),
+            minChildSize: height.toDouble(),
             builder: (context, scrollController) {
               return Container(
                 decoration: BoxDecoration(
@@ -262,8 +270,8 @@ class _WelcomeState extends State<Welcome> {
                 ),
                 child: ListView.builder(
                   controller: scrollController,
-                  itemCount: 60,
-                  physics: BouncingScrollPhysics(),
+                  itemCount: 6,
+                  // physics: BouncingScrollPhysics(),
                   itemBuilder: (context, i) => new Container(
                     // height: 300.0,
                     //  margin: const EdgeInsets.only(top: 9),

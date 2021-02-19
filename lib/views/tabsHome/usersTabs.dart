@@ -51,15 +51,34 @@ class _UsesTabsState extends State<UsesTabs> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        WikiObjectifItemBar(
-                          descriptin: "Mon compte",
-                          valeur: 1500,
-                          type: "FC",
+                        Expanded(
+                          child: Container(
+                            height: 90,
+                            decoration: BoxDecoration(
+                              color: Yellow,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: WikiObjectifItemBar(
+                              descriptin: "Mon compte",
+                              valeur: 1500,
+                              type: "FC",
+                            ),
+                          ),
                         ),
-                        WikiObjectifItemBar(
-                          descriptin: "Mes points",
-                          valeur: 150,
-                          type: "Points",
+                        SizedBox(width: 10),
+                        Expanded(
+                          child: Container(
+                            height: 90,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Yellow),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: WikiObjectifItemBar(
+                              descriptin: "Mes points",
+                              valeur: 150,
+                              type: "Points",
+                            ),
+                          ),
                         ),
                       ],
                     )
@@ -70,7 +89,7 @@ class _UsesTabsState extends State<UsesTabs> {
             DraggableScrollableSheet(
               // maxChildSize: 0.9,
               initialChildSize: 0.9,
-              minChildSize: 0.8,
+              minChildSize: 0.9,
               builder: (context, scrollController) {
                 return Container(
                   decoration: BoxDecoration(

@@ -41,7 +41,7 @@ dev_dependencies:
   cached_network_image: ^2.4.1
   font_awesome_flutter: ^8.10.0  
   introduction_screen: ^1.0.9
-  flutter_rounded_progress_bar: ^0.1.2
+  flutter_rounded_progress_bar: ^0.1.1
   qr_code_scanner: ^0.3.0
   animated_icon_button: ^0.3.0
   pin_entry_text_field: ^0.1.4 

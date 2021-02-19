@@ -32,7 +32,7 @@ class Recharge extends StatelessWidget {
                 height: 100,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  //color: Colors.green,
+                  //  color: Colors.green,
                 ),
                 padding: const EdgeInsets.only(
                   top: 5,
@@ -58,7 +58,7 @@ class Recharge extends StatelessWidget {
                     Tab(
                       child: Container(
                         width: 100,
-                        height: 60,
+                        height: 65,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                         ),
@@ -70,7 +70,7 @@ class Recharge extends StatelessWidget {
                                 Icons.person,
                                 color: BlueText,
                               ),
-                              SizedBox(height: 8),
+                              SizedBox(height: 5),
                               const SingleTitle(
                                 singleTitle: "Personne",
                                 fontWeight: FontWeight.bold,
@@ -83,7 +83,7 @@ class Recharge extends StatelessWidget {
                     Tab(
                       child: Container(
                         width: 100,
-                        height: 60,
+                        height: 65,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                         ),
@@ -95,7 +95,7 @@ class Recharge extends StatelessWidget {
                                 Icons.monetization_on,
                                 color: BlueText,
                               ),
-                              SizedBox(height: 8),
+                              SizedBox(height: 5),
                               const SingleTitle(
                                 singleTitle: "Banque",
                                 fontWeight: FontWeight.bold,
