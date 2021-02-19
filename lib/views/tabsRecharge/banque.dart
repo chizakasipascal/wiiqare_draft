@@ -30,11 +30,13 @@ class Banque extends StatelessWidget {
             SizedBox(height: 10),
             Wrap(
               children: [
-                RechargerTelecomButtom(
-                  size: size,
-                  name: "Airtel",
-                  color: Red,
-                  onTap: () {},
+                Expanded(
+                  child: RechargerTelecomButtom(
+                    size: size,
+                    name: "Airtel",
+                    color: Red,
+                    onTap: () {},
+                  ),
                 ),
                 RechargerTelecomButtom(
                   size: size,
