@@ -229,34 +229,21 @@ class _HelpState extends State<Help> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: [
-                                          Expanded(
-                                            child: Center(
-                                              child: Container(
-                                                height: 60,
-                                                width: 60,
-                                                decoration: BoxDecoration(
-                                                  color: BlueText,
-                                                  shape: BoxShape.circle,
+                                          CircleAvatar(
+                                            child: Stack(
+                                              children: [
+                                                Positioned(
+                                                  bottom: 0,
+                                                  right: 5,
+                                                  child: Container(
+                                                    height: 10,
+                                                    width: 10,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.green,
+                                                        shape: BoxShape.circle),
+                                                  ),
                                                 ),
-                                                child: Stack(
-                                                  children: [
-                                                    Positioned(
-                                                      bottom: 0,
-                                                      right: 5,
-                                                      child: Container(
-                                                        height: 10,
-                                                        width: 10,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color: Colors.green,
-                                                          shape:
-                                                              BoxShape.circle,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
+                                              ],
                                             ),
                                           ),
                                           Spacer(),
@@ -286,7 +273,7 @@ class _HelpState extends State<Help> {
                                                 singleTitle:
                                                     "besoin d’assistance?",
                                                 color: Grey,
-                                                size: 10.0,
+                                                size: 11.0,
                                               ),
                                             ],
                                           )

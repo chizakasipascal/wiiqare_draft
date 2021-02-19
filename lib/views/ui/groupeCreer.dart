@@ -77,7 +77,6 @@ class _CreerState extends State<Creer> with SingleTickerProviderStateMixin {
                       child: Center(
                         child: SingleTitle(
                           singleTitle: "Groupe solde actuel : 250.00 FC",
-                          size: 20.0,
                           fontWeight: FontWeight.bold,
                           textAlign: TextAlign.center,
                           color: White,

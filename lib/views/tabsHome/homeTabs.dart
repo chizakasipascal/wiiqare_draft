@@ -37,7 +37,9 @@ class _HomeTabsState extends State<HomeTabs> {
                   RichText(
                     text: TextSpan(
                       text: 'Mon objectif :',
-                      style: TextStyle(color: White, fontSize: 20.0),
+                      style: TextStyle(
+                        color: White,
+                      ),
                       children: <TextSpan>[
                         TextSpan(
                           text: ' 50.000 Fc ',
@@ -71,7 +73,7 @@ class _HomeTabsState extends State<HomeTabs> {
                     children: [
                       Expanded(
                         child: SizedBox(
-                          height: size.height * .1,
+                          height: size.height * .08,
                           child: WikiButtom(
                             descpritionButtom: "Recharge",
                             color: WikiBleu,
@@ -85,7 +87,7 @@ class _HomeTabsState extends State<HomeTabs> {
                       SizedBox(width: 10),
                       Expanded(
                         child: Container(
-                          height: size.height * .1,
+                          height: size.height * .08,
                           decoration: BoxDecoration(
                               color: Yellow,
                               border: Border.all(color: Yellow),

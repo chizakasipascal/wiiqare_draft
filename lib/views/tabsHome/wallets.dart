@@ -30,7 +30,7 @@ class _WalletsState extends State<Wallets> {
         BackGroundHome(
           size: size,
           widget: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(4.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -40,11 +40,11 @@ class _WalletsState extends State<Wallets> {
                     SingleTitle(
                       singleTitle: "My total balance",
                       color: White,
-                      size: 20.0,
+                      // size: 18.0,
                     ),
                     SingleTitle(
                       singleTitle: "${valeur} FC",
-                      size: 20.0,
+                      //  size: 18.0,
                       fontWeight: FontWeight.bold,
                       color: White,
                     )
@@ -58,15 +58,17 @@ class _WalletsState extends State<Wallets> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      WikiImtesHome(
-                        icon: Image.asset(Pictures.Trasnfert),
-                        chaine: "Transfert",
-                        textColor: White,
-                        color: White,
-                        border: Colors.transparent,
-                        onPressed: () {
-                          Navigator.pushNamed(context, Routes.recharge);
-                        },
+                      SizedBox(
+                        child: WikiImtesHome(
+                          icon: Image.asset(Pictures.Trasnfert),
+                          chaine: "Transfert",
+                          textColor: White,
+                          color: White,
+                          border: Colors.transparent,
+                          onPressed: () {
+                            Navigator.pushNamed(context, Routes.recharge);
+                          },
+                        ),
                       ),
                       WikiImtesHome(
                         icon: Image.asset(Pictures.Pay),
@@ -95,10 +97,12 @@ class _WalletsState extends State<Wallets> {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 290, left: 10.0, right: 10.0),
+        Positioned(
+          top: 230,
+          // padding: const EdgeInsets.only(top: 280, left: 10.0, right: 10.0),
           child: Container(
             height: 80,
+            width: size.width,
             decoration: BoxDecoration(
               color: BACKGROUND,
               borderRadius: BorderRadius.circular(10),
@@ -141,53 +145,197 @@ class _WalletsState extends State<Wallets> {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 390, left: 10.0, right: 10.0),
+        Positioned(
+          top: 320,
+          // padding: const EdgeInsets.only(top: 390, left: 10.0, right: 10.0),
           child: SingleTitle(
             singleTitle: "Historique",
             color: Bleu,
             fontWeight: FontWeight.bold,
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 420, left: 10.0, right: 10.0),
-          child: ListView.builder(
+        Positioned(
+          top: 345,
+          child: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
-            itemCount: 60,
-            itemBuilder: (BuildContext context, int index) => Container(
-              height: 60.0,
-              width: size.width,
-              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-              margin: const EdgeInsets.only(bottom: 2.5, top: 2.5),
-              decoration: BoxDecoration(
-                color: BACKGROUND,
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              // selectedTileColor: BlueText,
-              // leading: SizedBox(height: 50, width: 50, child: widget),
-              child: ListTile(
-                leading: Icon(Icons.transform),
-                title: SingleTitle(
-                  singleTitle: "Transfert",
-                ),
-                subtitle: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SingleTitle(
-                      singleTitle: "2020-20-02",
-                      size: 10.0,
-                      color: BlackText,
-                      fontWeight: FontWeight.w500,
+            child: Column(
+              children: [
+                Container(
+                  height: 60.0,
+                  width: size.width,
+                  padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                  margin: const EdgeInsets.only(bottom: 2.5, top: 2.5),
+                  decoration: BoxDecoration(
+                    color: BACKGROUND,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  // selectedTileColor: BlueText,
+                  // leading: SizedBox(height: 50, width: 50, child: widget),
+                  child: ListTile(
+                    leading: Icon(Icons.transform),
+                    title: SingleTitle(
+                      singleTitle: "Transfert",
                     ),
-                    SingleTitle(
-                      singleTitle: "Rercharger",
-                      color: WikiBleu,
-                      size: 12.0,
-                      fontWeight: FontWeight.w500,
+                    subtitle: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SingleTitle(
+                          singleTitle: "2020-20-02",
+                          size: 10.0,
+                          color: BlackText,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        SingleTitle(
+                          singleTitle: "Rercharger",
+                          color: WikiBleu,
+                          size: 12.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
-              ),
+                Container(
+                  height: 60.0,
+                  width: size.width,
+                  padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                  margin: const EdgeInsets.only(bottom: 2.5, top: 2.5),
+                  decoration: BoxDecoration(
+                    color: BACKGROUND,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  // selectedTileColor: BlueText,
+                  // leading: SizedBox(height: 50, width: 50, child: widget),
+                  child: ListTile(
+                    leading: Icon(Icons.transform),
+                    title: SingleTitle(
+                      singleTitle: "Transfert",
+                    ),
+                    subtitle: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SingleTitle(
+                          singleTitle: "2020-20-02",
+                          size: 10.0,
+                          color: BlackText,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        SingleTitle(
+                          singleTitle: "Rercharger",
+                          color: WikiBleu,
+                          size: 12.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 60.0,
+                  width: size.width,
+                  padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                  margin: const EdgeInsets.only(bottom: 2.5, top: 2.5),
+                  decoration: BoxDecoration(
+                    color: BACKGROUND,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  // selectedTileColor: BlueText,
+                  // leading: SizedBox(height: 50, width: 50, child: widget),
+                  child: ListTile(
+                    leading: Icon(Icons.transform),
+                    title: SingleTitle(
+                      singleTitle: "Transfert",
+                    ),
+                    subtitle: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SingleTitle(
+                          singleTitle: "2020-20-02",
+                          size: 10.0,
+                          color: BlackText,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        SingleTitle(
+                          singleTitle: "Rercharger",
+                          color: WikiBleu,
+                          size: 12.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 60.0,
+                  width: size.width,
+                  padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                  margin: const EdgeInsets.only(bottom: 2.5, top: 2.5),
+                  decoration: BoxDecoration(
+                    color: BACKGROUND,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  // selectedTileColor: BlueText,
+                  // leading: SizedBox(height: 50, width: 50, child: widget),
+                  child: ListTile(
+                    leading: Icon(Icons.transform),
+                    title: SingleTitle(
+                      singleTitle: "Transfert",
+                    ),
+                    subtitle: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SingleTitle(
+                          singleTitle: "2020-20-02",
+                          size: 10.0,
+                          color: BlackText,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        SingleTitle(
+                          singleTitle: "Rercharger",
+                          color: WikiBleu,
+                          size: 12.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 60.0,
+                  width: size.width,
+                  padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                  margin: const EdgeInsets.only(bottom: 2.5, top: 2.5),
+                  decoration: BoxDecoration(
+                    color: BACKGROUND,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  // selectedTileColor: BlueText,
+                  // leading: SizedBox(height: 50, width: 50, child: widget),
+                  child: ListTile(
+                    leading: Icon(Icons.transform),
+                    title: SingleTitle(
+                      singleTitle: "Transfert",
+                    ),
+                    subtitle: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SingleTitle(
+                          singleTitle: "2020-20-02",
+                          size: 10.0,
+                          color: BlackText,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        SingleTitle(
+                          singleTitle: "Rercharger",
+                          color: WikiBleu,
+                          size: 12.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
