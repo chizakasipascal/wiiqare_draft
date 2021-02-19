@@ -79,6 +79,7 @@ class _HelpState extends State<Help> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final double height = .2;
     return Scaffold(
       key: _scaffoldKey,
       body: Stack(
@@ -130,236 +131,253 @@ class _HelpState extends State<Help> {
                 ),
               ),
               // Spacer(),
-              SizedBox(height: size.height * .14),
+              SizedBox(height: size.height * .23),
 
               ///
 
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 0.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    WelcomItemsButtom(
-                      size: size,
-                      widget: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Align(
-                              alignment: Alignment.center,
-                              child: SizedBox(
-                                height: 70,
-                                width: 70,
-                                child: CircleAvatar(backgroundColor: BlueText),
+                    Expanded(
+                      child: WelcomItemsButtom(
+                        size: size,
+                        widget: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Align(
+                                alignment: Alignment.center,
+                                child: SizedBox(
+                                  height: 100,
+                                  width: 100,
+                                  child:
+                                      CircleAvatar(backgroundColor: BlueText),
+                                ),
                               ),
-                            ),
-                            SizedBox(height: 5),
-                            SingleTitle(
-                              singleTitle: "Salut",
-                              color: Grey,
-                              size: 11.0,
-                            ),
-                            SingleTitle(
-                              singleTitle: "Christopher Bengangine",
-                              color: Grey,
-                              size: 11.0,
-                            ),
-                            SizedBox(height: 5),
-                            Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  SingleTitle(
-                                    singleTitle: "Votre solde est:",
-                                    color: Grey,
-                                    size: 12.0,
-                                  ),
-                                  SizedBox(height: 10),
-                                  // getMontant
-                                  Text(
-                                    "${montant}FC",
-                                    style: TextStyle(
+                              SizedBox(height: 5),
+                              SingleTitle(
+                                singleTitle: "Salut",
+                                color: Grey,
+                                // size: 11.0,
+                              ),
+                              SingleTitle(
+                                singleTitle: "Christopher Bengangine",
+                                color: Grey,
+                                // size: 11.0,
+                              ),
+                              SizedBox(height: 5),
+                              Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SingleTitle(
+                                      singleTitle: "Votre solde est:",
+                                      color: Grey,
+                                      //  size: 12.0,
+                                    ),
+                                    SizedBox(height: 10),
+                                    // getMontant
+                                    Text(
+                                      "${montant}FC",
+                                      style: TextStyle(
                                         color: BlueText,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 15),
-                                  )
-                                ],
+                                        // fontSize: 15,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        // color: Colors.red,
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              width: size.width * .5,
+                              child: WelcomItemsButtom(
+                                size: size,
+                                widget: Column(
+                                  children: [
+                                    Align(
+                                      alignment: Alignment.topRight,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            right: 8.0, top: 5.0),
+                                        child: SingleTitle(
+                                          singleTitle: "Enligne",
+                                          color: Colors.green,
+                                          size: 10.0,
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Expanded(
+                                            child: Center(
+                                              child: Container(
+                                                height: 60,
+                                                width: 60,
+                                                decoration: BoxDecoration(
+                                                  color: BlueText,
+                                                  shape: BoxShape.circle,
+                                                ),
+                                                child: Stack(
+                                                  children: [
+                                                    Positioned(
+                                                      bottom: 0,
+                                                      right: 5,
+                                                      child: Container(
+                                                        height: 10,
+                                                        width: 10,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.green,
+                                                          shape:
+                                                              BoxShape.circle,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Spacer(),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              SingleTitle(
+                                                singleTitle: "Dr",
+                                                color: Grey,
+                                                //size: 11.0,
+                                              ),
+                                              SingleTitle(
+                                                singleTitle: "Robert  M.",
+                                                color: Grey,
+                                                // size: 11.0,
+                                              ),
+                                              SingleTitle(
+                                                singleTitle:
+                                                    "Salut Avez-vous", //
+                                                color: Grey,
+                                                //  size: 10.0,
+                                              ),
+                                              SingleTitle(
+                                                singleTitle:
+                                                    "besoin d’assistance?",
+                                                color: Grey,
+                                                //  size: 10.0,
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  // height: 100,
+                                  // width: 90,
+                                  child: InkWell(
+                                    onTap: () {
+                                      guideModalSheet(context);
+                                    },
+                                    child: WelcomItemsButtom(
+                                      size: size,
+                                      color: BlueText,
+                                      widget: Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Align(
+                                              alignment: Alignment.topCenter,
+                                              child: CircleAvatar(
+                                                backgroundColor:
+                                                    Colors.transparent,
+                                                child:
+                                                    Image.asset(Pictures.Guide),
+                                              ),
+                                            ),
+                                            SizedBox(height: 10),
+                                            SingleTitle(
+                                              singleTitle: "Guide",
+                                              //  size: 10.0,
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  // height: 100,
+                                  // width: 90,
+                                  child: InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.pharmacie);
+                                    },
+                                    child: WelcomItemsButtom(
+                                      size: size,
+                                      color: BlueText,
+                                      widget: Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Align(
+                                              alignment: Alignment.topCenter,
+                                              child: CircleAvatar(
+                                                backgroundColor:
+                                                    Colors.transparent,
+                                                child:
+                                                    Image.asset(Pictures.MAP),
+                                              ),
+                                            ),
+                                            SizedBox(height: 10),
+                                            SingleTitle(
+                                              singleTitle: "Map",
+                                              //  size: 10.0,
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             )
                           ],
                         ),
                       ),
-                    ),
-                    Column(
-                      children: [
-                        SizedBox(
-                          height: 90,
-                          width: size.width * .5,
-                          child: WelcomItemsButtom(
-                            size: size,
-                            widget: Stack(
-                              children: [
-                                Positioned(
-                                  right: 0,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        right: 8.0, top: 5.0),
-                                    child: SingleTitle(
-                                      singleTitle: "Enligne",
-                                      color: Colors.green,
-                                      size: 8.0,
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Center(
-                                        child: Container(
-                                          height: 50,
-                                          width: 50,
-                                          decoration: BoxDecoration(
-                                            color: BlueText,
-                                            borderRadius:
-                                                BorderRadius.circular(100),
-                                          ),
-                                          child: Stack(
-                                            children: [
-                                              Positioned(
-                                                bottom: 0,
-                                                right: 5,
-                                                child: Container(
-                                                  height: 10,
-                                                  width: 10,
-                                                  decoration: BoxDecoration(
-                                                    color: Colors.green,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                      100,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          SingleTitle(
-                                            singleTitle: "Dr",
-                                            color: Grey,
-                                            size: 11.0,
-                                          ),
-                                          SingleTitle(
-                                            singleTitle: "Robert  M.",
-                                            color: Grey,
-                                            size: 11.0,
-                                          ),
-                                          SingleTitle(
-                                            singleTitle: "Salut Avez-vous", //
-                                            color: Grey,
-                                            size: 10.0,
-                                          ),
-                                          SingleTitle(
-                                            singleTitle: "besoin d’assistance?",
-                                            color: Grey,
-                                            size: 10.0,
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            SizedBox(
-                              height: 100,
-                              width: 90,
-                              child: InkWell(
-                                onTap: () {
-                                  guideModalSheet(context);
-                                },
-                                child: WelcomItemsButtom(
-                                  size: size,
-                                  color: BlueText,
-                                  widget: Padding(
-                                    padding: const EdgeInsets.all(10.0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Align(
-                                          alignment: Alignment.topCenter,
-                                          child: CircleAvatar(
-                                            backgroundColor: Colors.transparent,
-                                            child: Image.asset(Pictures.Guide),
-                                          ),
-                                        ),
-                                        SingleTitle(
-                                          singleTitle: "Guide",
-                                          size: 10.0,
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 100,
-                              width: 90,
-                              child: InkWell(
-                                onTap: () {
-                                  Navigator.pushNamed(
-                                      context, Routes.pharmacie);
-                                },
-                                child: WelcomItemsButtom(
-                                  size: size,
-                                  color: BlueText,
-                                  widget: Padding(
-                                    padding: const EdgeInsets.all(10.0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Align(
-                                          alignment: Alignment.topCenter,
-                                          child: CircleAvatar(
-                                            backgroundColor: Colors.transparent,
-                                            child: Image.asset(Pictures.MAP),
-                                          ),
-                                        ),
-                                        SingleTitle(
-                                          singleTitle: "Map",
-                                          size: 10.0,
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
                     )
                   ],
                 ),
@@ -370,8 +388,8 @@ class _HelpState extends State<Help> {
           ),
           DraggableScrollableSheet(
             // maxChildSize: 0.9,
-            initialChildSize: 0.3,
-            minChildSize: 0.3,
+            initialChildSize: height.toDouble(),
+            minChildSize: height.toDouble(),
             builder: (context, scrollController) {
               return Container(
                 decoration: BoxDecoration(
@@ -383,8 +401,8 @@ class _HelpState extends State<Help> {
                 ),
                 child: ListView.builder(
                   controller: scrollController,
-                  itemCount: 60,
-                  physics: BouncingScrollPhysics(),
+                  itemCount: 6,
+                  // physics: BouncingScrollPhysics(),
                   itemBuilder: (context, i) => new Container(
                     // height: 300.0,
                     //  margin: const EdgeInsets.only(top: 9),
