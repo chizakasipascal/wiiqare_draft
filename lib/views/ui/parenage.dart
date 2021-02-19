@@ -24,6 +24,7 @@ class Parenage extends StatelessWidget {
                       Container(
                         height: 70,
                         width: size.width,
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: White,
                           boxShadow: [
@@ -38,7 +39,7 @@ class Parenage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -53,6 +54,7 @@ class Parenage extends StatelessWidget {
                                 ),
                               ],
                             ),
+                            Spacer(),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
@@ -60,6 +62,7 @@ class Parenage extends StatelessWidget {
                                 color: Grey,
                               ),
                             ),
+                            Spacer(),
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [

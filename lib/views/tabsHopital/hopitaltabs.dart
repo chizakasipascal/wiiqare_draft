@@ -20,39 +20,47 @@ class HopitalTabs extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  MapButtom(
-                    description: "Acceuil",
-                    widget: Placeholder(),
-                    onTap: () {
-                      //TODO: add Method form map d
+                  Expanded(
+                    child: MapButtom(
+                      description: "Acceuil",
+                      widget: Placeholder(),
+                      onTap: () {
+                        //TODO: add Method form map d
 
-                      Navigator.pushNamed(context, Routes.home);
-                    },
+                        Navigator.pushNamed(context, Routes.home);
+                      },
+                    ),
                   ),
-                  MapButtom(
-                    description: "Compte",
-                    widget: Placeholder(),
-                    onTap: () {
-                      //TODO: add Method form map d
-                      Navigator.pushNamed(context, Routes.setting);
-                    },
+                  Expanded(
+                    child: MapButtom(
+                      description: "Compte",
+                      widget: Placeholder(),
+                      onTap: () {
+                        //TODO: add Method form map d
+                        Navigator.pushNamed(context, Routes.setting);
+                      },
+                    ),
                   ),
-                  MapButtom(
-                    description: "Rendez vous",
-                    widget: Placeholder(),
-                    onTap: () {
-                      Navigator.pushNamed(
-                          context, Routes.consiltationListeDoctor);
-                    },
+                  Expanded(
+                    child: MapButtom(
+                      description: "Rendez vous",
+                      widget: Placeholder(),
+                      onTap: () {
+                        Navigator.pushNamed(
+                            context, Routes.consiltationListeDoctor);
+                      },
+                    ),
                   ),
-                  MapButtom(
-                    description: "Aider",
-                    widget: Placeholder(),
-                    onTap: () {
-                      //TODO: add Method form map d
+                  Expanded(
+                    child: MapButtom(
+                      description: "Aider",
+                      widget: Placeholder(),
+                      onTap: () {
+                        //TODO: add Method form map d
 
-                      //TODO:Buttom Sheet (Call contact center,email contact centre ,visist facebook page,tweet us,,,,, Cancel )
-                    },
+                        //TODO:Buttom Sheet (Call contact center,email contact centre ,visist facebook page,tweet us,,,,, Cancel )
+                      },
+                    ),
                   )
                 ],
               ),
