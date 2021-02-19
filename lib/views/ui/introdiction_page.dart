@@ -66,9 +66,11 @@ class _OnBoardingPageState extends State<Introdiction_page> {
               SingleTitle(
                 singleTitle:
                     "Gagner les points chaque fois que vous prenez soin de vous!",
+                textAlign: TextAlign.center,
               ),
               SingleTitle(
                 singleTitle: "C'est tres facile!",
+                textAlign: TextAlign.center,
               )
             ],
           ),
@@ -85,9 +87,11 @@ class _OnBoardingPageState extends State<Introdiction_page> {
               ),
               SingleTitle(
                 singleTitle: "Payez vos soin de sante avec votre telephone",
+                textAlign: TextAlign.center,
               ),
               SingleTitle(
                 singleTitle: "C'est tres facile!",
+                textAlign: TextAlign.center,
               )
             ],
           ),
